@@ -1,0 +1,14 @@
+predicted \ true,helmet,gloves,vest,boots,goggles,Person,no_helmet,no_goggle,no_gloves,no_boots,forklift,no_vest,background
+helmet,264,0,0,0,0,0,7,0,0,0,0,0,15
+gloves,0,320,0,0,0,0,0,0,3,0,0,0,45
+vest,0,0,300,0,0,0,0,0,0,0,0,6,7
+boots,0,1,0,391,0,0,0,0,0,24,0,0,80
+goggles,0,0,0,0,133,0,0,2,0,0,0,0,7
+Person,0,0,1,0,0,457,1,0,0,0,0,2,22
+no_helmet,2,0,0,0,0,0,127,0,0,0,0,0,23
+no_goggle,0,0,0,0,0,0,0,39,0,0,0,0,16
+no_gloves,0,1,0,0,0,0,0,0,141,0,0,0,22
+no_boots,0,0,0,9,0,0,0,0,0,122,0,0,12
+forklift,0,0,0,0,0,0,0,0,0,0,60,0,11
+no_vest,0,0,3,0,0,1,0,0,0,0,0,89,5
+background,28,59,36,81,6,23,44,41,59,32,13,33,0

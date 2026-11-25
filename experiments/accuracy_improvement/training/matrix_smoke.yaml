@@ -1,0 +1,20 @@
+# Phase 3 hardware smoke tests: memory and speed of YOLO26m training at larger image sizes.
+# 1 epoch on 10 % of the training split (64 images), validation on dev. Not used for any quality claim.
+defaults:
+  weights: models/pretrained/yolo26m.pt
+  data: experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml
+  epochs: 1
+  patience: 15
+  seed: 42
+  fraction: 0.1
+  batch: 4
+  evaluate: false
+  hypothesis: "Training at this image size fits in 16 GB unified memory without swap growth"
+  changed: [imgsz]
+  fixed: "YOLO26m pretrained, batch 4 (unless stated), defaults otherwise"
+  expected: "Memory and time grow roughly with pixel count"
+  success: "Completes; system free memory stays >= 10 %; swap does not grow materially"
+experiments:
+  - {name: smoke_m_768_b4, imgsz: 768}
+  - {name: smoke_m_896_b4, imgsz: 896}
+  - {name: smoke_m_1024_b4, imgsz: 1024}

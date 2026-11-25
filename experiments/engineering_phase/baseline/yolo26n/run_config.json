@@ -1,0 +1,24 @@
+{
+  "name": "yolo26n",
+  "weights": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/trained/best.pt",
+  "weights_sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b",
+  "weights_size_bytes": 5443013,
+  "started": "2026-11-19T20:52:40",
+  "finished": "2026-11-19T20:52:53",
+  "device": "mps",
+  "imgsz": 640,
+  "val_batch": 8,
+  "val_conf": 0.001,
+  "val_nms_iou": 0.7,
+  "operating_conf": 0.25,
+  "operating_nms_iou": 0.5,
+  "max_det": 300,
+  "precision_mode": "fp32",
+  "val_images": 200,
+  "versions": {
+    "python": "3.12.16",
+    "torch": "2.15.0",
+    "ultralytics": "8.4.215"
+  },
+  "command": "scripts/engineering/evaluate_model.py --weights models/trained/best.pt --name yolo26n --out experiments/engineering_phase/baseline/yolo26n"
+}

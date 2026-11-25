@@ -1,0 +1,158 @@
+{
+  "model_key": "yolo26m_e3_896_v1",
+  "description": "YOLO26m E3_m896 (896 px, seed 42), accuracy-programme candidate; better than YOLO26n on dev and than E1 on the locked test, below the spec targets",
+  "status": "not promoted: locked test failed promotion gates G1 (mAP50 0.847 < 0.93), G2 (P 0.885 / R 0.862 at conf 0.25 < 0.90) and G3 (missing-PPE recall 0.52-0.80 < 0.90); see REPORT-024",
+  "registered_in_settings": false,
+  "active_default": false,
+  "architecture": "yolo26m",
+  "parameters": 21791392,
+  "checkpoint": "models/trained/yolo26m_accuracy_candidate/yolo26m_e3_896_v1/best.pt",
+  "checkpoint_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6",
+  "checkpoint_bytes": 44059865,
+  "training_run": "experiments/accuracy_improvement/training/E3_m896",
+  "source_checkpoint_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6",
+  "training_arguments": {
+    "model": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained/yolo26m.pt",
+    "data": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "epochs": 30,
+    "batch": 4,
+    "imgsz": 896,
+    "seed": 42,
+    "optimizer": "auto",
+    "lr0": 0.01,
+    "scale": 0.5,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "cls_pw": 0.0,
+    "mosaic": 1.0,
+    "close_mosaic": 10,
+    "patience": 15
+  },
+  "dataset_version": "datasets/v1_original_labels (symlinks to ../construction-ppe, unchanged labels)",
+  "split_list_sha256": {
+    "train": "6d9138035fd2665e768e0b4beed7d01e72999771c9e6cee1591085bde649f70f",
+    "dev": "eb1854d404cfe55a27398655b2dde8e3655dfe3321f5d059f808c43b6b024ae9",
+    "test": "cbc2ef25b8e25f26f1b57f0c14c5ecfa8d43e81e9328371742d21f783aeef5c2"
+  },
+  "class_mapping": {
+    "0": "helmet",
+    "1": "gloves",
+    "2": "vest",
+    "3": "boots",
+    "4": "goggles",
+    "5": "Person",
+    "6": "no_helmet",
+    "7": "no_goggle",
+    "8": "no_gloves",
+    "9": "no_boots",
+    "10": "forklift",
+    "11": "no_vest"
+  },
+  "image_size": 896,
+  "thresholds": {
+    "detection_confidence": 0.25,
+    "nms_iou": 0.5,
+    "compliance": {
+      "required_ppe": [
+        "helmet",
+        "vest",
+        "gloves"
+      ],
+      "person_confidence": 0.4,
+      "violation_confidence": 0.5,
+      "evidence_confidence": 0.4,
+      "min_containment": 0.6,
+      "ambiguity_margin": 0.15,
+      "person_box_margin": 0.1,
+      "conflict_iou": 0.5
+    },
+    "note": "compliance and event rules unchanged by this model"
+  },
+  "evaluation": {
+    "dev": {
+      "path": "experiments/accuracy_improvement/evaluation/dev_E3_m896",
+      "split": "dev",
+      "images": 200,
+      "gt_objects": 2961,
+      "ultralytics": {
+        "precision": 0.922,
+        "recall": 0.7961,
+        "mAP50": 0.8539,
+        "mAP50-95": 0.6278
+      },
+      "audit_evaluator": {
+        "mAP50": 0.8427,
+        "mAP50-95": 0.617
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.8925,
+        "recall": 0.8578,
+        "f1": 0.8748,
+        "tp": 2540,
+        "fp": 306,
+        "fn": 421,
+        "background_fp": 74
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.7654,
+        "no_gloves": 0.7192,
+        "no_goggle": 0.6098,
+        "no_boots": 0.7753,
+        "no_vest": 0.7385
+      },
+      "person_recall_op": 0.9667,
+      "latency_ms_mean": 51.28,
+      "weights_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6"
+    },
+    "locked_test": {
+      "path": "experiments/accuracy_improvement/evaluation/test_E3_m896",
+      "split": "test",
+      "images": 160,
+      "gt_objects": 2480,
+      "ultralytics": {
+        "precision": 0.9135,
+        "recall": 0.7819,
+        "mAP50": 0.8473,
+        "mAP50-95": 0.6443
+      },
+      "audit_evaluator": {
+        "mAP50": 0.8322,
+        "mAP50-95": 0.6298
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.8849,
+        "recall": 0.8617,
+        "f1": 0.8731,
+        "tp": 2137,
+        "fp": 278,
+        "fn": 343,
+        "background_fp": 73
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.7394,
+        "no_gloves": 0.6503,
+        "no_goggle": 0.5217,
+        "no_boots": 0.7963,
+        "no_vest": 0.6882
+      },
+      "person_recall_op": 0.9776,
+      "latency_ms_mean": 49.72,
+      "weights_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6"
+    }
+  },
+  "reports": [
+    "experiments/accuracy_improvement/reports/REPORT-022-training-experiment-matrix.md",
+    "experiments/accuracy_improvement/reports/REPORT-023-model-comparison-and-error-analysis.md",
+    "experiments/accuracy_improvement/reports/REPORT-024-qualification-and-integration.md"
+  ],
+  "created": "2026-11-23T03:15:39",
+  "ultralytics_version": "8.4.215",
+  "rollback": {
+    "key": "yolo26n_baseline",
+    "weights": "models/trained/best.pt",
+    "sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b"
+  }
+}

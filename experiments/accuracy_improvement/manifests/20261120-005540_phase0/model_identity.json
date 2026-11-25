@@ -1,0 +1,390 @@
+{
+  "recorded_at": "2026-11-20T00:55:57",
+  "active_checkpoint_setting": "models/trained/best.pt",
+  "class_mapping": {
+    "configs/dataset.yaml": {
+      "0": "helmet",
+      "1": "gloves",
+      "2": "vest",
+      "3": "boots",
+      "4": "goggles",
+      "5": "Person",
+      "6": "no_helmet",
+      "7": "no_goggle",
+      "8": "no_gloves",
+      "9": "no_boots",
+      "10": "forklift",
+      "11": "no_vest"
+    },
+    "construction-ppe/data.yaml": {
+      "0": "helmet",
+      "1": "gloves",
+      "2": "vest",
+      "3": "boots",
+      "4": "goggles",
+      "5": "Person",
+      "6": "no_helmet",
+      "7": "no_goggle",
+      "8": "no_gloves",
+      "9": "no_boots",
+      "10": "forklift",
+      "11": "no_vest"
+    },
+    "identical": true
+  },
+  "checkpoints": {
+    "yolo26n_active": {
+      "sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b",
+      "size_bytes": 5443013,
+      "architecture_yaml": "yolo26n.yaml",
+      "nc": 12,
+      "scale": "n",
+      "names": {
+        "0": "helmet",
+        "1": "gloves",
+        "2": "vest",
+        "3": "boots",
+        "4": "goggles",
+        "5": "Person",
+        "6": "no_helmet",
+        "7": "no_goggle",
+        "8": "no_gloves",
+        "9": "no_boots",
+        "10": "forklift",
+        "11": "no_vest"
+      },
+      "parameters": 2539232,
+      "epoch_field": -1,
+      "best_fitness": null,
+      "ultralytics_version_in_checkpoint": "8.4.215",
+      "date": "2026-11-19T18:56:05.728062+05:30",
+      "train_args": {
+        "model": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained/yolo26n.pt",
+        "data": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/data/generated/dataset_resolved.yaml",
+        "epochs": 30,
+        "batch": 8,
+        "imgsz": 640,
+        "seed": 42,
+        "deterministic": true,
+        "optimizer": "AdamW",
+        "lr0": 0.000625,
+        "lrf": 0.01,
+        "momentum": 0.937,
+        "weight_decay": 0.0005,
+        "warmup_epochs": 3.0,
+        "patience": 15,
+        "cos_lr": false,
+        "close_mosaic": 10,
+        "mosaic": 1.0,
+        "mixup": 0.0,
+        "copy_paste": 0.0,
+        "fliplr": 0.5,
+        "scale": 0.5,
+        "translate": 0.1,
+        "hsv_h": 0.015,
+        "hsv_s": 0.7,
+        "hsv_v": 0.4,
+        "nbs": 64,
+        "amp": true,
+        "device": "mps",
+        "project": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments",
+        "name": "siteguard_yolo26n",
+        "fraction": 1.0,
+        "cache": false,
+        "workers": 0,
+        "pretrained": true
+      },
+      "path": "models/trained/best.pt",
+      "sha256_matches_recorded": true,
+      "names_match_dataset": true,
+      "historical_metrics": {
+        "precision": 0.8322,
+        "recall": 0.6809,
+        "mAP50": 0.7339,
+        "mAP50-95": 0.5227
+      },
+      "historical_source": "REPORT-010 \u00a710 / REPORT-015 \u00a71",
+      "revalidation": {
+        "settings": {
+          "split": "val (200 images)",
+          "imgsz": 640,
+          "batch": 8,
+          "conf": 0.001,
+          "nms_iou": 0.7,
+          "device": "mps",
+          "data": "data/generated/dataset_resolved.yaml (symlink mirror)"
+        },
+        "metrics": {
+          "precision": 0.8322,
+          "recall": 0.6809,
+          "mAP50": 0.7339,
+          "mAP50-95": 0.5227
+        },
+        "per_class": {
+          "helmet": {
+            "P": 0.9012,
+            "R": 0.7755,
+            "AP50": 0.8246,
+            "AP50-95": 0.6266
+          },
+          "gloves": {
+            "P": 0.8418,
+            "R": 0.7349,
+            "AP50": 0.793,
+            "AP50-95": 0.6006
+          },
+          "vest": {
+            "P": 0.9359,
+            "R": 0.8294,
+            "AP50": 0.8873,
+            "AP50-95": 0.6853
+          },
+          "boots": {
+            "P": 0.8121,
+            "R": 0.6819,
+            "AP50": 0.7711,
+            "AP50-95": 0.5724
+          },
+          "goggles": {
+            "P": 0.8292,
+            "R": 0.9209,
+            "AP50": 0.9242,
+            "AP50-95": 0.5608
+          },
+          "Person": {
+            "P": 0.9329,
+            "R": 0.8965,
+            "AP50": 0.9399,
+            "AP50-95": 0.7809
+          },
+          "no_helmet": {
+            "P": 0.894,
+            "R": 0.5531,
+            "AP50": 0.652,
+            "AP50-95": 0.3829
+          },
+          "no_goggle": {
+            "P": 0.3818,
+            "R": 0.1281,
+            "AP50": 0.1483,
+            "AP50-95": 0.0451
+          },
+          "no_gloves": {
+            "P": 0.8981,
+            "R": 0.5644,
+            "AP50": 0.6199,
+            "AP50-95": 0.3841
+          },
+          "no_boots": {
+            "P": 0.8388,
+            "R": 0.6726,
+            "AP50": 0.7475,
+            "AP50-95": 0.5741
+          },
+          "forklift": {
+            "P": 0.8006,
+            "R": 0.7945,
+            "AP50": 0.8071,
+            "AP50-95": 0.5847
+          },
+          "no_vest": {
+            "P": 0.92,
+            "R": 0.6194,
+            "AP50": 0.6918,
+            "AP50-95": 0.4746
+          }
+        },
+        "max_abs_diff_vs_historical": 0.0,
+        "speed_ms_per_image": {
+          "preprocess": 0.21,
+          "inference": 4.67,
+          "loss": 0.0,
+          "postprocess": 3.59
+        }
+      }
+    },
+    "yolo26m_previous": {
+      "sha256": "399c4e5be335e3544afe185c7abb08d5fc894a382b891d970f71b94df3f1773f",
+      "size_bytes": 44029401,
+      "architecture_yaml": "yolo26m.yaml",
+      "nc": 12,
+      "scale": "m",
+      "names": {
+        "0": "helmet",
+        "1": "gloves",
+        "2": "vest",
+        "3": "boots",
+        "4": "goggles",
+        "5": "Person",
+        "6": "no_helmet",
+        "7": "no_goggle",
+        "8": "no_gloves",
+        "9": "no_boots",
+        "10": "forklift",
+        "11": "no_vest"
+      },
+      "parameters": 21791392,
+      "epoch_field": -1,
+      "best_fitness": null,
+      "ultralytics_version_in_checkpoint": "8.4.215",
+      "date": "2026-11-19T22:57:18.641859+05:30",
+      "train_args": {
+        "model": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained/yolo26m.pt",
+        "data": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/data/generated/dataset_resolved.yaml",
+        "epochs": 30,
+        "batch": 4,
+        "imgsz": 640,
+        "seed": 42,
+        "deterministic": true,
+        "optimizer": "AdamW",
+        "lr0": 0.000625,
+        "lrf": 0.01,
+        "momentum": 0.937,
+        "weight_decay": 0.0005,
+        "warmup_epochs": 3.0,
+        "patience": 15,
+        "cos_lr": false,
+        "close_mosaic": 10,
+        "mosaic": 1.0,
+        "mixup": 0.0,
+        "copy_paste": 0.0,
+        "fliplr": 0.5,
+        "scale": 0.5,
+        "translate": 0.1,
+        "hsv_h": 0.015,
+        "hsv_s": 0.7,
+        "hsv_v": 0.4,
+        "nbs": 64,
+        "amp": true,
+        "device": "mps",
+        "project": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/yolo26m/training",
+        "name": "yolo26m_e30_b4",
+        "fraction": 1.0,
+        "cache": false,
+        "workers": 0,
+        "pretrained": true
+      },
+      "path": "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt",
+      "sha256_matches_recorded": true,
+      "names_match_dataset": true,
+      "historical_metrics": {
+        "precision": 0.8909,
+        "recall": 0.7773,
+        "mAP50": 0.8311,
+        "mAP50-95": 0.6195
+      },
+      "historical_source": "REPORT-014 \u00a710 / REPORT-015 \u00a71",
+      "revalidation": {
+        "settings": {
+          "split": "val (200 images)",
+          "imgsz": 640,
+          "batch": 8,
+          "conf": 0.001,
+          "nms_iou": 0.7,
+          "device": "mps",
+          "data": "data/generated/dataset_resolved.yaml (symlink mirror)"
+        },
+        "metrics": {
+          "precision": 0.8909,
+          "recall": 0.7773,
+          "mAP50": 0.8311,
+          "mAP50-95": 0.6195
+        },
+        "per_class": {
+          "helmet": {
+            "P": 0.9378,
+            "R": 0.881,
+            "AP50": 0.9155,
+            "AP50-95": 0.7432
+          },
+          "gloves": {
+            "P": 0.9064,
+            "R": 0.8346,
+            "AP50": 0.8888,
+            "AP50-95": 0.7371
+          },
+          "vest": {
+            "P": 0.952,
+            "R": 0.8751,
+            "AP50": 0.9202,
+            "AP50-95": 0.7531
+          },
+          "boots": {
+            "P": 0.8278,
+            "R": 0.79,
+            "AP50": 0.8487,
+            "AP50-95": 0.6592
+          },
+          "goggles": {
+            "P": 0.9399,
+            "R": 0.9568,
+            "AP50": 0.967,
+            "AP50-95": 0.7179
+          },
+          "Person": {
+            "P": 0.9541,
+            "R": 0.948,
+            "AP50": 0.9752,
+            "AP50-95": 0.8633
+          },
+          "no_helmet": {
+            "P": 0.8575,
+            "R": 0.6872,
+            "AP50": 0.7563,
+            "AP50-95": 0.4769
+          },
+          "no_goggle": {
+            "P": 0.7888,
+            "R": 0.4268,
+            "AP50": 0.5305,
+            "AP50-95": 0.1824
+          },
+          "no_gloves": {
+            "P": 0.8801,
+            "R": 0.6872,
+            "AP50": 0.7653,
+            "AP50-95": 0.4844
+          },
+          "no_boots": {
+            "P": 0.8684,
+            "R": 0.7135,
+            "AP50": 0.8053,
+            "AP50-95": 0.6587
+          },
+          "forklift": {
+            "P": 0.879,
+            "R": 0.8356,
+            "AP50": 0.8483,
+            "AP50-95": 0.6394
+          },
+          "no_vest": {
+            "P": 0.8988,
+            "R": 0.6923,
+            "AP50": 0.7527,
+            "AP50-95": 0.5187
+          }
+        },
+        "max_abs_diff_vs_historical": 0.0,
+        "speed_ms_per_image": {
+          "preprocess": 0.2,
+          "inference": 8.86,
+          "loss": 0.0,
+          "postprocess": 21.19
+        }
+      }
+    }
+  },
+  "pretrained": {
+    "yolo26n.pt": {
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "size_bytes": 5544453,
+      "prefix_matches_recorded": null
+    },
+    "yolo26m.pt": {
+      "sha256": "401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7",
+      "size_bytes": 44255705,
+      "prefix_matches_recorded": true
+    }
+  },
+  "active_is": "yolo26n_active"
+}

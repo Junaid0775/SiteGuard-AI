@@ -1,0 +1,97 @@
+{
+  "counts": {
+    "train_images": 800,
+    "train_labels": 800,
+    "train_images_without_label": 0,
+    "train_labels_without_image": 0,
+    "val_images": 200,
+    "val_labels": 200,
+    "val_images_without_label": 0,
+    "val_labels_without_image": 0,
+    "total_annotations": 14863,
+    "invalid_rows": 0,
+    "unreadable_images": 0,
+    "empty_label_files": 0,
+    "duplicate_filenames_across_splits": 0,
+    "class_ids_present": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "image_dimensions": {
+    "width": {
+      "min": 1152.0,
+      "max": 2048.0,
+      "mean": 1798.6,
+      "median": 2048.0
+    },
+    "height": {
+      "min": 848.0,
+      "max": 2048.0,
+      "mean": 1609.8,
+      "median": 1360.0
+    },
+    "aspect_w_over_h": {
+      "min": 0.5625,
+      "max": 1.7777777777777777,
+      "mean": 1.2,
+      "median": 1.5058823529411764
+    }
+  },
+  "orientation": {
+    "landscape": 577,
+    "portrait": 282,
+    "square": 141
+  },
+  "most_common_sizes": [
+    [
+      "2048x1360",
+      361
+    ],
+    [
+      "2048x1152",
+      141
+    ],
+    [
+      "1360x2048",
+      141
+    ],
+    [
+      "1152x2048",
+      141
+    ],
+    [
+      "2048x2048",
+      141
+    ],
+    [
+      "1536x1024",
+      42
+    ],
+    [
+      "2048x1536",
+      26
+    ],
+    [
+      "1448x1086",
+      5
+    ],
+    [
+      "1264x848",
+      2
+    ]
+  ],
+  "invalid_row_examples": [],
+  "unreadable": [],
+  "empty_labels": []
+}

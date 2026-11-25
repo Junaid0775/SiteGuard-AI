@@ -1,0 +1,104 @@
+{
+  "yolo26n": {
+    "cam720_clean": {
+      "mAP50": 0.7345868557408718,
+      "mAP50-95": 0.5174656757216953,
+      "precision": 0.887816646562123,
+      "recall": 0.745694022289767,
+      "fp_per_image": 1.395,
+      "contradiction_pairs": 38
+    },
+    "cam720_dim": {
+      "mAP50": 0.721125261997166,
+      "mAP50-95": 0.5051687289271023,
+      "precision": 0.8956774729842062,
+      "recall": 0.7277946639648767,
+      "fp_per_image": 1.255,
+      "contradiction_pairs": 25
+    },
+    "cam720_dark": {
+      "mAP50": 0.6507463507147858,
+      "mAP50-95": 0.4222561944516427,
+      "precision": 0.8754681647940075,
+      "recall": 0.6315433975008443,
+      "fp_per_image": 1.33,
+      "contradiction_pairs": 57
+    },
+    "cam720_blur17": {
+      "mAP50": 0.613879647676872,
+      "mAP50-95": 0.37417720076108957,
+      "precision": 0.8873897249610794,
+      "recall": 0.5775075987841946,
+      "fp_per_image": 1.085,
+      "contradiction_pairs": 34
+    }
+  },
+  "yolo26m_e30": {
+    "cam720_clean": {
+      "mAP50": 0.8209077909882869,
+      "mAP50-95": 0.6136832832333183,
+      "precision": 0.8970695970695971,
+      "recall": 0.8270854441067207,
+      "fp_per_image": 1.405,
+      "contradiction_pairs": 27
+    },
+    "cam720_dim": {
+      "mAP50": 0.8108535215732303,
+      "mAP50-95": 0.5972696748654963,
+      "precision": 0.8998144712430427,
+      "recall": 0.8189800742992233,
+      "fp_per_image": 1.35,
+      "contradiction_pairs": 16
+    },
+    "cam720_dark": {
+      "mAP50": 0.6836601938566127,
+      "mAP50-95": 0.46046289427689696,
+      "precision": 0.8590809628008753,
+      "recall": 0.662951705504897,
+      "fp_per_image": 1.61,
+      "contradiction_pairs": 27
+    },
+    "cam720_blur17": {
+      "mAP50": 0.6864528134367368,
+      "mAP50-95": 0.45708989388810767,
+      "precision": 0.9195837275307474,
+      "recall": 0.6565349544072948,
+      "fp_per_image": 0.85,
+      "contradiction_pairs": 18
+    }
+  },
+  "e3_candidate": {
+    "cam720_clean": {
+      "mAP50": 0.8445207061397926,
+      "mAP50-95": 0.6178110645250181,
+      "precision": 0.9095186391603329,
+      "recall": 0.8486997635933806,
+      "fp_per_image": 1.25,
+      "contradiction_pairs": 20
+    },
+    "cam720_dim": {
+      "mAP50": 0.8258695801541207,
+      "mAP50-95": 0.599462886053796,
+      "precision": 0.8997429305912596,
+      "recall": 0.8274231678486997,
+      "fp_per_image": 1.365,
+      "contradiction_pairs": 18
+    },
+    "cam720_dark": {
+      "mAP50": 0.6259150748485579,
+      "mAP50-95": 0.4094623298093555,
+      "precision": 0.8733798604187437,
+      "recall": 0.5916919959473151,
+      "fp_per_image": 1.27,
+      "contradiction_pairs": 33
+    },
+    "cam720_blur17": {
+      "mAP50": 0.6747145583513644,
+      "mAP50-95": 0.43374941092089225,
+      "precision": 0.9306476287608363,
+      "recall": 0.6163458291117866,
+      "fp_per_image": 0.68,
+      "contradiction_pairs": 16
+    }
+  }
+}

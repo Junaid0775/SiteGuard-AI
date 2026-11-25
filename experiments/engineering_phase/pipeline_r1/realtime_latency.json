@@ -1,0 +1,113 @@
+{
+  "pre_R1_R2_every3_480": {
+    "inference_imgsz": 480,
+    "process_every_n": 3,
+    "frames_received": 300,
+    "frames_dropped_queue": 2,
+    "frames_analysed": 100,
+    "frames_held": 198,
+    "frames_rendered": 298,
+    "errors": 0,
+    "inference_ms": {
+      "mean": 30.0,
+      "median": 29.34,
+      "p95": 34.14,
+      "max": 128.81,
+      "n": 100
+    },
+    "receive_to_render_ms": {
+      "mean": 30.81,
+      "median": 30.26,
+      "p95": 35.69,
+      "max": 130.1,
+      "n": 100
+    },
+    "displayed_result_age_ms": {
+      "mean": 43.53,
+      "median": 34.23,
+      "p95": 68.85,
+      "max": 130.1,
+      "n": 298
+    },
+    "received_fps": 29.99,
+    "analysed_fps": 10.1,
+    "rendered_fps": 30.19,
+    "source_fps": 30.0,
+    "frames_delivered": 300,
+    "extra_load_ms": 0.0
+  },
+  "post_R1_R2_every1_640": {
+    "inference_imgsz": 640,
+    "process_every_n": 1,
+    "frames_received": 300,
+    "frames_dropped_queue": 0,
+    "frames_analysed": 300,
+    "frames_held": 0,
+    "frames_rendered": 300,
+    "errors": 0,
+    "inference_ms": {
+      "mean": 22.23,
+      "median": 22.17,
+      "p95": 26.75,
+      "max": 34.13,
+      "n": 300
+    },
+    "receive_to_render_ms": {
+      "mean": 22.89,
+      "median": 22.88,
+      "p95": 27.65,
+      "max": 34.81,
+      "n": 300
+    },
+    "displayed_result_age_ms": {
+      "mean": 22.89,
+      "median": 22.88,
+      "p95": 27.65,
+      "max": 34.81,
+      "n": 300
+    },
+    "received_fps": 29.99,
+    "analysed_fps": 30.02,
+    "rendered_fps": 30.02,
+    "source_fps": 30.0,
+    "frames_delivered": 300,
+    "extra_load_ms": 0.0
+  },
+  "post_every1_640_with_40ms_extra_load": {
+    "inference_imgsz": 640,
+    "process_every_n": 1,
+    "frames_received": 300,
+    "frames_dropped_queue": 169,
+    "frames_analysed": 131,
+    "frames_held": 0,
+    "frames_rendered": 131,
+    "errors": 0,
+    "inference_ms": {
+      "mean": 31.83,
+      "median": 32.01,
+      "p95": 36.07,
+      "max": 37.95,
+      "n": 131
+    },
+    "receive_to_render_ms": {
+      "mean": 32.69,
+      "median": 32.95,
+      "p95": 37.12,
+      "max": 39.92,
+      "n": 131
+    },
+    "displayed_result_age_ms": {
+      "mean": 32.69,
+      "median": 32.95,
+      "p95": 37.12,
+      "max": 39.92,
+      "n": 131
+    },
+    "received_fps": 29.85,
+    "analysed_fps": 12.98,
+    "rendered_fps": 12.98,
+    "source_fps": 30.0,
+    "frames_delivered": 300,
+    "extra_load_ms": 40.0
+  }
+}

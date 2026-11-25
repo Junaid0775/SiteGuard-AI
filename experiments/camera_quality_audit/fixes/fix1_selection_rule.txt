@@ -1,0 +1,9 @@
+Fix 1 selection rule, written 2026-11-24 02:05:46 IST before the confirmation benchmark (logs/bench_bitrate_results_v4_final.json) was run.
+
+Choose the lowest return-video bitrate that meets all three conditions:
+(a) Stability: in every valid moving-content run, at least 29 received frames per second, at least 29 displayed frames per second, and no more than 3 dropped frames in the steady window.
+(b) Cost: mean server CPU no more than 5 percentage points of one core above the library default in the same benchmark.
+(c) Value: the next higher setting adds less than 1 dB of return-video PSNR per extra Mbit/s on the moving annotated test (logs/bench_codec_rd.json, 640x360).
+
+Measured for (c): 2.5 to 4 Mbit/s adds 1.08 dB per Mbit/s; 4 to 6 Mbit/s adds 0.62; 6 to 8 Mbit/s adds 0.33. So 4 Mbit/s is the expected choice if it meets (a) and (b).
+If 4 Mbit/s fails (a) or (b), the current 2.5 Mbit/s stays.

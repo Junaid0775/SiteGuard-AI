@@ -1,0 +1,223 @@
+{
+ "p0": {
+  "startup_s": [
+   0.28,
+   0.23,
+   0.23
+  ],
+  "shutdown": [
+   {
+    "seconds": 0.4,
+    "exit_code": 0,
+    "port_released": true
+   },
+   {
+    "seconds": 0.46,
+    "exit_code": 0,
+    "port_released": true
+   },
+   {
+    "seconds": 0.45,
+    "exit_code": 0,
+    "port_released": true
+   }
+  ],
+  "cold_first_render_s": 1.21,
+  "full_load_s": {
+   "Overview": 0.23,
+   "Live Monitoring": 0.17,
+   "Image Inspection": 0.22,
+   "Video Inspection": 0.18,
+   "Safety Events": 0.22,
+   "Analytics": 0.23,
+   "Model Evaluation": 0.36,
+   "Settings / About": 0.23
+  },
+  "switch_s": {
+   "Overview": 0.11,
+   "Live Monitoring": 0.11,
+   "Image Inspection": 0.06,
+   "Video Inspection": 0.06,
+   "Safety Events": 0.11,
+   "Analytics": 0.17,
+   "Model Evaluation": 0.19,
+   "Settings / About": 0.11
+  },
+  "heap_mb": {
+   "Overview": 73.8,
+   "Live Monitoring": 57.0,
+   "Image Inspection": 34.0,
+   "Video Inspection": 33.4,
+   "Safety Events": 63.1,
+   "Analytics": 43.6,
+   "Model Evaluation": 109.6,
+   "Settings / About": 122.9
+  },
+  "dom_nodes": {
+   "Overview": 5514,
+   "Live Monitoring": 3088,
+   "Image Inspection": 1115,
+   "Video Inspection": 2452,
+   "Safety Events": 4867,
+   "Analytics": 3553,
+   "Model Evaluation": 15819,
+   "Settings / About": 19054
+  },
+  "recalc_ms": {
+   "Overview": 0.0,
+   "Live Monitoring": 0,
+   "Image Inspection": 0.01,
+   "Video Inspection": 0.0,
+   "Safety Events": 0.0,
+   "Analytics": 0.01,
+   "Model Evaluation": 0.0,
+   "Settings / About": 0.01
+  },
+  "scroll": {
+   "Overview": {
+    "px": 397,
+    "frames": 121,
+    "p95": 17,
+    "max": 18,
+    "TaskDuration": 38,
+    "LayoutDuration": 0,
+    "RecalcStyleDuration": 0
+   },
+   "Model Evaluation": {
+    "px": 3916,
+    "frames": 121,
+    "p95": 17,
+    "max": 18,
+    "TaskDuration": 107,
+    "LayoutDuration": 0,
+    "RecalcStyleDuration": 0
+   }
+  },
+  "live_idle_10s_main_thread_ms": 54,
+  "overview_full_load_bytes": {
+   "http_kb": 1,
+   "websocket_kb": 27
+  },
+  "server_rss_mb": 438,
+  "final_shutdown": {
+   "seconds": 11.86,
+   "exit_code": 0,
+   "port_released": true
+  }
+ },
+ "p5": {
+  "startup_s": [
+   0.24,
+   0.23,
+   0.24
+  ],
+  "shutdown": [
+   {
+    "seconds": 0.45,
+    "exit_code": 0,
+    "port_released": true
+   },
+   {
+    "seconds": 0.43,
+    "exit_code": 0,
+    "port_released": true
+   },
+   {
+    "seconds": 0.45,
+    "exit_code": 0,
+    "port_released": true
+   }
+  ],
+  "cold_first_render_s": 0.96,
+  "full_load_s": {
+   "Overview": 0.28,
+   "Live Monitoring": 0.22,
+   "Image Inspection": 0.22,
+   "Video Inspection": 0.18,
+   "Safety Events": 0.23,
+   "Analytics": 0.29,
+   "Model Evaluation": 0.35,
+   "Settings / About": 0.23
+  },
+  "switch_s": {
+   "Overview": 0.12,
+   "Live Monitoring": 0.06,
+   "Image Inspection": 0.06,
+   "Video Inspection": 0.06,
+   "Safety Events": 0.11,
+   "Analytics": 0.15,
+   "Model Evaluation": 0.24,
+   "Settings / About": 0.11
+  },
+  "heap_mb": {
+   "Overview": 58.2,
+   "Live Monitoring": 55.0,
+   "Image Inspection": 36.8,
+   "Video Inspection": 46.6,
+   "Safety Events": 74.1,
+   "Analytics": 52.2,
+   "Model Evaluation": 123.1,
+   "Settings / About": 138.0
+  },
+  "dom_nodes": {
+   "Overview": 7018,
+   "Live Monitoring": 2677,
+   "Image Inspection": 2529,
+   "Video Inspection": 3256,
+   "Safety Events": 5399,
+   "Analytics": 4340,
+   "Model Evaluation": 16720,
+   "Settings / About": 20092
+  },
+  "recalc_ms": {
+   "Overview": 0.3,
+   "Live Monitoring": 0.45,
+   "Image Inspection": 0.33,
+   "Video Inspection": 0.35,
+   "Safety Events": 0.72,
+   "Analytics": 0.54,
+   "Model Evaluation": 0.99,
+   "Settings / About": 0.62
+  },
+  "scroll": {
+   "Overview": {
+    "px": 1028,
+    "frames": 121,
+    "p95": 17,
+    "max": 18,
+    "TaskDuration": 55,
+    "LayoutDuration": 0,
+    "RecalcStyleDuration": 0
+   },
+   "Model Evaluation": {
+    "px": 4240,
+    "frames": 121,
+    "p95": 17,
+    "max": 18,
+    "TaskDuration": 308,
+    "LayoutDuration": 0,
+    "RecalcStyleDuration": 0
+   }
+  },
+  "live_idle_10s_main_thread_ms": 89,
+  "overview_full_load_bytes": {
+   "http_kb": 476,
+   "websocket_kb": 63
+  },
+  "background_requests_during_7_page_switches": 0,
+  "background_on_3_full_reloads": {
+   "requests": 3,
+   "statuses": [
+    200
+   ],
+   "served_from_cache": 3,
+   "bytes_transferred": 0
+  },
+  "server_rss_mb": 467,
+  "final_shutdown": {
+   "seconds": 14.35,
+   "exit_code": 0,
+   "port_released": true
+  }
+ }
+}

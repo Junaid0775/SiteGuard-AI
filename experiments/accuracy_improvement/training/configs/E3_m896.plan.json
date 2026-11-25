@@ -1,0 +1,36 @@
+{
+  "hypothesis": "Training and evaluating at 896 px makes the tiny missing-PPE boxes resolvable (boxes < 8 px at 640: 13.7 % of training boxes -> ~5 % at 896-1024) and improves small-object and real-scene recall",
+  "changed": [
+    "imgsz 640 -> 896 (training and evaluation)"
+  ],
+  "fixed": "YOLO26m architecture and pretrained weights; train/dev split v1; AdamW auto (lr0 0.000625); nominal batch 64; seed 42; Ultralytics 8.4.215 defaults except the changed variable",
+  "expected": "Higher recall on boxes < 16 px and on source-family images; about 2x training time; inference latency about 1.7-2x",
+  "success": "Dev mAP50 and missing-PPE recall above E1 with a paired-bootstrap CI that excludes 0; latency measured",
+  "name": "E3_m896",
+  "arguments": [
+    "--weights",
+    "models/pretrained/yolo26m.pt",
+    "--data",
+    "experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "--epochs",
+    "30",
+    "--imgsz",
+    "896",
+    "--batch",
+    "4",
+    "--patience",
+    "15",
+    "--seed",
+    "42",
+    "--fraction",
+    "1.0",
+    "--name",
+    "E3_m896",
+    "--project",
+    "experiments/accuracy_improvement/training",
+    "--no-promote"
+  ],
+  "hyp": {},
+  "written": "2026-11-22T19:56:57",
+  "resume": false
+}

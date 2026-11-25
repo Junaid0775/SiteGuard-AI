@@ -1,0 +1,138 @@
+{
+  "pairs": 499500,
+  "cos_percentiles": {
+    "p50": -0.0055,
+    "p90": 0.5472,
+    "p99": 0.8039,
+    "p99.9": 0.8973,
+    "p99.99": 0.9376
+  },
+  "nearest_neighbour_cos": {
+    "median": 0.8363,
+    "p90": 0.9233,
+    "max": 0.9902
+  },
+  "pairs_above": {
+    "0.5": 62542,
+    "0.6": 37024,
+    "0.7": 17449,
+    "0.75": 10296,
+    "0.8": 5291,
+    "0.85": 2097,
+    "0.9": 443
+  },
+  "filename_sequence": {
+    "delta_1": {
+      "pairs": 706,
+      "mean_cos": 0.1552,
+      "p90": 0.6371
+    },
+    "delta_2": {
+      "pairs": 705,
+      "mean_cos": 0.0961,
+      "p90": 0.598
+    },
+    "delta_5": {
+      "pairs": 702,
+      "mean_cos": 0.0542,
+      "p90": 0.5347
+    },
+    "delta_10": {
+      "pairs": 697,
+      "mean_cos": 0.0057,
+      "p90": 0.499
+    },
+    "delta_50": {
+      "pairs": 657,
+      "mean_cos": 0.2626,
+      "p90": 0.7183
+    },
+    "random_pairs_same_family": {
+      "pairs": 4996,
+      "mean_cos": 0.0683,
+      "p90": 0.5713
+    }
+  },
+  "top10": [
+    {
+      "rank": 1,
+      "cos": 0.9902,
+      "image_a": "train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg",
+      "image_b": "train/source-efc23273c04e007083114c0f217335f0.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 2,
+      "cos": 0.9812,
+      "image_a": "train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg",
+      "image_b": "val/source-9e10b0409f922546c35b276eb5a5756e.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 3,
+      "cos": 0.9783,
+      "image_a": "train/source-efc23273c04e007083114c0f217335f0.jpg",
+      "image_b": "val/source-9e10b0409f922546c35b276eb5a5756e.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 4,
+      "cos": 0.9729,
+      "image_a": "train/source-76c5536c698f0876c67f76c14c3c2e96.jpg",
+      "image_b": "train/source-93168c9434209cfd03d41783e32cd24a.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 5,
+      "cos": 0.97,
+      "image_a": "train/source-6daa6a8b4e8186e0a15ad4dc6715f4d8.jpg",
+      "image_b": "val/source-3dec6deaf0d256258b125015a036bb67.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 6,
+      "cos": 0.9657,
+      "image_a": "val/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg",
+      "image_b": "val/source-aace0a9a1ad6cbfe9e492e99b2eb14e4.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 7,
+      "cos": 0.9632,
+      "image_a": "train/source-e32b16f1f50be861a165bdfdfcf4c520.jpg",
+      "image_b": "val/source-af866a11bbf9d7013ede2dedda277e6f.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 8,
+      "cos": 0.9595,
+      "image_a": "val/source-565c1ab59a24c4d04e0909ae74c93f0d.jpg",
+      "image_b": "val/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 9,
+      "cos": 0.9581,
+      "image_a": "train/source-d4bc2317d648708109fa99ccee349f2b.jpg",
+      "image_b": "val/source-565c1ab59a24c4d04e0909ae74c93f0d.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    },
+    {
+      "rank": 10,
+      "cos": 0.9572,
+      "image_a": "train/source-d4bc2317d648708109fa99ccee349f2b.jpg",
+      "image_b": "val/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg",
+      "family_a": "source",
+      "family_b": "source"
+    }
+  ]
+}

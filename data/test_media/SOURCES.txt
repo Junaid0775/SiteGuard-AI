@@ -1,0 +1,8 @@
+test_site_clip.mp4 is a slideshow built by scripts/make_test_video.py from these
+Ultralytics Construction-PPE validation images (CC BY 4.0). It is not real video footage.
+ultralytics-ppe-nov2026-021.jpg
+ultralytics-ppe-nov2026-022.jpg
+ultralytics-ppe-nov2026-023.jpg
+ultralytics-ppe-nov2026-024.jpg
+source-00f1fbfd9c8193a3c5a071512cf8c0a7.jpg
+source-150feca69395fa769adccdc8e157e935.jpg

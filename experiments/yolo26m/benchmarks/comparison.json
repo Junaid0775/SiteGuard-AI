@@ -1,0 +1,382 @@
+{
+  "overall_ultralytics_val": {
+    "precision": {
+      "yolo26n": 0.8322,
+      "yolo26m": 0.8909,
+      "abs_diff": 0.0587,
+      "pct_change": 7.1
+    },
+    "recall": {
+      "yolo26n": 0.6809,
+      "yolo26m": 0.7773,
+      "abs_diff": 0.0964,
+      "pct_change": 14.2
+    },
+    "mAP50": {
+      "yolo26n": 0.7339,
+      "yolo26m": 0.8311,
+      "abs_diff": 0.0972,
+      "pct_change": 13.2
+    },
+    "mAP50-95": {
+      "yolo26n": 0.5227,
+      "yolo26m": 0.6195,
+      "abs_diff": 0.0968,
+      "pct_change": 18.5
+    }
+  },
+  "operating_point_conf0.25_iou0.5": {
+    "precision": {
+      "yolo26n": 0.8842,
+      "yolo26m": 0.8849
+    },
+    "recall": {
+      "yolo26n": 0.745,
+      "yolo26m": 0.8281
+    },
+    "f1": {
+      "yolo26n": 0.8087,
+      "yolo26m": 0.8555
+    },
+    "tp": {
+      "yolo26n": 2206,
+      "yolo26m": 2452
+    },
+    "fp": {
+      "yolo26n": 289,
+      "yolo26m": 319
+    },
+    "fn": {
+      "yolo26n": 755,
+      "yolo26m": 509
+    },
+    "fp_per_image": {
+      "yolo26n": 1.445,
+      "yolo26m": 1.595
+    },
+    "contradiction_pairs": {
+      "yolo26n": 33,
+      "yolo26m": 16
+    },
+    "fp_types": {
+      "yolo26n": {
+        "background": 53,
+        "localization": 137,
+        "wrong_class": 93,
+        "duplicate": 6
+      },
+      "yolo26m": {
+        "wrong_class": 74,
+        "background": 89,
+        "localization": 151,
+        "duplicate": 5
+      }
+    }
+  },
+  "bootstrap": {
+    "method": "paired bootstrap over val images (B=1000, seed 0); metric recomputed on the same resample for both models; evaluator = audit evaluator at NMS IoU 0.5 (app setting)",
+    "point": {
+      "yolo26n": {
+        "mAP50": 0.7296424055054574,
+        "mAP50-95": 0.5142302039829089,
+        "recall@0.25": 0.7450185748058088
+      },
+      "yolo26m": {
+        "mAP50": 0.8150297491789614,
+        "mAP50-95": 0.6073185263063842,
+        "recall@0.25": 0.8280986153326579
+      }
+    },
+    "diff_mAP50": {
+      "m_minus_n": 0.0854,
+      "ci95": [
+        0.065,
+        0.1013
+      ],
+      "share_of_resamples_m_better": 1.0
+    },
+    "diff_mAP50-95": {
+      "m_minus_n": 0.0931,
+      "ci95": [
+        0.0813,
+        0.1033
+      ],
+      "share_of_resamples_m_better": 1.0
+    },
+    "diff_recall@0.25": {
+      "m_minus_n": 0.0831,
+      "ci95": [
+        0.0686,
+        0.0964
+      ],
+      "share_of_resamples_m_better": 1.0
+    }
+  },
+  "latency_memory": {
+    "yolo26n": {
+      "weights": "models/trained/best.pt",
+      "sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b",
+      "size_bytes": 5443013,
+      "params_unfused": 2539232,
+      "load_s_median_of_5": 0.011,
+      "first_detect_s": 0.698,
+      "mps_driver_allocated_mb_after": 100.5,
+      "frames_1280x720": {
+        "n": 60,
+        "mean": 8.0,
+        "median": 7.91,
+        "p95": 9.14,
+        "max": 9.99,
+        "throughput_fps_sequential": 125.0
+      },
+      "val_full_resolution": {
+        "n": 60,
+        "mean": 14.63,
+        "median": 8.83,
+        "p95": 17.41,
+        "max": 118.31,
+        "throughput_fps_sequential": 68.4
+      }
+    },
+    "yolo26m": {
+      "weights": "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt",
+      "sha256": "399c4e5be335e3544afe185c7abb08d5fc894a382b891d970f71b94df3f1773f",
+      "size_bytes": 44029401,
+      "params_unfused": 21791392,
+      "load_s_median_of_5": 0.018,
+      "first_detect_s": 0.259,
+      "mps_driver_allocated_mb_after": 1213.5,
+      "frames_1280x720": {
+        "n": 60,
+        "mean": 25.04,
+        "median": 25.02,
+        "p95": 25.52,
+        "max": 26.42,
+        "throughput_fps_sequential": 39.9
+      },
+      "val_full_resolution": {
+        "n": 60,
+        "mean": 33.31,
+        "median": 28.72,
+        "p95": 35.86,
+        "max": 115.29,
+        "throughput_fps_sequential": 30.0
+      }
+    }
+  },
+  "visual_examples": [
+    {
+      "file": "source-4cd393d3dd8a7a83a25d413bdeadfd23.jpg",
+      "category": "easy"
+    },
+    {
+      "file": "source-9e10b0409f922546c35b276eb5a5756e.jpg",
+      "category": "easy"
+    },
+    {
+      "file": "source-b08681d985288f3ddcc52556c4445bab.jpg",
+      "category": "difficult"
+    },
+    {
+      "file": "source-63861e8188160ca09d7e331600db6cad.jpg",
+      "category": "difficult"
+    },
+    {
+      "file": "ultralytics-ppe-nov2026-022.jpg",
+      "category": "small_objects"
+    },
+    {
+      "file": "ultralytics-ppe-nov2026-024.jpg",
+      "category": "small_objects"
+    },
+    {
+      "file": "source-560a65e44fe956bc3c118c607d5f8c05.jpg",
+      "category": "crowded_occlusion_proxy"
+    },
+    {
+      "file": "source-00f1fbfd9c8193a3c5a071512cf8c0a7.jpg",
+      "category": "overhead_view"
+    },
+    {
+      "file": "source-150feca69395fa769adccdc8e157e935.jpg",
+      "category": "overhead_view"
+    },
+    {
+      "file": "ultralytics-ppe-nov2026-071.jpg",
+      "category": "side_view"
+    },
+    {
+      "file": "source-c80c8c85444532b3d6bbd799e6c9c4b8.jpg",
+      "category": "low_light"
+    },
+    {
+      "file": "ultralytics-ppe-nov2026-248.jpg",
+      "category": "low_light"
+    },
+    {
+      "file": "source-801ff8c7ea69847ba9cc5dcfb4df1892.jpg",
+      "category": "false_positive_heavy"
+    },
+    {
+      "file": "source-884ce8ac82984a62565821b150882347.jpg",
+      "category": "false_positive_heavy"
+    },
+    {
+      "file": "source-38d248f0e2100035cc7c30a81392baa8.jpg",
+      "category": "conflicting_boxes"
+    },
+    {
+      "file": "source-3f184ae68fc6f7534cd774fed7b212fb.jpg",
+      "category": "conflicting_boxes"
+    }
+  ],
+  "webcam_style": {
+    "yolo26n_val_webcam_style_crops": {
+      "images": 164,
+      "gt_objects": 1168,
+      "tp": 1016,
+      "fp": 101,
+      "fn": 152,
+      "precision": 0.909579230080573,
+      "recall": 0.8698630136986302,
+      "mAP50": 0.829859495763951,
+      "mAP50-95": 0.6134194135314066,
+      "fp_types": {
+        "background": 25,
+        "wrong_class": 23,
+        "localization": 51,
+        "duplicate": 2
+      }
+    },
+    "yolo26n_real_webcam_10frames_imgsz640": {
+      "images": 10,
+      "gt_objects": 30,
+      "tp": 10,
+      "fp": 15,
+      "fn": 20,
+      "precision": 0.4,
+      "recall": 0.3333333333333333,
+      "fp_types": {
+        "localization": 15
+      }
+    },
+    "yolo26n_real_webcam_10frames_imgsz320": {
+      "images": 10,
+      "gt_objects": 30,
+      "tp": 30,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "fp_types": {
+        "localization": 1
+      }
+    },
+    "yolo26m_val_webcam_style_crops": {
+      "images": 164,
+      "gt_objects": 1168,
+      "tp": 1075,
+      "fp": 102,
+      "fn": 93,
+      "precision": 0.913338997451147,
+      "recall": 0.9203767123287672,
+      "mAP50": 0.8764274109243867,
+      "mAP50-95": 0.6616512075999038,
+      "fp_types": {
+        "background": 27,
+        "localization": 57,
+        "wrong_class": 16,
+        "duplicate": 2
+      }
+    },
+    "yolo26m_real_webcam_10frames_imgsz640": {
+      "images": 10,
+      "gt_objects": 30,
+      "tp": 10,
+      "fp": 16,
+      "fn": 20,
+      "precision": 0.38461538461538464,
+      "recall": 0.3333333333333333,
+      "fp_types": {
+        "background": 9,
+        "localization": 7
+      }
+    },
+    "yolo26m_real_webcam_10frames_imgsz320": {
+      "images": 10,
+      "gt_objects": 30,
+      "tp": 29,
+      "fp": 7,
+      "fn": 1,
+      "precision": 0.8055555555555556,
+      "recall": 0.9666666666666667,
+      "fp_types": {
+        "localization": 5,
+        "background": 2
+      }
+    },
+    "note": "real webcam = 10 frames of ONE indoor scene with one person (REPORT-009 \u00a75.6); results describe that scene only. Frames are private and are not reproduced in reports."
+  },
+  "small_object_recall": {
+    "Person|small(<0.01)": {
+      "gt": 186,
+      "yolo26n": 0.7581,
+      "yolo26m": 0.8978
+    },
+    "boots|small(<0.01)": {
+      "gt": 340,
+      "yolo26n": 0.6088,
+      "yolo26m": 0.75
+    },
+    "forklift|small(<0.01)": {
+      "gt": 10,
+      "yolo26n": 0.5,
+      "yolo26m": 0.7
+    },
+    "gloves|small(<0.01)": {
+      "gt": 340,
+      "yolo26n": 0.7088,
+      "yolo26m": 0.8206
+    },
+    "goggles|small(<0.01)": {
+      "gt": 128,
+      "yolo26n": 0.9375,
+      "yolo26m": 0.9688
+    },
+    "helmet|small(<0.01)": {
+      "gt": 202,
+      "yolo26n": 0.6931,
+      "yolo26m": 0.8515
+    },
+    "no_boots|small(<0.01)": {
+      "gt": 149,
+      "yolo26n": 0.6443,
+      "yolo26m": 0.6779
+    },
+    "no_gloves|small(<0.01)": {
+      "gt": 200,
+      "yolo26n": 0.565,
+      "yolo26m": 0.695
+    },
+    "no_goggle|small(<0.01)": {
+      "gt": 82,
+      "yolo26n": 0.1707,
+      "yolo26m": 0.4756
+    },
+    "no_helmet|small(<0.01)": {
+      "gt": 130,
+      "yolo26n": 0.4692,
+      "yolo26m": 0.6308
+    },
+    "no_vest|small(<0.01)": {
+      "gt": 59,
+      "yolo26n": 0.2034,
+      "yolo26m": 0.3559
+    },
+    "vest|small(<0.01)": {
+      "gt": 178,
+      "yolo26n": 0.7079,
+      "yolo26m": 0.7921
+    }
+  }
+}

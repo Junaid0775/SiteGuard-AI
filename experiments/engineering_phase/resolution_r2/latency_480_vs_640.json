@@ -1,0 +1,36 @@
+{
+  "imgsz480": {
+    "inference_ms": {
+      "mean": 7.54,
+      "median": 7.03,
+      "p95": 11.1,
+      "max": 24.9,
+      "n": 200
+    },
+    "receive_to_render_ms": {
+      "mean": 7.83,
+      "median": 7.27,
+      "p95": 11.41,
+      "max": 25.62,
+      "n": 200
+    },
+    "max_throughput_fps": 126.01
+  },
+  "imgsz640": {
+    "inference_ms": {
+      "mean": 7.83,
+      "median": 7.79,
+      "p95": 8.18,
+      "max": 9.46,
+      "n": 200
+    },
+    "receive_to_render_ms": {
+      "mean": 8.11,
+      "median": 8.02,
+      "p95": 8.66,
+      "max": 9.69,
+      "n": 200
+    },
+    "max_throughput_fps": 120.57
+  }
+}

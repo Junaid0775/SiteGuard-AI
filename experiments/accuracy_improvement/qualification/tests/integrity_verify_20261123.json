@@ -1,0 +1,34 @@
+{
+  "verified_at": "2026-11-23T03:56:41",
+  "manifest_dir": "experiments/accuracy_improvement/manifests/20261120-005540_phase0",
+  "dataset.csv": {
+    "listed": 2004,
+    "changed": [],
+    "missing": [],
+    "volatile_changed": [],
+    "new_files": []
+  },
+  "protected.csv": {
+    "listed": 824,
+    "changed": [
+      "app.py",
+      "configs/settings.yaml",
+      "docs/IMPLEMENTATION_LOG.md",
+      "experiments/training.log",
+      "scripts/engineering/realtime_eval.py",
+      "src/detection/detector.py",
+      "src/training/train.py"
+    ],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "user_data.csv": {
+    "listed": 313,
+    "changed": [
+      "outputs/siteguard_events.db"
+    ],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "critical_violations": 0
+}

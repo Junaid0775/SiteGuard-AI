@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Ultralytics local config (settings.json, fonts)
+.ultralytics/
+
+# Generated data (rebuild with: python -m src.utils.dataset_tools)
+data/dataset_mirror/
+data/generated/
+data/viewpoint_sheets/*.jpg
+
+# Large/binary artefacts
+*.pt
+!models/trained/.gitkeep
+experiments/**/weights/
+outputs/videos/
+outputs/evidence/
+outputs/images/
+outputs/*.db
+data/test_media/*.mp4
+
+# macOS
+.DS_Store
+
+# Live-audit webcam captures may show people: keep them local
+experiments/live_audit/webcam/
+
+# Added 25 November 2026, before the first GitHub push.
+# Private data and dataset imagery stay on this computer.
+outputs/
+experiments/camera_quality_audit/logs/
+experiments/accuracy_improvement/datasets/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+
+# Images and videos are excluded by default (dataset images, camera frames, training mosaics)
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+*.webp
+*.gif
+*.bmp
+*.mp4
+*.mov
+*.avi
+*.webm
+*.mkv
+
+# Exceptions: project images that are safe to share
+!static/siteguard_background.webp
+!assets/images/*.png
+!experiments/frontend_redesign/evidence/reference_match/*_redacted.png
+!**/confusion_matrix_normalized.png
+!**/confusion_matrix.png
+!**/BoxPR_curve.png
+!**/BoxP_curve.png
+!**/BoxR_curve.png
+!**/BoxF1_curve.png
+!**/results.png
+
+# Other large or regenerable files
+*.onnx
+*.npz
+*.log
+*.out
+*.tmp
+
+# Presentation: local copies and preview renders
+presentation/backup/
+presentation/previews/
+presentation/_thumbs/

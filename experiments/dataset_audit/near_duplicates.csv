@@ -1,0 +1,14 @@
+path_a,split_a,path_b,split_b,dhash_distance,phash_distance,cross_split,category,review_status
+images/train/source-efc23273c04e007083114c0f217335f0.jpg,train,images/val/source-9e10b0409f922546c35b276eb5a5756e.jpg,val,4,6,True,near-duplicate,pending visual review
+images/train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,train,images/train/source-efc23273c04e007083114c0f217335f0.jpg,train,3,12,False,similar,pending visual review
+images/train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,train,images/val/source-9e10b0409f922546c35b276eb5a5756e.jpg,val,5,12,True,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-069.jpg,train,images/train/ultralytics-ppe-nov2026-310.jpg,train,7,20,False,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-490.jpg,train,images/train/ultralytics-ppe-nov2026-626.jpg,train,10,18,False,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-569.jpg,train,images/val/source-9b649b7415bcb389744b5dcc00c39a00.jpg,val,9,20,True,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-163.jpg,train,images/train/ultralytics-ppe-nov2026-429.jpg,train,9,22,False,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-460.jpg,train,images/val/source-8497dd5065ce426e2d223085b4a773a0.jpg,val,8,24,True,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-541.jpg,train,images/val/ultralytics-ppe-nov2026-549.jpg,val,10,24,True,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-069.jpg,train,images/val/ultralytics-ppe-nov2026-472.jpg,val,10,26,True,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-251.jpg,train,images/train/ultralytics-ppe-nov2026-427.jpg,train,10,30,False,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-363.jpg,train,images/train/ultralytics-ppe-nov2026-415.jpg,train,10,34,False,similar,pending visual review
+images/train/ultralytics-ppe-nov2026-569.jpg,train,images/val/ultralytics-ppe-nov2026-298.jpg,val,10,36,True,similar,pending visual review

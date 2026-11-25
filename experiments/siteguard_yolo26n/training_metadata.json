@@ -1,0 +1,56 @@
+{
+  "created": "2026-11-19T18:59:42",
+  "pretrained_weights": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained/yolo26n.pt",
+  "train_params": {
+    "data": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/data/generated/dataset_resolved.yaml",
+    "epochs": 30,
+    "imgsz": 640,
+    "batch": 8,
+    "workers": 4,
+    "patience": 15,
+    "device": "mps",
+    "seed": 42,
+    "deterministic": true,
+    "cache": false,
+    "optimizer": "auto",
+    "amp": true,
+    "project": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments",
+    "name": "siteguard_yolo26n",
+    "exist_ok": false,
+    "pretrained": true,
+    "plots": true,
+    "val": true,
+    "fraction": 1.0
+  },
+  "duration_seconds": 1273.4,
+  "epochs_completed": 30,
+  "best_fitness": 0.52348,
+  "final_val_metrics": {
+    "metrics/precision(B)": 0.8322697203903088,
+    "metrics/recall(B)": 0.6795004481506194,
+    "metrics/mAP50(B)": 0.7339379007711995,
+    "metrics/mAP50-95(B)": 0.5231077111974749
+  },
+  "versions": {
+    "python": "3.12.16",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.15.0",
+    "ultralytics": "8.4.215",
+    "mps_available": true
+  },
+  "class_names": {
+    "0": "helmet",
+    "1": "gloves",
+    "2": "vest",
+    "3": "boots",
+    "4": "goggles",
+    "5": "Person",
+    "6": "no_helmet",
+    "7": "no_goggle",
+    "8": "no_gloves",
+    "9": "no_boots",
+    "10": "forklift",
+    "11": "no_vest"
+  }
+}

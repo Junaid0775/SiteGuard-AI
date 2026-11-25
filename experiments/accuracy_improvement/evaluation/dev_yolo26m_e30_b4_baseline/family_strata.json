@@ -1,0 +1,44 @@
+{
+  "source": {
+    "images": 59,
+    "gt_objects": 1287,
+    "mAP50": 0.6283,
+    "mAP50-95": 0.3761,
+    "precision_op": 0.8111,
+    "recall_op": 0.6939,
+    "missing_ppe_recall_op": {
+      "no_helmet": 0.5312,
+      "no_gloves": 0.4421,
+      "no_goggle": 0.6667,
+      "no_boots": 0.18,
+      "no_vest": 0.4237
+    },
+    "fp_types": {
+      "wrong_class": 37,
+      "background": 70,
+      "localization": 97,
+      "duplicate": 4
+    }
+  },
+  "ultralytics-ppe": {
+    "images": 141,
+    "gt_objects": 1674,
+    "mAP50": 0.9063,
+    "mAP50-95": 0.7442,
+    "precision_op": 0.9335,
+    "recall_op": 0.9313,
+    "missing_ppe_recall_op": {
+      "no_helmet": 0.9277,
+      "no_gloves": 0.9259,
+      "no_goggle": 0.4219,
+      "no_boots": 0.8906,
+      "no_vest": 0.9155
+    },
+    "fp_types": {
+      "localization": 54,
+      "wrong_class": 37,
+      "background": 19,
+      "duplicate": 1
+    }
+  }
+}

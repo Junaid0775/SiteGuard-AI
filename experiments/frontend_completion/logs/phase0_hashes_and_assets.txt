@@ -1,0 +1,31 @@
+== handoff docs
+431512ea5860bc70e989397f66c9f40a9a449e747d76bc3f696e8e690a8dd960  experiments/accuracy_improvement/reports/HANDOFF-ML-to-frontend.md
+91de087f779e0bc0ea9ca5ac18f80abb661c1aeb3a055fef6f37854ede19f616  experiments/accuracy_improvement/reports/REPORT-022-training-experiment-matrix.md
+71f3eed14c2df892f7b125ebf09c4766feb74cef392bf877bd3428dd21804396  experiments/accuracy_improvement/reports/REPORT-023-model-comparison-and-error-analysis.md
+310f4133d735a7e89ad41705bb0c663c53650e85000571462d7643e3984ae7e6  experiments/accuracy_improvement/reports/REPORT-024-qualification-and-integration.md
+f212910d1dcbc3d06d7321a3e26611cad477677738bb895e7c314487767a3433  experiments/accuracy_improvement/reports/REPORT-025-final-research-decision.md
+e7ef5e9cb1b98af20a15b6cfdb0f86b7deb33da9d7abcbc4cd93adce4659f64f  experiments/accuracy_improvement/README.md
+== checkpoints
+890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b  models/trained/best.pt
+590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6  models/trained/yolo26m_accuracy_candidate/yolo26m_e3_896_v1/best.pt
+f42a7e0a9ad061e522c4d4f2ce83469fd4b20d4b57561327cf0a78f75038dd71  models/trained/yolo26m_accuracy_candidate/yolo26m_e3_896_v1/model_card.json
+399c4e5be335e3544afe185c7abb08d5fc894a382b891d970f71b94df3f1773f  experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt
+401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7  models/pretrained/yolo26m.pt
+9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef  models/pretrained/yolo26n.pt
+== backups
+f5dec9085306fa1669da3b381fb5a42e3a1666edfb2e68ac2fbc04ae0093f25a  experiments/frontend_completion/backups/20261123-phase0/README.md
+569e58d8ecc47cb03e1aeda9898340710bf0191f2bab77d512f7b9cd18763d8e  experiments/frontend_completion/backups/20261123-phase0/app.py
+125571ea63e64f7191a81a387f3916ae39c1ff9dc583200c980627bc49a6988d  experiments/frontend_completion/backups/20261123-phase0/config.toml
+125571ea63e64f7191a81a387f3916ae39c1ff9dc583200c980627bc49a6988d  experiments/frontend_completion/backups/20261123-phase0/streamlit_config.toml
+== events db
+outputs/siteguard_events.db 36864 bytes mtime 2026-11-20 21:19:11
+== evidence
+     125
+ 21M
+evidence
+images
+logs
+reports
+siteguard_events.db
+streamlit_server.log
+videos

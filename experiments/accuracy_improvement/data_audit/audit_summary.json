@@ -1,0 +1,271 @@
+{
+  "counts": {
+    "images": 1000,
+    "annotations": 14863,
+    "invalid_rows": 0,
+    "boxes_extending_beyond_image": 0,
+    "empty_label_files": 0,
+    "unreadable_images": 0,
+    "train_images_without_label": 0,
+    "train_labels_without_image": 0,
+    "val_images_without_label": 0,
+    "val_labels_without_image": 0
+  },
+  "invalid_examples": [],
+  "beyond_examples": [],
+  "families": {
+    "train/source": 234,
+    "train/ultralytics-ppe": 566,
+    "val/source": 59,
+    "val/ultralytics-ppe": 141
+  },
+  "image_dimensions": {
+    "all": {
+      "images": 1000,
+      "width_min_med_max": [
+        1152,
+        2048,
+        2048
+      ],
+      "height_min_med_max": [
+        848,
+        1360,
+        2048
+      ],
+      "aspect_min_med_max": [
+        0.562,
+        1.506,
+        1.778
+      ],
+      "orientation": {
+        "landscape": 577,
+        "portrait": 282,
+        "square": 141
+      },
+      "distinct_sizes": 9,
+      "top_sizes": [
+        [
+          "2048x1360",
+          361
+        ],
+        [
+          "2048x1152",
+          141
+        ],
+        [
+          "1360x2048",
+          141
+        ],
+        [
+          "1152x2048",
+          141
+        ],
+        [
+          "2048x2048",
+          141
+        ]
+      ],
+      "brightness_median": 118.0,
+      "boxes_per_image_median": 12.0,
+      "persons_per_image_median": 2.0
+    },
+    "source": {
+      "images": 293,
+      "width_min_med_max": [
+        1264,
+        2048,
+        2048
+      ],
+      "height_min_med_max": [
+        848,
+        1360,
+        1536
+      ],
+      "aspect_min_med_max": [
+        1.333,
+        1.506,
+        1.506
+      ],
+      "orientation": {
+        "landscape": 293
+      },
+      "distinct_sizes": 5,
+      "top_sizes": [
+        [
+          "2048x1360",
+          218
+        ],
+        [
+          "1536x1024",
+          42
+        ],
+        [
+          "2048x1536",
+          26
+        ],
+        [
+          "1448x1086",
+          5
+        ],
+        [
+          "1264x848",
+          2
+        ]
+      ],
+      "brightness_median": 123.8,
+      "boxes_per_image_median": 23.0,
+      "persons_per_image_median": 4.0
+    },
+    "ultralytics-ppe": {
+      "images": 707,
+      "width_min_med_max": [
+        1152,
+        2048,
+        2048
+      ],
+      "height_min_med_max": [
+        1152,
+        2048,
+        2048
+      ],
+      "aspect_min_med_max": [
+        0.562,
+        1.0,
+        1.778
+      ],
+      "orientation": {
+        "landscape": 284,
+        "portrait": 282,
+        "square": 141
+      },
+      "distinct_sizes": 5,
+      "top_sizes": [
+        [
+          "2048x1360",
+          143
+        ],
+        [
+          "2048x1152",
+          141
+        ],
+        [
+          "1360x2048",
+          141
+        ],
+        [
+          "1152x2048",
+          141
+        ],
+        [
+          "2048x2048",
+          141
+        ]
+      ],
+      "brightness_median": 116.4,
+      "boxes_per_image_median": 9.0,
+      "persons_per_image_median": 1.0
+    }
+  },
+  "overlaps_iou_ge_0.5": {
+    "cross_class:Person|vest": 59,
+    "cross_class:Person|no_vest": 47,
+    "cross_class:Person|forklift": 7,
+    "cross_class:Person|helmet": 5,
+    "cross_class:goggles|no_helmet": 5,
+    "cross_class:Person|no_helmet": 4,
+    "same_class_overlap": 3,
+    "cross_class:helmet|vest": 3,
+    "cross_class:no_goggle|no_helmet": 2,
+    "cross_class:boots|gloves": 1,
+    "cross_class:gloves|helmet": 1,
+    "cross_class:no_helmet|vest": 1,
+    "person_person_overlap": 1,
+    "cross_class:goggles|helmet": 1,
+    "cross_class:no_helmet|no_vest": 1
+  },
+  "person_annotation_gaps": {
+    "likely_unlabelled_person_clusters": 5,
+    "images_with_such_clusters": 5,
+    "images_with_ppe_items_but_no_person_box": 1
+  },
+  "similarity": {
+    "candidate_pairs": 13,
+    "counts": {
+      "train-train: background_masked_corr>=0.85": 1,
+      "train-train: dhash<=5": 1,
+      "train-val: background_masked_corr>=0.85": 2,
+      "train-val: dhash<=5": 2,
+      "train-val: phash<=8": 1
+    }
+  },
+  "suspect_reconciliation": {
+    "rule_based_rederived": 148,
+    "earlier_rule_based_rows": 148,
+    "matched_to_earlier": 148,
+    "earlier_unmatched": 0,
+    "by_issue": {
+      "ppe_without_person/low": 75,
+      "missing_ppe_without_person/high": 51,
+      "extreme_aspect/medium": 15,
+      "item_as_large_as_person/medium": 7
+    }
+  },
+  "resolvability": {
+    "boxes_min_side_lt4px_at_640": 315,
+    "boxes_min_side_lt8px_at_640": 2207,
+    "boxes_min_side_lt8px_native": 36,
+    "boxes_touching_boundary": 1065
+  },
+  "viewpoint_ai_assisted": {
+    "method": [
+      "manual visual inspection of contact-sheet thumbnails"
+    ],
+    "viewpoint": {
+      "train/frontal": 527,
+      "train/low_angle": 10,
+      "train/overhead": 166,
+      "train/side": 84,
+      "train/unclear": 13,
+      "val/frontal": 112,
+      "val/low_angle": 3,
+      "val/overhead": 53,
+      "val/side": 32
+    },
+    "image_group": {
+      "train/close_up": 530,
+      "train/scene": 270,
+      "val/close_up": 141,
+      "val/scene": 59
+    }
+  },
+  "instances_by_family": {
+    "source": {
+      "helmet": 860,
+      "gloves": 533,
+      "vest": 1079,
+      "boots": 1124,
+      "goggles": 23,
+      "Person": 1364,
+      "no_helmet": 492,
+      "no_goggle": 95,
+      "no_gloves": 501,
+      "no_boots": 238,
+      "forklift": 131,
+      "no_vest": 252
+    },
+    "ultralytics-ppe": {
+      "helmet": 716,
+      "gloves": 1396,
+      "vest": 737,
+      "boots": 1360,
+      "goggles": 728,
+      "Person": 1079,
+      "no_helmet": 321,
+      "no_goggle": 252,
+      "no_gloves": 541,
+      "no_boots": 509,
+      "forklift": 217,
+      "no_vest": 315
+    }
+  }
+}

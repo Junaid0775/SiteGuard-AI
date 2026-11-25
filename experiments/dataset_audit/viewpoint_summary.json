@@ -1,0 +1,38 @@
+{
+  "source": "data/viewpoint_metadata.csv",
+  "images": 1000,
+  "labelling_method": [
+    "manual visual inspection of contact-sheet thumbnails"
+  ],
+  "reliability": "AI-assisted thumbnail judgements (REPORT-003); NOT independently human-verified",
+  "by_viewpoint": {
+    "overhead": 219,
+    "frontal": 639,
+    "unclear": 13,
+    "side": 116,
+    "low_angle": 13
+  },
+  "by_viewpoint_and_split": {
+    "overhead|train": 166,
+    "frontal|train": 527,
+    "unclear|train": 13,
+    "side|train": 84,
+    "low_angle|train": 10,
+    "overhead|val": 53,
+    "frontal|val": 112,
+    "low_angle|val": 3,
+    "side|val": 32
+  },
+  "by_viewpoint_and_group": {
+    "overhead|scene": 215,
+    "frontal|scene": 92,
+    "unclear|scene": 6,
+    "side|scene": 4,
+    "low_angle|scene": 12,
+    "frontal|close_up": 547,
+    "side|close_up": 112,
+    "low_angle|close_up": 1,
+    "unclear|close_up": 7,
+    "overhead|close_up": 4
+  }
+}

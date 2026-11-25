@@ -1,0 +1,40 @@
+{
+  "hypothesis": "Square-root inverse-frequency class weights (cls_pw 0.5) raise the learning signal of the rare missing-PPE classes (no_goggle 219 and no_vest 344 training instances vs boots 1,563)",
+  "changed": [
+    "cls_pw 0.0 -> 0.5"
+  ],
+  "fixed": "YOLO26m architecture and pretrained weights; train/dev split v1; AdamW auto (lr0 0.000625); nominal batch 64; seed 42; Ultralytics 8.4.215 defaults except the changed variable",
+  "expected": "Higher recall for no_goggle / no_vest / no_boots; possible precision loss on frequent classes",
+  "success": "Missing-PPE recall above E1 without a larger loss in precision",
+  "name": "E5_m640_clspw",
+  "arguments": [
+    "--weights",
+    "models/pretrained/yolo26m.pt",
+    "--data",
+    "experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "--epochs",
+    "30",
+    "--imgsz",
+    "640",
+    "--batch",
+    "4",
+    "--patience",
+    "15",
+    "--seed",
+    "42",
+    "--fraction",
+    "1.0",
+    "--name",
+    "E5_m640_clspw",
+    "--project",
+    "experiments/accuracy_improvement/training",
+    "--no-promote",
+    "--hyp",
+    "experiments/accuracy_improvement/training/configs/E5_m640_clspw.hyp.yaml"
+  ],
+  "hyp": {
+    "cls_pw": 0.5
+  },
+  "written": "2026-11-22T23:19:35",
+  "resume": false
+}

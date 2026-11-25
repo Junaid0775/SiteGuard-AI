@@ -1,0 +1,17 @@
+file,category,gt,n_tp,n_fp,n_fn,m_tp,m_fp,m_fn,verdict_tp_minus_fp
+source-4cd393d3dd8a7a83a25d413bdeadfd23.jpg,easy,8,8,1,0,8,0,0,yolo26m better
+source-9e10b0409f922546c35b276eb5a5756e.jpg,easy,8,8,2,0,8,0,0,yolo26m better
+source-b08681d985288f3ddcc52556c4445bab.jpg,difficult,23,4,4,19,8,4,15,yolo26m better
+source-63861e8188160ca09d7e331600db6cad.jpg,difficult,17,3,0,14,4,0,13,yolo26m better
+ultralytics-ppe-nov2026-022.jpg,small_objects,59,35,6,24,48,10,11,yolo26m better
+ultralytics-ppe-nov2026-024.jpg,small_objects,61,46,5,15,53,9,8,yolo26m better
+source-560a65e44fe956bc3c118c607d5f8c05.jpg,crowded_occlusion_proxy,37,11,3,26,14,8,23,yolo26m worse
+source-00f1fbfd9c8193a3c5a071512cf8c0a7.jpg,overhead_view,8,7,0,1,8,1,0,equal
+source-150feca69395fa769adccdc8e157e935.jpg,overhead_view,13,4,4,9,5,3,8,yolo26m better
+ultralytics-ppe-nov2026-071.jpg,side_view,8,8,0,0,8,0,0,equal
+source-c80c8c85444532b3d6bbd799e6c9c4b8.jpg,low_light,26,16,7,10,22,4,4,yolo26m better
+ultralytics-ppe-nov2026-248.jpg,low_light,8,8,2,0,8,0,0,yolo26m better
+source-801ff8c7ea69847ba9cc5dcfb4df1892.jpg,false_positive_heavy,27,18,7,9,21,4,6,yolo26m better
+source-884ce8ac82984a62565821b150882347.jpg,false_positive_heavy,26,18,7,8,21,3,5,yolo26m better
+source-38d248f0e2100035cc7c30a81392baa8.jpg,conflicting_boxes,24,16,5,8,15,8,9,yolo26m worse
+source-3f184ae68fc6f7534cd774fed7b212fb.jpg,conflicting_boxes,23,9,3,14,13,7,10,equal

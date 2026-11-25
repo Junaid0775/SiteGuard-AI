@@ -1,0 +1,6 @@
+image,boxes,regions,annotation_ids,classes
+train/source-4c8b02d254dd8190897f4ce0e54ef9f7.jpg,2,feet hands,train/source-4c8b02d254dd8190897f4ce0e54ef9f7#L42 train/source-4c8b02d254dd8190897f4ce0e54ef9f7#L44,boots gloves
+train/source-8abad491606bbd2343029bf42b48208e.jpg,2,hands head,train/source-8abad491606bbd2343029bf42b48208e#L3 train/source-8abad491606bbd2343029bf42b48208e#L24,helmet gloves
+train/source-9ee9d4ea8bef38f97faecd6be074f904.jpg,2,head torso,train/source-9ee9d4ea8bef38f97faecd6be074f904#L1 train/source-9ee9d4ea8bef38f97faecd6be074f904#L2,helmet vest
+train/source-d6cf98f5a426285e1ad496703b33cf93.jpg,2,feet head,train/source-d6cf98f5a426285e1ad496703b33cf93#L19 train/source-d6cf98f5a426285e1ad496703b33cf93#L22,helmet boots
+train/ultralytics-ppe-nov2026-265.jpg,3,feet hands,train/ultralytics-ppe-nov2026-265#L9 train/ultralytics-ppe-nov2026-265#L10 train/ultralytics-ppe-nov2026-265#L11,gloves boots boots

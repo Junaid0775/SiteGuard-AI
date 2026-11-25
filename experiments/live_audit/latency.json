@@ -1,0 +1,82 @@
+{
+  "mps_320": {
+    "device": "mps",
+    "imgsz": 320,
+    "detect_ms_mean": 6.7,
+    "detect_ms_p95": 8.0,
+    "callback_ms_mean": 6.9,
+    "max_analysed_fps": 144.3
+  },
+  "mps_480": {
+    "device": "mps",
+    "imgsz": 480,
+    "detect_ms_mean": 6.9,
+    "detect_ms_p95": 7.0,
+    "callback_ms_mean": 7.0,
+    "max_analysed_fps": 142.3
+  },
+  "mps_640": {
+    "device": "mps",
+    "imgsz": 640,
+    "detect_ms_mean": 7.7,
+    "detect_ms_p95": 7.9,
+    "callback_ms_mean": 7.9,
+    "max_analysed_fps": 127.3
+  },
+  "mps_800": {
+    "device": "mps",
+    "imgsz": 800,
+    "detect_ms_mean": 9.1,
+    "detect_ms_p95": 10.1,
+    "callback_ms_mean": 9.2,
+    "max_analysed_fps": 108.2
+  },
+  "mps_960": {
+    "device": "mps",
+    "imgsz": 960,
+    "detect_ms_mean": 10.0,
+    "detect_ms_p95": 10.3,
+    "callback_ms_mean": 10.2,
+    "max_analysed_fps": 98.5
+  },
+  "cpu_320": {
+    "device": "cpu",
+    "imgsz": 320,
+    "detect_ms_mean": 6.0,
+    "detect_ms_p95": 6.1,
+    "callback_ms_mean": 6.1,
+    "max_analysed_fps": 163.4
+  },
+  "cpu_480": {
+    "device": "cpu",
+    "imgsz": 480,
+    "detect_ms_mean": 11.2,
+    "detect_ms_p95": 12.6,
+    "callback_ms_mean": 11.4,
+    "max_analysed_fps": 87.9
+  },
+  "cpu_640": {
+    "device": "cpu",
+    "imgsz": 640,
+    "detect_ms_mean": 15.8,
+    "detect_ms_p95": 18.5,
+    "callback_ms_mean": 16.0,
+    "max_analysed_fps": 62.4
+  },
+  "cpu_800": {
+    "device": "cpu",
+    "imgsz": 800,
+    "detect_ms_mean": 21.6,
+    "detect_ms_p95": 22.0,
+    "callback_ms_mean": 21.8,
+    "max_analysed_fps": 45.8
+  },
+  "cpu_960": {
+    "device": "cpu",
+    "imgsz": 960,
+    "detect_ms_mean": 28.1,
+    "detect_ms_p95": 28.8,
+    "callback_ms_mean": 28.3,
+    "max_analysed_fps": 35.3
+  }
+}

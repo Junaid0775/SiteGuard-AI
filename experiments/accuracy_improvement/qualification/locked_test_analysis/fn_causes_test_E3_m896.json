@@ -1,0 +1,71 @@
+{
+ "split": "locked test (160 images)",
+ "model": "E3_m896 at 896",
+ "conf": 0.25,
+ "definition": "GT box with no same-class prediction at IoU>=0.5 (greedy); cause = best-overlapping prediction of any class; size = short side scaled to a 640-px long side",
+ "results": {
+  "no_helmet": {
+   "fn": 37,
+   "causes": {
+    "nothing": 20,
+    "same class, IoU 0.3-0.5": 8,
+    "other class: helmet": 7,
+    "other class: Person": 1,
+    "other class: vest": 1
+   },
+   "under_8px_at_640": 31,
+   "median_short_side_640": 4.5
+  },
+  "no_gloves": {
+   "fn": 64,
+   "causes": {
+    "nothing": 47,
+    "other class: gloves": 9,
+    "same class, IoU 0.3-0.5": 8
+   },
+   "under_8px_at_640": 41,
+   "median_short_side_640": 6.7
+  },
+  "no_goggle": {
+   "fn": 22,
+   "causes": {
+    "nothing": 15,
+    "same class, IoU 0.3-0.5": 4,
+    "other class: goggles": 3
+   },
+   "under_8px_at_640": 16,
+   "median_short_side_640": 6.8
+  },
+  "no_boots": {
+   "fn": 22,
+   "causes": {
+    "other class: boots": 13,
+    "same class, IoU 0.3-0.5": 6,
+    "nothing": 3
+   },
+   "under_8px_at_640": 13,
+   "median_short_side_640": 6.8
+  },
+  "no_vest": {
+   "fn": 29,
+   "causes": {
+    "other class: Person": 13,
+    "other class: vest": 8,
+    "nothing": 6,
+    "other class: no_helmet": 1,
+    "same class, IoU 0.3-0.5": 1
+   },
+   "under_8px_at_640": 12,
+   "median_short_side_640": 9.4
+  },
+  "Person": {
+   "fn": 9,
+   "causes": {
+    "nothing": 7,
+    "same class, IoU 0.3-0.5": 2
+   },
+   "under_8px_at_640": 1,
+   "median_short_side_640": 11.3
+  }
+ }
+}

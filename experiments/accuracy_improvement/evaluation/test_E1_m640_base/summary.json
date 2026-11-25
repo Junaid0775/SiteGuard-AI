@@ -1,0 +1,35 @@
+{
+  "split": "test",
+  "images": 160,
+  "gt_objects": 2480,
+  "ultralytics": {
+    "precision": 0.8907,
+    "recall": 0.7658,
+    "mAP50": 0.8275,
+    "mAP50-95": 0.6209
+  },
+  "audit_evaluator": {
+    "mAP50": 0.8116,
+    "mAP50-95": 0.6116
+  },
+  "operating_point": {
+    "conf": 0.25,
+    "precision": 0.8981,
+    "recall": 0.8355,
+    "f1": 0.8657,
+    "tp": 2072,
+    "fp": 235,
+    "fn": 408,
+    "background_fp": 53
+  },
+  "missing_ppe_recall_op": {
+    "no_helmet": 0.6761,
+    "no_gloves": 0.6503,
+    "no_goggle": 0.413,
+    "no_boots": 0.8148,
+    "no_vest": 0.5914
+  },
+  "person_recall_op": 0.98,
+  "latency_ms_mean": 30.87,
+  "weights_sha256": "13c71d3024306cf889033762dea6aaa9352be9abaa4aa6a6a83bad5d275c815e"
+}

@@ -1,0 +1,385 @@
+type,class,image,annotation_id,x1,y1,x2,y2,short_side_640,conf,detail
+FN,no_helmet,images/dev/source-150feca69395fa769adccdc8e157e935.jpg,dev/source-150feca69395fa769adccdc8e157e935#L8,722.9,647.4,741.4,663.7,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-150feca69395fa769adccdc8e157e935.jpg,dev/source-150feca69395fa769adccdc8e157e935#L10,948.2,677.3,974.8,714.0,8.3,,predicted instead: Person 0.86 IoU 0.49
+FN,no_helmet,images/dev/source-150feca69395fa769adccdc8e157e935.jpg,dev/source-150feca69395fa769adccdc8e157e935#L11,1097.7,680.0,1118.2,701.8,6.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-150feca69395fa769adccdc8e157e935.jpg,dev/source-150feca69395fa769adccdc8e157e935#L12,210.9,847.3,231.4,870.4,6.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-150feca69395fa769adccdc8e157e935.jpg,dev/source-150feca69395fa769adccdc8e157e935#L13,219.1,877.2,241.7,901.7,7.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-17e8cd16e406c9f394f05f7ec1b33947.jpg,dev/source-17e8cd16e406c9f394f05f7ec1b33947#L20,1094.2,525.7,1130.2,568.0,15.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/source-17e8cd16e406c9f394f05f7ec1b33947.jpg,dev/source-17e8cd16e406c9f394f05f7ec1b33947#L22,765.4,314.7,810.0,333.6,7.9,,predicted instead: no_goggle 0.29 IoU 0.47
+FN,no_goggle,images/dev/source-17e8cd16e406c9f394f05f7ec1b33947.jpg,dev/source-17e8cd16e406c9f394f05f7ec1b33947#L23,516.8,351.9,562.1,362.0,4.2,,predicted instead: no_goggle 0.48 IoU 0.35
+FP,no_goggle,images/dev/source-17e8cd16e406c9f394f05f7ec1b33947.jpg,,504.3,348.0,562.3,370.4,9.3,0.475,localization (true: no_goggle)
+FP,no_goggle,images/dev/source-17e8cd16e406c9f394f05f7ec1b33947.jpg,,758.5,317.2,811.8,344.6,11.4,0.293,localization (true: no_goggle)
+FN,no_gloves,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L19,843.8,879.9,868.4,901.7,6.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L24,1050.6,541.3,1069.1,557.6,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L25,1052.7,556.2,1075.2,586.2,7.0,,predicted instead: Person 0.49 IoU 0.34
+FN,no_helmet,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L27,1130.5,523.6,1142.8,533.1,3.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L28,1128.4,533.1,1146.9,556.2,5.8,,predicted instead: Person 0.53 IoU 0.47
+FN,Person,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L29,1138.7,535.8,1157.1,579.4,5.8,,predicted instead: Person 0.76 IoU 0.30
+FN,no_helmet,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,dev/source-223442b1ecf2d156710f2b828bb05db2#L30,1142.8,535.8,1155.1,544.0,2.5,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/source-223442b1ecf2d156710f2b828bb05db2.jpg,,1028.2,609.9,1044.3,623.6,4.3,0.316,localization (true: helmet)
+FN,no_gloves,images/dev/source-23d79ca5bf1c6544231641a70af3f37d.jpg,dev/source-23d79ca5bf1c6544231641a70af3f37d#L8,873.3,978.7,896.1,1018.9,7.1,,predicted instead: no_gloves 0.72 IoU 0.42
+FN,no_helmet,images/dev/source-23d79ca5bf1c6544231641a70af3f37d.jpg,dev/source-23d79ca5bf1c6544231641a70af3f37d#L11,999.4,390.1,1024.0,410.1,6.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-23d79ca5bf1c6544231641a70af3f37d.jpg,dev/source-23d79ca5bf1c6544231641a70af3f37d#L12,989.2,407.0,1032.2,433.2,8.2,,predicted instead: Person 0.48 IoU 0.48
+FP,no_gloves,images/dev/source-23d79ca5bf1c6544231641a70af3f37d.jpg,,867.7,965.0,906.9,1017.0,12.2,0.724,localization (true: no_gloves)
+FN,no_helmet,images/dev/source-38d248f0e2100035cc7c30a81392baa8.jpg,dev/source-38d248f0e2100035cc7c30a81392baa8#L3,788.1,813.1,846.0,867.0,16.8,,predicted instead: helmet 0.91 IoU 0.76
+FN,no_helmet,images/dev/source-38d248f0e2100035cc7c30a81392baa8.jpg,dev/source-38d248f0e2100035cc7c30a81392baa8#L19,1405.8,784.0,1454.7,825.7,13.0,,predicted instead: helmet 0.53 IoU 0.65
+FN,no_gloves,images/dev/source-38d248f0e2100035cc7c30a81392baa8.jpg,dev/source-38d248f0e2100035cc7c30a81392baa8#L22,989.5,1036.2,1022.3,1070.2,10.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-38d248f0e2100035cc7c30a81392baa8.jpg,dev/source-38d248f0e2100035cc7c30a81392baa8#L23,1390.6,909.8,1415.2,939.8,7.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-3dec6deaf0d256258b125015a036bb67.jpg,dev/source-3dec6deaf0d256258b125015a036bb67#L16,1083.4,705.8,1099.8,733.0,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-3dec6deaf0d256258b125015a036bb67.jpg,dev/source-3dec6deaf0d256258b125015a036bb67#L17,1110.0,767.0,1138.7,790.2,7.2,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-3dec6deaf0d256258b125015a036bb67.jpg,,320.9,667.6,408.3,776.1,27.3,0.641,localization (true: forklift)
+FP,Person,images/dev/source-3dec6deaf0d256258b125015a036bb67.jpg,,243.3,320.6,264.8,362.7,6.7,0.36,background
+FP,no_helmet,images/dev/source-3dec6deaf0d256258b125015a036bb67.jpg,,326.2,667.8,353.4,691.2,7.3,0.325,background
+FN,no_boots,images/dev/source-3f184ae68fc6f7534cd774fed7b212fb.jpg,dev/source-3f184ae68fc6f7534cd774fed7b212fb#L19,946.2,878.6,968.7,907.1,7.0,,predicted instead: gloves 0.45 IoU 0.45
+FN,no_boots,images/dev/source-3f184ae68fc6f7534cd774fed7b212fb.jpg,dev/source-3f184ae68fc6f7534cd774fed7b212fb#L20,1022.0,855.4,1058.8,877.2,6.8,,predicted instead: no_boots 0.31 IoU 0.41
+FP,no_boots,images/dev/source-3f184ae68fc6f7534cd774fed7b212fb.jpg,,1053.4,872.4,1090.8,926.4,11.7,0.536,background
+FP,no_boots,images/dev/source-3f184ae68fc6f7534cd774fed7b212fb.jpg,,1024.4,863.5,1060.0,886.7,7.3,0.306,localization (true: no_boots)
+FP,no_boots,images/dev/source-3f184ae68fc6f7534cd774fed7b212fb.jpg,,884.9,963.1,925.9,993.7,9.6,0.266,wrong_class (true: boots)
+FN,no_helmet,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L6,718.5,401.1,782.5,479.5,20.0,,predicted instead: Person 0.87 IoU 0.90
+FN,no_helmet,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L7,354.1,492.6,411.5,597.1,18.0,,predicted instead: Person 0.89 IoU 0.93
+FN,no_helmet,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L8,1703.4,525.2,1836.6,640.2,35.9,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L23,1703.4,523.9,1836.6,640.2,36.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L24,1718.3,541.3,1818.6,629.7,27.6,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L37,673.8,137.4,704.5,186.3,9.6,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L38,679.9,137.4,696.3,153.7,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,dev/source-485eb05877af0e242d34e297d390c7cd#L39,673.8,152.3,696.3,175.4,7.0,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,,371.7,489.2,393.8,510.2,6.6,0.418,background
+FP,no_boots,images/dev/source-485eb05877af0e242d34e297d390c7cd.jpg,,1229.0,730.5,1253.8,748.8,5.7,0.282,wrong_class (true: boots)
+FN,Person,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,dev/source-49167518cb619cd5c12a8f33872f9b7e#L22,1433.6,451.5,1474.6,515.4,12.8,,predicted instead: Person 0.64 IoU 0.36
+FN,no_helmet,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,dev/source-49167518cb619cd5c12a8f33872f9b7e#L23,1447.9,451.5,1474.6,485.5,8.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,dev/source-49167518cb619cd5c12a8f33872f9b7e#L24,1433.6,478.7,1462.3,514.1,9.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,dev/source-49167518cb619cd5c12a8f33872f9b7e#L26,1443.8,843.2,1484.8,865.0,6.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,dev/source-49167518cb619cd5c12a8f33872f9b7e#L27,1189.9,748.0,1224.7,772.5,7.7,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-49167518cb619cd5c12a8f33872f9b7e.jpg,,1409.5,446.2,1495.2,530.5,26.3,0.642,localization (true: Person)
+FN,no_vest,images/dev/source-4c206d0f090805255c642a9a3d58d0e5.jpg,dev/source-4c206d0f090805255c642a9a3d58d0e5#L13,1234.9,576.6,1341.4,658.2,25.5,,predicted instead: Person 0.87 IoU 0.40
+FN,no_helmet,images/dev/source-4e4870d31f0c2ff366debd49c66a0803.jpg,dev/source-4e4870d31f0c2ff366debd49c66a0803#L13,1244.2,555.2,1258.6,567.7,3.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-4e4870d31f0c2ff366debd49c66a0803.jpg,dev/source-4e4870d31f0c2ff366debd49c66a0803#L15,1208.3,508.6,1222.7,522.2,4.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L13,261.6,817.3,287.6,838.6,6.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L15,280.6,831.5,322.0,880.1,12.9,,predicted instead: vest 0.75 IoU 0.81
+FN,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L17,790.5,647.4,806.9,661.0,4.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L18,1079.3,737.1,1099.8,754.8,5.5,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L19,847.9,684.1,884.7,748.0,11.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L20,856.1,684.1,872.4,700.4,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L21,849.9,697.7,884.7,734.4,10.9,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L22,186.4,560.3,202.8,593.0,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L26,198.7,603.8,208.9,617.4,3.2,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L29,518.1,569.8,540.7,620.2,7.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L30,520.2,583.4,538.6,610.6,5.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7#L31,540.7,590.2,557.1,609.3,5.1,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,,151.9,563.3,177.0,600.9,7.8,0.257,background
+FP,no_helmet,images/dev/source-53cbca61c77e1f22da4e9c5a1e6acdb7.jpg,,891.4,674.9,909.1,699.1,5.5,0.256,wrong_class (true: helmet)
+FN,no_helmet,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L15,968.3,191.1,986.0,210.2,7.4,,predicted instead: no_helmet 0.62 IoU 0.44
+FN,no_boots,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L19,1060.9,753.9,1077.3,785.2,6.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L22,1101.8,326.0,1148.2,373.7,19.3,,predicted instead: vest 0.63 IoU 0.78
+FN,no_gloves,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L23,1152.6,372.3,1166.0,388.0,5.6,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L24,1119.5,362.8,1141.9,377.9,6.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L26,979.2,246.0,987.6,255.5,3.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,dev/source-56088ecf75821c1b93f4015a2bc0a071#L33,1155.1,697.3,1175.0,722.9,8.3,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/source-56088ecf75821c1b93f4015a2bc0a071.jpg,,966.4,187.5,983.1,203.6,6.7,0.622,localization (true: no_helmet)
+FN,no_vest,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,dev/source-560a65e44fe956bc3c118c607d5f8c05#L20,1025.4,1000.9,1041.1,1022.5,4.9,,predicted instead: Person 0.39 IoU 0.31
+FN,Person,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,dev/source-560a65e44fe956bc3c118c607d5f8c05#L26,1202.2,946.6,1228.8,1018.6,8.3,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,dev/source-560a65e44fe956bc3c118c607d5f8c05#L28,1216.5,1002.3,1243.1,1029.5,8.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,dev/source-560a65e44fe956bc3c118c607d5f8c05#L35,946.2,903.0,966.7,923.4,6.4,,predicted instead: Person 0.57 IoU 0.52
+FP,Person,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,,849.7,514.6,866.7,554.6,5.3,0.65,background
+FP,Person,images/dev/source-560a65e44fe956bc3c118c607d5f8c05.jpg,,923.1,881.9,942.1,923.9,5.9,0.298,background
+FN,no_boots,images/dev/source-565c1ab59a24c4d04e0909ae74c93f0d.jpg,dev/source-565c1ab59a24c4d04e0909ae74c93f0d#L20,626.7,703.5,648.2,726.0,9.0,,predicted instead: boots 0.43 IoU 0.77
+FN,no_boots,images/dev/source-565c1ab59a24c4d04e0909ae74c93f0d.jpg,dev/source-565c1ab59a24c4d04e0909ae74c93f0d#L21,682.0,691.2,705.0,710.7,8.1,,predicted instead: boots 0.41 IoU 0.76
+FP,no_helmet,images/dev/source-565c1ab59a24c4d04e0909ae74c93f0d.jpg,,1202.8,151.6,1215.0,161.1,4.0,0.272,duplicate (true: no_helmet)
+FN,Person,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,dev/source-5a67f7bc0dd29deee4039b7c839d6663#L1,468.8,506.9,590.3,812.5,38.0,,predicted instead: Person 0.66 IoU 0.41
+FN,no_helmet,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,dev/source-5a67f7bc0dd29deee4039b7c839d6663#L14,585.7,507.3,688.1,627.0,32.0,,predicted instead: no_helmet 0.66 IoU 0.47
+FN,no_gloves,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,dev/source-5a67f7bc0dd29deee4039b7c839d6663#L16,428.0,648.7,473.1,690.9,13.2,,predicted instead: no_gloves 0.60 IoU 0.47
+FN,no_gloves,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,dev/source-5a67f7bc0dd29deee4039b7c839d6663#L17,852.0,593.0,876.5,627.0,7.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,dev/source-5a67f7bc0dd29deee4039b7c839d6663#L18,878.6,591.6,905.2,614.7,7.2,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,,577.9,503.4,717.1,689.6,43.5,0.665,localization (true: no_helmet)
+FP,Person,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,,444.3,453.6,591.6,672.8,46.0,0.656,localization (true: Person)
+FP,no_gloves,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,,431.9,642.7,482.5,712.7,15.8,0.598,localization (true: no_gloves)
+FP,no_gloves,images/dev/source-5a67f7bc0dd29deee4039b7c839d6663.jpg,,440.8,673.7,512.3,725.5,16.2,0.551,localization (true: no_gloves)
+FP,no_boots,images/dev/source-5ddf92ab1c7359b8db38cb868a5d2961.jpg,,945.7,1318.1,1023.5,1419.7,24.3,0.799,wrong_class (true: boots)
+FP,no_boots,images/dev/source-5ddf92ab1c7359b8db38cb868a5d2961.jpg,,1027.5,1188.5,1085.0,1278.0,18.0,0.797,wrong_class (true: boots)
+FN,no_boots,images/dev/source-5fd28e2e77938704bc78db0ee3ed95c5.jpg,dev/source-5fd28e2e77938704bc78db0ee3ed95c5#L22,1792.0,1069.0,1816.6,1096.2,7.7,,predicted instead: boots 0.55 IoU 0.49
+FN,no_boots,images/dev/source-5fd28e2e77938704bc78db0ee3ed95c5.jpg,dev/source-5fd28e2e77938704bc78db0ee3ed95c5#L23,1816.6,1056.7,1843.2,1086.6,8.3,,predicted instead: boots 0.50 IoU 0.46
+FN,no_gloves,images/dev/source-5fd28e2e77938704bc78db0ee3ed95c5.jpg,dev/source-5fd28e2e77938704bc78db0ee3ed95c5#L32,1386.5,1024.1,1402.9,1043.1,5.1,,predicted instead: nothing (IoU < 0.3)
+FP,no_boots,images/dev/source-5ff9631584ae41efd2b7f508e6b24947.jpg,,386.5,737.1,431.5,766.0,12.0,0.388,wrong_class (true: boots)
+FN,no_helmet,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L6,1009.9,499.8,1020.3,513.6,3.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L7,860.2,500.5,878.6,515.4,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L8,860.2,515.4,880.6,549.4,6.4,,predicted instead: Person 0.78 IoU 0.53
+FN,no_helmet,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L9,958.5,496.4,970.8,512.7,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L13,1034.2,442.0,1046.5,463.8,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L14,1034.2,450.2,1046.5,463.8,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L15,1036.3,442.0,1044.5,451.5,2.6,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L16,1001.5,571.2,1019.9,588.9,5.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-63861e8188160ca09d7e331600db6cad.jpg,dev/source-63861e8188160ca09d7e331600db6cad#L17,1013.8,571.2,1030.1,588.9,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L14,366.6,310.1,391.2,337.3,7.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L15,368.6,308.7,380.9,325.0,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L16,366.6,322.3,389.1,337.3,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L17,845.8,389.0,884.7,446.1,12.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L18,854.0,389.0,870.4,406.6,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L19,847.9,405.3,882.7,433.8,8.9,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L20,1257.5,399.8,1300.5,466.5,13.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L21,1263.6,399.8,1286.1,421.6,6.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L22,1259.5,417.5,1298.4,458.3,12.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L23,841.7,801.0,860.2,822.8,5.8,,predicted instead: no_boots 0.28 IoU 0.44
+FN,no_boots,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,dev/source-6af78fcdef2424c52bcfefc5f4cf220d#L24,852.0,801.0,874.5,820.1,5.9,,predicted instead: no_boots 0.44 IoU 0.44
+FP,Person,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,,1285.4,727.2,1379.5,861.2,29.4,0.676,background
+FP,no_boots,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,,860.1,804.5,879.3,820.5,5.0,0.443,localization (true: no_boots)
+FP,Person,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,,587.9,557.4,640.7,641.7,16.5,0.436,background
+FP,no_boots,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,,845.4,806.3,867.8,821.9,4.9,0.276,localization (true: no_boots)
+FP,no_gloves,images/dev/source-6af78fcdef2424c52bcfefc5f4cf220d.jpg,,882.3,720.4,894.8,745.3,3.9,0.274,background
+FN,no_vest,images/dev/source-6be0ee79a4c7364262f7c9b4820fde0c.jpg,dev/source-6be0ee79a4c7364262f7c9b4820fde0c#L3,966.1,652.9,989.1,682.5,7.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-6be0ee79a4c7364262f7c9b4820fde0c.jpg,dev/source-6be0ee79a4c7364262f7c9b4820fde0c#L5,949.9,576.1,964.1,597.3,4.5,,predicted instead: Person 0.83 IoU 0.34
+FN,no_helmet,images/dev/source-6be0ee79a4c7364262f7c9b4820fde0c.jpg,dev/source-6be0ee79a4c7364262f7c9b4820fde0c#L8,970.9,637.9,983.6,649.8,3.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-6be0ee79a4c7364262f7c9b4820fde0c.jpg,dev/source-6be0ee79a4c7364262f7c9b4820fde0c#L9,954.3,567.4,960.3,575.3,1.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-6f3ca58e9c68013699ea32f8af0ceef9.jpg,dev/source-6f3ca58e9c68013699ea32f8af0ceef9#L13,1335.4,1161.2,1438.6,1208.2,14.7,,predicted instead: boots 0.87 IoU 0.92
+FN,no_boots,images/dev/source-6f3ca58e9c68013699ea32f8af0ceef9.jpg,dev/source-6f3ca58e9c68013699ea32f8af0ceef9#L14,1447.7,1143.2,1514.3,1186.3,13.5,,predicted instead: boots 0.89 IoU 0.92
+FN,no_gloves,images/dev/source-6f3ca58e9c68013699ea32f8af0ceef9.jpg,dev/source-6f3ca58e9c68013699ea32f8af0ceef9#L22,243.7,792.9,276.5,828.2,10.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-6f3ca58e9c68013699ea32f8af0ceef9.jpg,dev/source-6f3ca58e9c68013699ea32f8af0ceef9#L23,254.0,780.6,284.7,818.7,9.6,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/source-6f3ca58e9c68013699ea32f8af0ceef9.jpg,,414.9,773.7,442.9,808.2,8.8,0.428,background
+FP,Person,images/dev/source-721db38767f12afe8741916b5bb5eec5.jpg,,1763.8,921.1,1843.5,990.5,21.7,0.356,background
+FN,no_vest,images/dev/source-801ff8c7ea69847ba9cc5dcfb4df1892.jpg,dev/source-801ff8c7ea69847ba9cc5dcfb4df1892#L27,546.8,165.9,585.2,209.9,16.0,,predicted instead: no_vest 0.27 IoU 0.31
+FP,no_helmet,images/dev/source-801ff8c7ea69847ba9cc5dcfb4df1892.jpg,,732.4,589.9,759.2,621.2,11.2,0.685,wrong_class (true: helmet)
+FP,no_vest,images/dev/source-801ff8c7ea69847ba9cc5dcfb4df1892.jpg,,555.0,154.2,609.4,226.0,22.7,0.272,localization (true: Person)
+FN,no_gloves,images/dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d.jpg,dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d#L11,822.4,614.3,842.3,637.9,6.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d.jpg,dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d#L12,567.2,463.1,580.5,481.1,4.1,,predicted instead: gloves 0.30 IoU 0.41
+FN,no_gloves,images/dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d.jpg,dev/source-80f7d6e0d1a55f09fb7c6f149a791e7d#L13,484.1,458.4,504.0,473.5,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L5,1098.5,242.7,1125.4,264.3,6.7,,predicted instead: helmet 0.77 IoU 0.74
+FN,no_gloves,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L10,989.2,287.0,1005.6,319.6,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L11,1044.5,296.5,1060.9,311.4,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L12,1056.8,296.5,1073.2,312.8,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L15,1046.5,384.9,1071.1,399.8,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L16,1071.1,383.5,1099.8,398.5,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L17,1089.5,413.4,1120.3,431.1,5.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,dev/source-8473d8f6d74a556cf5c2ddda99432b04#L18,1120.3,416.2,1136.6,429.8,4.3,,predicted instead: boots 0.30 IoU 0.48
+FP,no_helmet,images/dev/source-8473d8f6d74a556cf5c2ddda99432b04.jpg,,993.0,209.0,1016.1,228.4,6.1,0.447,localization (true: helmet)
+FN,no_boots,images/dev/source-84927cebf7c164830f2befea9afb6702.jpg,dev/source-84927cebf7c164830f2befea9afb6702#L6,985.1,314.2,1003.5,331.8,5.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-84927cebf7c164830f2befea9afb6702.jpg,dev/source-84927cebf7c164830f2befea9afb6702#L7,1079.3,361.8,1103.9,375.4,4.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-84927cebf7c164830f2befea9afb6702.jpg,dev/source-84927cebf7c164830f2befea9afb6702#L9,1078.1,285.9,1091.5,305.7,4.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-84927cebf7c164830f2befea9afb6702.jpg,dev/source-84927cebf7c164830f2befea9afb6702#L13,1001.5,323.7,1026.0,346.8,7.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-84927cebf7c164830f2befea9afb6702.jpg,dev/source-84927cebf7c164830f2befea9afb6702#L14,1105.9,368.6,1132.5,386.2,5.5,,predicted instead: boots 0.43 IoU 0.47
+FN,no_gloves,images/dev/source-884ce8ac82984a62565821b150882347.jpg,dev/source-884ce8ac82984a62565821b150882347#L22,297.0,688.2,331.8,729.0,10.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-8ab3d789269f96488e51d8550b563200.jpg,dev/source-8ab3d789269f96488e51d8550b563200#L18,418.1,148.3,436.0,165.2,5.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-8ab3d789269f96488e51d8550b563200.jpg,dev/source-8ab3d789269f96488e51d8550b563200#L19,405.5,164.6,442.4,199.9,11.1,,predicted instead: Person 0.50 IoU 0.56
+FN,no_helmet,images/dev/source-8ab3d789269f96488e51d8550b563200.jpg,dev/source-8ab3d789269f96488e51d8550b563200#L21,847.9,107.4,866.3,127.8,5.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-8ab3d789269f96488e51d8550b563200.jpg,dev/source-8ab3d789269f96488e51d8550b563200#L22,815.1,125.1,868.4,156.4,9.8,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-8ab3d789269f96488e51d8550b563200.jpg,,1644.8,587.8,1729.4,682.1,26.4,0.457,background
+FN,no_helmet,images/dev/source-93d9c238b1d6487376f089319bed5fc8.jpg,dev/source-93d9c238b1d6487376f089319bed5fc8#L10,908.6,737.6,935.5,764.5,8.4,,predicted instead: helmet 0.67 IoU 0.81
+FN,no_vest,images/dev/source-93d9c238b1d6487376f089319bed5fc8.jpg,dev/source-93d9c238b1d6487376f089319bed5fc8#L24,1583.1,191.8,1622.0,231.2,12.2,,predicted instead: Person 0.42 IoU 0.33
+FN,no_gloves,images/dev/source-93d9c238b1d6487376f089319bed5fc8.jpg,dev/source-93d9c238b1d6487376f089319bed5fc8#L33,901.1,867.7,921.6,893.5,6.4,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-93d9c238b1d6487376f089319bed5fc8.jpg,,1551.8,217.3,1580.7,270.1,9.0,0.362,background
+FP,Person,images/dev/source-93d9c238b1d6487376f089319bed5fc8.jpg,,1555.6,177.4,1613.1,269.3,18.0,0.296,localization (true: Person)
+FN,no_gloves,images/dev/source-9b649b7415bcb389744b5dcc00c39a00.jpg,dev/source-9b649b7415bcb389744b5dcc00c39a00#L3,713.2,974.5,789.9,1070.0,24.0,,predicted instead: no_gloves 0.72 IoU 0.45
+FP,no_gloves,images/dev/source-9b649b7415bcb389744b5dcc00c39a00.jpg,,723.9,1016.0,788.8,1066.8,15.9,0.716,localization (true: no_gloves)
+FN,no_gloves,images/dev/source-a8c726058fc542d983d5eb9427f86f09.jpg,dev/source-a8c726058fc542d983d5eb9427f86f09#L14,698.4,1036.3,710.7,1054.0,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-a8c726058fc542d983d5eb9427f86f09.jpg,dev/source-a8c726058fc542d983d5eb9427f86f09#L15,720.9,1032.2,733.2,1047.2,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-a8c726058fc542d983d5eb9427f86f09.jpg,dev/source-a8c726058fc542d983d5eb9427f86f09#L22,1126.4,1262.1,1148.9,1279.8,5.5,,predicted instead: boots 0.27 IoU 0.59
+FN,no_boots,images/dev/source-a8c726058fc542d983d5eb9427f86f09.jpg,dev/source-a8c726058fc542d983d5eb9427f86f09#L23,1146.9,1262.1,1163.3,1275.7,4.2,,predicted instead: boots 0.29 IoU 0.52
+FN,no_boots,images/dev/source-aaa3355b226f41989845a45462c68cdb.jpg,dev/source-aaa3355b226f41989845a45462c68cdb#L6,1030.1,1156.6,1095.7,1241.1,20.5,,predicted instead: no_boots 0.84 IoU 0.46
+FP,no_boots,images/dev/source-aaa3355b226f41989845a45462c68cdb.jpg,,1020.9,1086.4,1093.4,1238.9,22.7,0.836,localization (true: no_boots)
+FN,no_helmet,images/dev/source-aace0a9a1ad6cbfe9e492e99b2eb14e4.jpg,dev/source-aace0a9a1ad6cbfe9e492e99b2eb14e4#L18,873.7,340.7,890.1,358.8,5.1,,predicted instead: no_helmet 0.45 IoU 0.45
+FN,no_gloves,images/dev/source-aace0a9a1ad6cbfe9e492e99b2eb14e4.jpg,dev/source-aace0a9a1ad6cbfe9e492e99b2eb14e4#L20,1429.5,718.1,1450.0,741.2,6.4,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/source-aace0a9a1ad6cbfe9e492e99b2eb14e4.jpg,,870.2,345.1,887.4,363.3,5.4,0.451,localization (true: no_helmet)
+FN,no_helmet,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L20,1155.1,516.8,1187.8,545.4,8.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L24,903.2,892.2,925.7,916.6,7.0,,predicted instead: no_gloves 0.75 IoU 0.47
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L25,618.5,1147.8,663.6,1198.2,14.1,,predicted instead: boots 0.72 IoU 0.71
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L26,585.7,1100.2,610.3,1141.0,7.7,,predicted instead: boots 0.58 IoU 0.55
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L27,817.2,1117.9,864.3,1166.9,14.7,,predicted instead: boots 0.48 IoU 0.75
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L28,784.4,1060.8,813.1,1116.6,9.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L29,411.6,734.4,442.4,764.3,9.3,,predicted instead: boots 0.57 IoU 0.48
+FN,no_boots,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,dev/source-ab1fb85dccb8e6325a99fca62a476ef7#L30,434.2,719.4,454.7,746.6,6.4,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/source-ab1fb85dccb8e6325a99fca62a476ef7.jpg,,904.9,881.5,933.8,916.0,9.0,0.749,localization (true: no_gloves)
+FP,no_gloves,images/dev/source-ab78be39fcf54451aa89437c75b82cb2.jpg,,659.6,753.8,696.5,802.8,11.5,0.702,wrong_class (true: gloves)
+FN,no_gloves,images/dev/source-af366d748c1fb9a8dbe8345ed8bd35c1.jpg,dev/source-af366d748c1fb9a8dbe8345ed8bd35c1#L21,516.1,568.3,540.7,587.8,8.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-af366d748c1fb9a8dbe8345ed8bd35c1.jpg,dev/source-af366d748c1fb9a8dbe8345ed8bd35c1#L22,520.7,580.6,551.4,600.1,8.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-af866a11bbf9d7013ede2dedda277e6f.jpg,dev/source-af866a11bbf9d7013ede2dedda277e6f#L15,1293.9,629.6,1470.1,824.7,55.1,,predicted instead: vest 0.78 IoU 0.77
+FP,no_goggle,images/dev/source-af866a11bbf9d7013ede2dedda277e6f.jpg,,658.4,763.1,710.5,797.1,10.6,0.382,background
+FP,no_goggle,images/dev/source-af866a11bbf9d7013ede2dedda277e6f.jpg,,1371.8,617.5,1422.0,636.9,6.0,0.321,background
+FP,no_helmet,images/dev/source-af866a11bbf9d7013ede2dedda277e6f.jpg,,1392.7,274.6,1414.5,299.6,6.8,0.283,localization (true: helmet)
+FN,no_vest,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L3,805.6,448.6,840.5,503.7,10.9,,predicted instead: vest 0.67 IoU 0.83
+FN,no_vest,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L6,893.5,445.1,922.7,498.8,9.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L9,1035.3,451.7,1068.1,497.3,10.2,,predicted instead: Person 0.79 IoU 0.40
+FN,no_vest,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L12,1094.1,432.8,1133.8,486.8,12.4,,predicted instead: Person 0.83 IoU 0.32
+FN,no_gloves,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L13,819.2,471.9,835.6,503.2,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L14,1050.6,488.2,1065.0,511.4,4.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L15,1093.6,477.4,1110.0,499.1,5.1,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L16,1120.3,446.1,1132.5,466.5,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L17,806.9,541.3,835.6,553.5,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L18,888.8,537.2,915.5,552.2,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L19,866.3,537.2,884.7,550.8,4.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L20,1026.0,539.9,1042.4,554.9,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L21,1048.6,539.9,1069.1,554.9,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L22,1087.5,535.8,1114.1,553.5,5.5,,predicted instead: boots 0.27 IoU 0.56
+FN,no_boots,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,dev/source-b08681d985288f3ddcc52556c4445bab#L23,1110.0,535.8,1126.4,553.5,5.1,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-b08681d985288f3ddcc52556c4445bab.jpg,,1793.6,847.8,1822.0,909.7,8.9,0.487,background
+FN,no_gloves,images/dev/source-b58c93c47793ff3f0010e6cf29c7ca98.jpg,dev/source-b58c93c47793ff3f0010e6cf29c7ca98#L11,1005.7,638.2,1034.9,656.4,5.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-b58c93c47793ff3f0010e6cf29c7ca98.jpg,dev/source-b58c93c47793ff3f0010e6cf29c7ca98#L12,1171.2,653.4,1198.5,678.6,7.9,,predicted instead: no_gloves 0.37 IoU 0.49
+FP,no_gloves,images/dev/source-b58c93c47793ff3f0010e6cf29c7ca98.jpg,,1169.7,642.9,1199.3,672.2,9.2,0.372,localization (true: no_gloves)
+FP,no_gloves,images/dev/source-b58c93c47793ff3f0010e6cf29c7ca98.jpg,,1177.2,632.1,1200.5,655.2,7.2,0.344,background
+FN,no_gloves,images/dev/source-c29c306002a2f421917c4a9b59f449f7.jpg,dev/source-c29c306002a2f421917c4a9b59f449f7#L9,829.4,484.2,847.9,507.3,5.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-c29c306002a2f421917c4a9b59f449f7.jpg,dev/source-c29c306002a2f421917c4a9b59f449f7#L10,1003.5,548.1,1026.0,572.6,7.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L4,329.7,377.3,361.2,412.5,9.8,,predicted instead: Person 0.77 IoU 0.33
+FN,no_vest,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L8,573.6,653.2,614.2,702.4,12.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L11,904.3,557.0,931.4,596.3,8.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L27,1366.8,396.1,1382.0,413.0,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L29,905.4,537.0,926.8,557.6,6.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L31,338.0,363.1,351.4,377.3,4.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L35,337.9,700.4,354.3,714.0,4.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L36,354.3,697.7,368.6,709.9,3.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L37,940.0,943.8,954.4,969.7,4.5,,predicted instead: no_gloves 0.31 IoU 0.42
+FN,no_gloves,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,dev/source-c2db5b6bf60550cfcd7f562460c9e273#L38,313.3,631.0,327.7,652.8,4.5,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/source-c2db5b6bf60550cfcd7f562460c9e273.jpg,,942.4,953.8,956.7,972.7,4.5,0.315,localization (true: no_gloves)
+FN,no_helmet,images/dev/source-c565c40ac5d9c5f2659804a3826ab942.jpg,dev/source-c565c40ac5d9c5f2659804a3826ab942#L12,1141.8,1007.8,1178.1,1040.2,10.1,,predicted instead: helmet 0.62 IoU 0.66
+FN,no_gloves,images/dev/source-c565c40ac5d9c5f2659804a3826ab942.jpg,dev/source-c565c40ac5d9c5f2659804a3826ab942#L16,854.0,424.3,878.6,443.4,6.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-c565c40ac5d9c5f2659804a3826ab942.jpg,dev/source-c565c40ac5d9c5f2659804a3826ab942#L17,899.1,413.4,919.6,435.2,6.4,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-c80c8c85444532b3d6bbd799e6c9c4b8.jpg,,1373.7,152.0,1413.4,221.9,16.5,0.384,background
+FN,no_gloves,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,dev/source-ca41ff5d10bb701e0976d54c8acd58d6#L13,560.3,871.6,585.8,908.3,8.0,,predicted instead: gloves 0.35 IoU 0.66
+FN,no_gloves,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,dev/source-ca41ff5d10bb701e0976d54c8acd58d6#L14,916.5,967.3,940.0,1005.0,7.3,,predicted instead: gloves 0.27 IoU 0.34
+FN,no_vest,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,dev/source-ca41ff5d10bb701e0976d54c8acd58d6#L22,0.0,443.4,20.5,476.0,6.4,,predicted instead: Person 0.75 IoU 0.39
+FN,no_helmet,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,dev/source-ca41ff5d10bb701e0976d54c8acd58d6#L23,0.0,424.3,16.4,447.4,5.1,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,,1439.8,590.8,1480.0,731.2,12.6,0.533,background
+FP,no_vest,images/dev/source-ca41ff5d10bb701e0976d54c8acd58d6.jpg,,1444.5,606.9,1479.4,678.0,10.9,0.281,background
+FN,no_gloves,images/dev/source-d0264a817d1338b876dcc82c1e5575cb.jpg,dev/source-d0264a817d1338b876dcc82c1e5575cb#L21,834.5,963.1,897.5,1012.3,15.4,,predicted instead: no_gloves 0.45 IoU 0.36
+FN,no_gloves,images/dev/source-d0264a817d1338b876dcc82c1e5575cb.jpg,dev/source-d0264a817d1338b876dcc82c1e5575cb#L23,823.3,952.0,874.5,994.2,13.2,,predicted instead: no_gloves 0.45 IoU 0.42
+FP,no_boots,images/dev/source-d0264a817d1338b876dcc82c1e5575cb.jpg,,674.3,1138.6,801.2,1185.8,14.7,0.625,wrong_class (true: boots)
+FP,no_boots,images/dev/source-d0264a817d1338b876dcc82c1e5575cb.jpg,,925.3,1116.5,999.2,1167.0,15.8,0.482,wrong_class (true: boots)
+FP,no_gloves,images/dev/source-d0264a817d1338b876dcc82c1e5575cb.jpg,,816.1,933.3,891.7,1000.7,21.1,0.448,localization (true: no_gloves)
+FN,no_helmet,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,dev/source-ea0ae6faa6f33684ea285af1f6eae79c#L17,591.0,215.5,602.5,229.2,5.8,,predicted instead: helmet 0.39 IoU 0.72
+FN,no_helmet,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,dev/source-ea0ae6faa6f33684ea285af1f6eae79c#L18,482.1,568.1,514.4,601.1,16.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,dev/source-ea0ae6faa6f33684ea285af1f6eae79c#L29,868.0,555.9,893.1,574.2,9.2,,predicted instead: no_helmet 0.86 IoU 0.41
+FN,no_goggle,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,dev/source-ea0ae6faa6f33684ea285af1f6eae79c#L30,1035.6,381.0,1049.3,390.4,4.7,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,dev/source-ea0ae6faa6f33684ea285af1f6eae79c#L31,450.0,586.8,480.3,609.7,11.6,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/source-ea0ae6faa6f33684ea285af1f6eae79c.jpg,,455.8,630.2,470.1,644.2,7.1,0.296,background
+FN,no_boots,images/dev/source-f90f8c78e44eb2d40158a732d46901c8.jpg,dev/source-f90f8c78e44eb2d40158a732d46901c8#L16,612.9,790.5,640.5,816.1,10.7,,predicted instead: boots 0.42 IoU 0.30
+FN,no_boots,images/dev/source-f90f8c78e44eb2d40158a732d46901c8.jpg,dev/source-f90f8c78e44eb2d40158a732d46901c8#L17,637.4,822.3,691.2,853.0,12.8,,predicted instead: boots 0.34 IoU 0.68
+FN,no_gloves,images/dev/source-f90f8c78e44eb2d40158a732d46901c8.jpg,dev/source-f90f8c78e44eb2d40158a732d46901c8#L19,944.6,483.3,958.5,504.8,5.8,,predicted instead: gloves 0.31 IoU 0.62
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-021.jpg,,1164.2,396.7,1410.9,574.5,55.5,0.498,localization (true: no_helmet)
+FN,Person,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L27,948.2,325.0,1028.9,532.3,25.2,,predicted instead: no_vest 0.55 IoU 0.57
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L36,1438.7,324.8,1507.3,363.9,12.2,,predicted instead: no_helmet 0.59 IoU 0.34
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L37,502.0,371.6,565.1,418.7,14.7,,predicted instead: goggles 0.48 IoU 0.40
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L38,1656.7,357.3,1713.3,401.7,13.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L43,700.7,328.4,738.4,376.8,11.8,,predicted instead: goggles 0.33 IoU 0.60
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L53,475.1,531.8,528.4,576.6,14.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L56,1359.9,425.7,1386.5,525.0,8.3,,predicted instead: Person 0.69 IoU 0.35
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L57,1364.0,357.7,1443.8,587.5,25.0,,predicted instead: Person 0.27 IoU 0.79
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-022.jpg,dev/ultralytics-ppe-nov2026-022#L59,1005.6,462.4,1028.1,489.6,7.0,,predicted instead: nothing (IoU < 0.3)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-022.jpg,,1523.3,865.2,1637.2,914.7,15.5,0.58,wrong_class (true: boots)
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-022.jpg,,873.0,368.2,1021.5,540.6,46.4,0.309,localization (true: no_vest)
+FP,Person,images/dev/ultralytics-ppe-nov2026-022.jpg,,1351.4,335.0,1405.5,717.4,16.9,0.298,localization (true: Person)
+FP,Person,images/dev/ultralytics-ppe-nov2026-022.jpg,,1377.7,357.6,1442.8,594.9,20.3,0.275,wrong_class (true: no_vest)
+FP,Person,images/dev/ultralytics-ppe-nov2026-022.jpg,,1534.3,289.2,1693.5,627.1,49.7,0.261,wrong_class (true: no_vest)
+FN,Person,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L21,577.5,18.0,663.7,312.6,26.9,,predicted instead: Person 0.89 IoU 0.47
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L38,559.9,43.9,589.6,81.6,9.3,,predicted instead: no_helmet 0.84 IoU 0.33
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L44,656.6,119.9,686.2,137.4,5.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L56,631.0,4.1,680.0,147.5,15.3,,predicted instead: Person 0.66 IoU 0.55
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L57,678.6,0.0,718.1,124.9,12.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L58,731.7,45.1,784.7,143.4,16.6,,predicted instead: nothing (IoU < 0.3)
+FN,Person,images/dev/ultralytics-ppe-nov2026-024.jpg,dev/ultralytics-ppe-nov2026-024#L61,85.7,4.1,104.7,26.6,6.0,,predicted instead: nothing (IoU < 0.3)
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-024.jpg,,638.6,33.2,695.1,121.9,17.7,0.709,wrong_class (true: Person)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-024.jpg,,738.7,28.2,772.3,64.7,10.5,0.548,localization (true: no_helmet)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-024.jpg,,13.0,9.7,28.5,22.2,3.9,0.47,background
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-024.jpg,,737.5,78.2,831.5,186.4,29.4,0.396,wrong_class (true: Person)
+FP,Person,images/dev/ultralytics-ppe-nov2026-024.jpg,,577.1,21.4,660.8,164.0,26.2,0.314,wrong_class (true: no_vest)
+FP,Person,images/dev/ultralytics-ppe-nov2026-024.jpg,,724.8,56.4,844.1,280.3,37.3,0.312,duplicate (true: Person)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-024.jpg,,1062.7,86.3,1190.9,177.1,28.4,0.276,localization (true: no_helmet)
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-025.jpg,dev/ultralytics-ppe-nov2026-025#L17,438.9,852.0,465.4,895.0,8.3,,predicted instead: no_gloves 0.79 IoU 0.34
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-025.jpg,,416.0,432.1,726.1,833.1,96.9,0.925,wrong_class (true: vest)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-025.jpg,,432.6,810.5,469.3,902.9,11.5,0.787,localization (true: no_gloves)
+FN,Person,images/dev/ultralytics-ppe-nov2026-048.jpg,dev/ultralytics-ppe-nov2026-048#L24,190.5,192.4,344.1,462.0,48.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-048.jpg,dev/ultralytics-ppe-nov2026-048#L25,268.3,191.2,331.8,270.7,19.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-050.jpg,dev/ultralytics-ppe-nov2026-050#L28,536.8,385.0,566.8,430.1,9.4,,predicted instead: no_gloves 0.29 IoU 0.37
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-050.jpg,,524.4,379.3,558.4,419.1,10.6,0.291,localization (true: no_gloves)
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-075.jpg,dev/ultralytics-ppe-nov2026-075#L5,593.4,521.3,752.1,686.8,49.6,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-075.jpg,dev/ultralytics-ppe-nov2026-075#L6,615.2,530.4,695.8,563.2,10.2,,predicted instead: nothing (IoU < 0.3)
+FP,Person,images/dev/ultralytics-ppe-nov2026-075.jpg,,960.6,900.2,1010.1,1064.3,15.5,0.627,background
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-075.jpg,,749.0,1864.1,899.9,2016.4,47.2,0.523,wrong_class (true: boots)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-075.jpg,,469.9,226.5,544.2,249.3,7.1,0.371,localization (true: no_gloves)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-075.jpg,,654.5,206.7,752.8,253.5,14.6,0.274,localization (true: no_gloves)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-097.jpg,dev/ultralytics-ppe-nov2026-097#L12,1183.7,301.9,1257.5,329.1,8.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-097.jpg,dev/ultralytics-ppe-nov2026-097#L13,663.6,301.9,706.6,331.8,9.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-097.jpg,dev/ultralytics-ppe-nov2026-097#L20,944.1,344.1,974.8,371.3,8.5,,predicted instead: no_goggle 0.27 IoU 0.36
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-097.jpg,,935.8,337.1,970.9,360.6,7.3,0.267,localization (true: no_goggle)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-099.jpg,dev/ultralytics-ppe-nov2026-099#L15,446.1,546.8,526.3,585.7,12.2,,predicted instead: no_goggle 0.35 IoU 0.46
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-099.jpg,,470.3,556.7,530.0,590.3,10.5,0.349,localization (true: no_goggle)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-100.jpg,dev/ultralytics-ppe-nov2026-100#L7,778.8,1658.3,851.4,1737.7,22.7,,predicted instead: boots 0.49 IoU 0.81
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-125.jpg,,455.6,360.5,639.2,490.6,40.6,0.499,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-147.jpg,dev/ultralytics-ppe-nov2026-147#L8,714.8,378.1,763.9,401.2,7.2,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-149.jpg,dev/ultralytics-ppe-nov2026-149#L8,814.6,389.1,873.1,423.9,10.9,,predicted instead: no_goggle 0.26 IoU 0.42
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-149.jpg,,803.0,387.7,929.6,426.1,12.0,0.261,localization (true: no_goggle)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-171.jpg,dev/ultralytics-ppe-nov2026-171#L4,1042.5,1473.4,1209.4,1582.5,34.1,,predicted instead: boots 0.93 IoU 0.96
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-171.jpg,dev/ultralytics-ppe-nov2026-171#L5,1163.2,1639.5,1410.8,1818.4,55.9,,predicted instead: boots 0.96 IoU 0.99
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-175.jpg,dev/ultralytics-ppe-nov2026-175#L3,776.4,522.2,821.4,571.4,14.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-175.jpg,dev/ultralytics-ppe-nov2026-175#L6,583.2,1755.1,818.5,1878.9,38.7,,predicted instead: boots 0.77 IoU 0.98
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-175.jpg,dev/ultralytics-ppe-nov2026-175#L7,794.2,1798.3,979.9,1947.6,46.7,,predicted instead: boots 0.89 IoU 0.94
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-196.jpg,dev/ultralytics-ppe-nov2026-196#L16,737.3,1351.7,958.5,1468.4,36.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-197.jpg,dev/ultralytics-ppe-nov2026-197#L11,209.2,1014.3,371.9,1076.2,19.3,,predicted instead: no_boots 0.92 IoU 0.59
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-197.jpg,dev/ultralytics-ppe-nov2026-197#L16,835.6,246.2,895.0,274.7,8.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-199.jpg,dev/ultralytics-ppe-nov2026-199#L15,863.6,313.3,934.3,348.2,10.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-199.jpg,dev/ultralytics-ppe-nov2026-199#L16,537.2,364.5,622.9,399.4,10.9,,predicted instead: nothing (IoU < 0.3)
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-199.jpg,,533.6,356.3,580.7,385.5,9.1,0.358,localization (true: no_goggle)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-200.jpg,,768.1,1745.4,1010.2,1853.0,33.6,0.729,localization (true: no_boots)
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-225.jpg,dev/ultralytics-ppe-nov2026-225#L4,518.4,167.9,714.2,479.2,61.2,,predicted instead: no_helmet 0.38 IoU 0.37
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-225.jpg,,531.9,165.5,712.8,292.8,39.8,0.38,localization (true: no_helmet)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-274.jpg,,484.8,265.1,771.1,447.0,56.8,0.288,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-275.jpg,dev/ultralytics-ppe-nov2026-275#L7,692.4,577.5,735.0,618.5,12.8,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-296.jpg,,445.2,687.2,668.3,830.5,44.8,0.43,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-299.jpg,dev/ultralytics-ppe-nov2026-299#L15,650.1,505.9,695.0,528.4,7.0,,predicted instead: no_goggle 0.34 IoU 0.50
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-299.jpg,,660.0,506.8,706.7,533.8,8.4,0.339,localization (true: no_goggle)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-324.jpg,,477.8,160.6,727.2,328.7,52.5,0.481,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-347.jpg,dev/ultralytics-ppe-nov2026-347#L10,1009.7,499.1,1054.7,525.0,8.1,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-372.jpg,,1668.9,265.5,1778.8,355.5,28.1,0.471,wrong_class (true: Person)
+FP,Person,images/dev/ultralytics-ppe-nov2026-373.jpg,,1.2,0.9,211.9,147.8,45.9,0.412,background
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-375.jpg,dev/ultralytics-ppe-nov2026-375#L2,536.3,1806.1,746.2,1950.0,45.0,,predicted instead: boots 0.69 IoU 0.98
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-375.jpg,dev/ultralytics-ppe-nov2026-375#L3,338.9,1892.9,469.4,2048.0,40.8,,predicted instead: boots 0.80 IoU 0.98
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-375.jpg,dev/ultralytics-ppe-nov2026-375#L6,435.8,447.3,640.3,670.8,63.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-375.jpg,dev/ultralytics-ppe-nov2026-375#L7,482.7,499.7,602.5,540.7,12.8,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-375.jpg,,764.7,226.0,887.4,272.8,14.6,0.351,localization (true: no_gloves)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-397.jpg,dev/ultralytics-ppe-nov2026-397#L16,1247.2,229.8,1271.8,248.9,6.0,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-399.jpg,dev/ultralytics-ppe-nov2026-399#L5,785.3,1723.5,1030.2,1840.5,36.6,,predicted instead: boots 0.89 IoU 0.98
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-399.jpg,dev/ultralytics-ppe-nov2026-399#L7,893.3,1929.8,1174.6,2048.0,36.9,,predicted instead: boots 0.92 IoU 0.97
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-399.jpg,dev/ultralytics-ppe-nov2026-399#L14,481.4,448.5,505.9,481.3,7.7,,predicted instead: nothing (IoU < 0.3)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-400.jpg,,698.6,1830.2,992.1,1945.4,36.0,0.601,localization (true: no_boots)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-425.jpg,dev/ultralytics-ppe-nov2026-425#L3,549.5,489.5,618.6,520.2,9.6,,predicted instead: no_goggle 0.55 IoU 0.44
+FN,Person,images/dev/ultralytics-ppe-nov2026-425.jpg,dev/ultralytics-ppe-nov2026-425#L9,0.0,1777.7,54.1,2048.0,16.9,,predicted instead: nothing (IoU < 0.3)
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-425.jpg,,546.2,484.1,653.5,529.0,14.0,0.554,localization (true: no_goggle)
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-449.jpg,,510.1,476.6,1107.3,1246.9,186.6,0.838,wrong_class (true: vest)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-475.jpg,dev/ultralytics-ppe-nov2026-475#L8,277.6,702.5,330.6,741.4,12.2,,predicted instead: no_goggle 0.31 IoU 0.46
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-475.jpg,,281.7,714.6,346.3,746.7,10.0,0.306,localization (true: no_goggle)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-496.jpg,dev/ultralytics-ppe-nov2026-496#L14,909.3,1699.8,1026.0,1861.6,36.5,,predicted instead: no_boots 0.89 IoU 0.42
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-496.jpg,,940.3,1698.0,1023.1,1796.4,25.9,0.886,localization (true: no_boots)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-497.jpg,dev/ultralytics-ppe-nov2026-497#L13,935.1,343.1,1036.0,368.7,8.0,,predicted instead: goggles 0.74 IoU 0.72
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-497.jpg,dev/ultralytics-ppe-nov2026-497#L17,1005.1,1192.7,1140.9,1278.9,26.9,,predicted instead: boots 0.78 IoU 0.94
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-497.jpg,dev/ultralytics-ppe-nov2026-497#L20,454.7,375.4,501.8,416.2,12.8,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-497.jpg,dev/ultralytics-ppe-nov2026-497#L21,847.9,341.4,890.9,386.2,13.4,,predicted instead: nothing (IoU < 0.3)
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-499.jpg,dev/ultralytics-ppe-nov2026-499#L8,381.3,1801.2,559.0,1900.8,31.1,,predicted instead: boots 0.93 IoU 0.91
+FN,no_boots,images/dev/ultralytics-ppe-nov2026-499.jpg,dev/ultralytics-ppe-nov2026-499#L9,436.6,1917.7,700.3,2047.9,40.7,,predicted instead: boots 0.93 IoU 0.97
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-499.jpg,dev/ultralytics-ppe-nov2026-499#L15,446.1,503.8,523.6,563.2,18.6,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-499.jpg,dev/ultralytics-ppe-nov2026-499#L16,928.9,524.3,1007.8,583.7,18.6,,predicted instead: nothing (IoU < 0.3)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-521.jpg,,175.7,1290.5,302.6,1554.7,39.7,0.578,wrong_class (true: boots)
+FN,Person,images/dev/ultralytics-ppe-nov2026-525.jpg,dev/ultralytics-ppe-nov2026-525#L14,21.9,641.0,77.2,729.1,17.3,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-525.jpg,dev/ultralytics-ppe-nov2026-525#L15,47.2,686.1,74.9,710.7,7.7,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-525.jpg,,768.4,620.1,893.1,714.6,29.6,0.531,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-547.jpg,dev/ultralytics-ppe-nov2026-547#L9,966.7,295.1,1042.4,329.1,10.6,,predicted instead: no_goggle 0.44 IoU 0.44
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-547.jpg,,961.7,304.0,1015.8,330.6,8.3,0.445,localization (true: no_goggle)
+FP,no_vest,images/dev/ultralytics-ppe-nov2026-549.jpg,,781.5,459.9,1220.9,1226.6,137.3,0.866,wrong_class (true: vest)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-549.jpg,,608.4,702.3,688.5,767.6,20.4,0.472,localization (true: no_gloves)
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-575.jpg,dev/ultralytics-ppe-nov2026-575#L4,431.9,571.5,542.3,711.5,34.5,,predicted instead: nothing (IoU < 0.3)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-575.jpg,dev/ultralytics-ppe-nov2026-575#L5,441.2,581.6,494.2,616.4,10.9,,predicted instead: nothing (IoU < 0.3)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-575.jpg,,459.2,312.8,548.8,352.0,12.2,0.527,localization (true: no_gloves)
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-597.jpg,,404.2,787.9,471.0,892.6,20.9,0.446,wrong_class (true: gloves)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-621.jpg,,1312.1,1603.8,1567.4,1866.8,79.8,0.941,wrong_class (true: boots)
+FN,Person,images/dev/ultralytics-ppe-nov2026-622.jpg,dev/ultralytics-ppe-nov2026-622#L9,686.1,943.8,718.8,1003.7,10.2,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-625.jpg,,472.8,344.8,631.2,443.0,30.7,0.424,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-647.jpg,dev/ultralytics-ppe-nov2026-647#L9,944.1,300.6,987.1,325.0,7.7,,predicted instead: no_goggle 0.47 IoU 0.38
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-647.jpg,,924.9,294.5,973.8,323.3,9.0,0.466,localization (true: no_goggle)
+FN,no_vest,images/dev/ultralytics-ppe-nov2026-674.jpg,dev/ultralytics-ppe-nov2026-674#L3,811.1,449.3,1278.0,1187.8,145.9,,predicted instead: vest 0.92 IoU 0.93
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-675.jpg,dev/ultralytics-ppe-nov2026-675#L3,775.3,518.1,816.8,553.0,10.9,,predicted instead: nothing (IoU < 0.3)
+FN,no_helmet,images/dev/ultralytics-ppe-nov2026-696.jpg,dev/ultralytics-ppe-nov2026-696#L12,467.0,831.0,678.1,975.0,45.0,,predicted instead: no_helmet 0.90 IoU 0.47
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-696.jpg,dev/ultralytics-ppe-nov2026-696#L16,217.1,1577.0,264.2,1693.7,14.7,,predicted instead: nothing (IoU < 0.3)
+FP,no_helmet,images/dev/ultralytics-ppe-nov2026-696.jpg,,465.7,829.2,685.2,1126.3,68.6,0.896,localization (true: no_helmet)
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-697.jpg,dev/ultralytics-ppe-nov2026-697#L18,999.4,421.6,1028.1,447.4,8.1,,predicted instead: no_goggle 0.28 IoU 0.48
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-697.jpg,dev/ultralytics-ppe-nov2026-697#L23,1435.6,344.1,1468.4,369.9,8.1,,predicted instead: nothing (IoU < 0.3)
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-697.jpg,,999.7,431.0,1023.6,450.9,6.2,0.28,localization (true: no_goggle)
+FP,no_boots,images/dev/ultralytics-ppe-nov2026-698.jpg,,1572.0,737.0,1627.9,877.6,17.5,0.482,background
+FN,no_goggle,images/dev/ultralytics-ppe-nov2026-699.jpg,dev/ultralytics-ppe-nov2026-699#L13,851.4,544.8,888.1,575.5,9.6,,predicted instead: no_goggle 0.55 IoU 0.47
+FN,no_gloves,images/dev/ultralytics-ppe-nov2026-699.jpg,dev/ultralytics-ppe-nov2026-699#L16,216.2,612.4,263.8,712.7,14.9,,predicted instead: no_gloves 0.55 IoU 0.49
+FP,no_gloves,images/dev/ultralytics-ppe-nov2026-699.jpg,,209.3,618.4,283.9,737.6,23.3,0.55,localization (true: no_gloves)
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-699.jpg,,854.0,548.2,911.9,571.5,7.3,0.547,localization (true: no_goggle)
+FP,no_goggle,images/dev/ultralytics-ppe-nov2026-705.jpg,,1052.3,356.7,1155.1,389.3,10.2,0.311,background

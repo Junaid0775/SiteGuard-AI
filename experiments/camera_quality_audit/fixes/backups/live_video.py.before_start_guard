@@ -1,0 +1,49 @@
+"""Live-video transport settings for the dashboard (camera-quality programme, 2026-11-23).
+
+Fix 1: return-video bitrate. The annotated frames are sent back to the browser by aiortc's VP8 encoder, whose library
+defaults are a constant-bitrate target of 0.5 Mbit/s (start), 0.25 Mbit/s (floor) and 1.5 Mbit/s (cap). On this
+local-only application that compresses the returned video far more than necessary (CAMERA-QUALITY-REPORT-001 §3).
+`configure_return_video_bitrate()` replaces those three module constants once per process, before any stream starts.
+The encoder still adapts within [min, max] to the browser's bandwidth feedback (REMB). No library file is edited.
+
+Fix 3: `VIDEO_HTML_ATTRS` makes the <video> element show the stream at most at its own resolution (no upscaling),
+keep its aspect ratio and never crop.
+
+The values were chosen by benchmark: experiments/camera_quality_audit/reports/CAMERA-FIX-REPORT-004-fix1-bitrate.md.
+"""
+
+from __future__ import annotations
+
+# Chosen return-video VP8 bitrate (bits per second). See the benchmark report before changing.
+RETURN_VIDEO_BITRATE = {"default": 2_500_000, "min": 1_250_000, "max": 2_500_000}  # benchmarked (4-8 Mbit/s unstable)
+
+# <video> attributes for streamlit-webrtc: natural size (no upscaling beyond the stream resolution), centred,
+# aspect ratio preserved, never cropped, never wider than the column.
+VIDEO_HTML_ATTRS = {
+    "autoPlay": True,
+    "controls": False,
+    "muted": True,
+    "style": {"width": "auto", "maxWidth": "100%", "height": "auto", "display": "block", "margin": "0 auto",
+              "objectFit": "contain", "background": "#0d0f12"},
+}
+
+_applied: dict | None = None
+
+
+def configure_return_video_bitrate(default: int | None = None, minimum: int | None = None, maximum: int | None = None) -> dict:
+    """Set aiortc's VP8 encoder bitrate constants for this process. Idempotent; returns the values in use."""
+    global _applied
+    import aiortc.codecs.vpx as vpx
+
+    d = int(default or RETURN_VIDEO_BITRATE["default"])
+    lo = int(minimum or RETURN_VIDEO_BITRATE["min"])
+    hi = int(maximum or RETURN_VIDEO_BITRATE["max"])
+    if not (0 < lo <= d <= hi):
+        raise ValueError(f"invalid bitrate range: min {lo}, default {d}, max {hi}")
+    vpx.DEFAULT_BITRATE, vpx.MIN_BITRATE, vpx.MAX_BITRATE = d, lo, hi  # VP8 is the negotiated codec (measured)
+    _applied = {"default": d, "min": lo, "max": hi}
+    return dict(_applied)
+
+
+def applied_return_video_bitrate() -> dict | None:
+    return dict(_applied) if _applied else None

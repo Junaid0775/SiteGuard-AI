@@ -1,0 +1,386 @@
+[
+  {
+    "policy": "ref_no_augmentation",
+    "imgsz": 640,
+    "hyp": null,
+    "samples": 300,
+    "boxes": 4430,
+    "boxes_per_sample_mean": 14.77,
+    "short_side_px": {
+      "median": 28.6,
+      "lt4_share": 0.0181,
+      "lt8_share": 0.1368,
+      "ge32_share": 0.4515
+    },
+    "per_class": {
+      "gloves": 597,
+      "vest": 535,
+      "boots": 752,
+      "goggles": 227,
+      "Person": 718,
+      "no_helmet": 210,
+      "forklift": 106,
+      "helmet": 485,
+      "no_vest": 154,
+      "no_gloves": 310,
+      "no_goggle": 110,
+      "no_boots": 226
+    }
+  },
+  {
+    "policy": "P0_default",
+    "imgsz": 640,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.5,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 7662,
+    "boxes_per_sample_mean": 25.54,
+    "short_side_px": {
+      "median": 24.2,
+      "lt4_share": 0.0445,
+      "lt8_share": 0.1607,
+      "ge32_share": 0.3951
+    },
+    "per_class": {
+      "gloves": 972,
+      "vest": 948,
+      "boots": 1268,
+      "goggles": 400,
+      "Person": 1415,
+      "no_helmet": 332,
+      "forklift": 238,
+      "helmet": 779,
+      "no_vest": 264,
+      "no_gloves": 520,
+      "no_boots": 366,
+      "no_goggle": 160
+    }
+  },
+  {
+    "policy": "P1_scale_0.25",
+    "imgsz": 640,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 6833,
+    "boxes_per_sample_mean": 22.78,
+    "short_side_px": {
+      "median": 28.2,
+      "lt4_share": 0.0252,
+      "lt8_share": 0.1298,
+      "ge32_share": 0.4496
+    },
+    "per_class": {
+      "gloves": 831,
+      "vest": 839,
+      "boots": 1121,
+      "goggles": 357,
+      "Person": 1314,
+      "no_helmet": 308,
+      "forklift": 238,
+      "helmet": 685,
+      "no_vest": 243,
+      "no_goggle": 135,
+      "no_gloves": 443,
+      "no_boots": 319
+    }
+  },
+  {
+    "policy": "P2_scale_0.25_colour_mild",
+    "imgsz": 640,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.01,
+      "hsv_s": 0.4,
+      "hsv_v": 0.3,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 6833,
+    "boxes_per_sample_mean": 22.78,
+    "short_side_px": {
+      "median": 28.2,
+      "lt4_share": 0.0252,
+      "lt8_share": 0.1298,
+      "ge32_share": 0.4496
+    },
+    "per_class": {
+      "gloves": 831,
+      "vest": 839,
+      "boots": 1121,
+      "goggles": 357,
+      "Person": 1314,
+      "no_helmet": 308,
+      "forklift": 238,
+      "helmet": 685,
+      "no_vest": 243,
+      "no_goggle": 135,
+      "no_gloves": 443,
+      "no_boots": 319
+    }
+  },
+  {
+    "policy": "P3_no_mosaic_scale_0.25",
+    "imgsz": 640,
+    "hyp": {
+      "mosaic": 0.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 4392,
+    "boxes_per_sample_mean": 14.64,
+    "short_side_px": {
+      "median": 27.3,
+      "lt4_share": 0.0237,
+      "lt8_share": 0.1459,
+      "ge32_share": 0.4415
+    },
+    "per_class": {
+      "gloves": 597,
+      "vest": 533,
+      "boots": 743,
+      "goggles": 227,
+      "Person": 716,
+      "no_helmet": 210,
+      "forklift": 105,
+      "helmet": 477,
+      "no_vest": 154,
+      "no_gloves": 309,
+      "no_goggle": 109,
+      "no_boots": 212
+    }
+  },
+  {
+    "policy": "ref_no_augmentation",
+    "imgsz": 1024,
+    "hyp": null,
+    "samples": 300,
+    "boxes": 4430,
+    "boxes_per_sample_mean": 14.77,
+    "short_side_px": {
+      "median": 45.7,
+      "lt4_share": 0.0009,
+      "lt8_share": 0.0352,
+      "ge32_share": 0.6251
+    },
+    "per_class": {
+      "gloves": 597,
+      "vest": 535,
+      "boots": 752,
+      "goggles": 227,
+      "Person": 718,
+      "no_helmet": 210,
+      "forklift": 106,
+      "helmet": 485,
+      "no_vest": 154,
+      "no_gloves": 310,
+      "no_goggle": 110,
+      "no_boots": 226
+    }
+  },
+  {
+    "policy": "P0_default",
+    "imgsz": 1024,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.5,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 7697,
+    "boxes_per_sample_mean": 25.66,
+    "short_side_px": {
+      "median": 38.5,
+      "lt4_share": 0.0114,
+      "lt8_share": 0.0763,
+      "ge32_share": 0.5624
+    },
+    "per_class": {
+      "gloves": 979,
+      "vest": 952,
+      "boots": 1274,
+      "goggles": 401,
+      "Person": 1416,
+      "no_helmet": 342,
+      "forklift": 238,
+      "helmet": 785,
+      "no_gloves": 521,
+      "no_boots": 366,
+      "no_vest": 263,
+      "no_goggle": 160
+    }
+  },
+  {
+    "policy": "P1_scale_0.25",
+    "imgsz": 1024,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 6851,
+    "boxes_per_sample_mean": 22.84,
+    "short_side_px": {
+      "median": 45.1,
+      "lt4_share": 0.0063,
+      "lt8_share": 0.0501,
+      "ge32_share": 0.6217
+    },
+    "per_class": {
+      "gloves": 833,
+      "vest": 840,
+      "boots": 1125,
+      "goggles": 358,
+      "Person": 1316,
+      "no_helmet": 309,
+      "forklift": 239,
+      "helmet": 689,
+      "no_vest": 243,
+      "no_goggle": 135,
+      "no_gloves": 444,
+      "no_boots": 320
+    }
+  },
+  {
+    "policy": "P2_scale_0.25_colour_mild",
+    "imgsz": 1024,
+    "hyp": {
+      "mosaic": 1.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.01,
+      "hsv_s": 0.4,
+      "hsv_v": 0.3,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 6851,
+    "boxes_per_sample_mean": 22.84,
+    "short_side_px": {
+      "median": 45.1,
+      "lt4_share": 0.0063,
+      "lt8_share": 0.0501,
+      "ge32_share": 0.6217
+    },
+    "per_class": {
+      "gloves": 833,
+      "vest": 840,
+      "boots": 1125,
+      "goggles": 358,
+      "Person": 1316,
+      "no_helmet": 309,
+      "forklift": 239,
+      "helmet": 689,
+      "no_vest": 243,
+      "no_goggle": 135,
+      "no_gloves": 444,
+      "no_boots": 320
+    }
+  },
+  {
+    "policy": "P3_no_mosaic_scale_0.25",
+    "imgsz": 1024,
+    "hyp": {
+      "mosaic": 0.0,
+      "scale": 0.25,
+      "translate": 0.1,
+      "fliplr": 0.5,
+      "flipud": 0.0,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "mixup": 0.0
+    },
+    "samples": 300,
+    "boxes": 4394,
+    "boxes_per_sample_mean": 14.65,
+    "short_side_px": {
+      "median": 43.7,
+      "lt4_share": 0.0043,
+      "lt8_share": 0.0485,
+      "ge32_share": 0.6138
+    },
+    "per_class": {
+      "gloves": 597,
+      "vest": 533,
+      "boots": 745,
+      "goggles": 227,
+      "Person": 716,
+      "no_helmet": 210,
+      "forklift": 105,
+      "helmet": 477,
+      "no_vest": 154,
+      "no_gloves": 309,
+      "no_goggle": 109,
+      "no_boots": 212
+    }
+  }
+]

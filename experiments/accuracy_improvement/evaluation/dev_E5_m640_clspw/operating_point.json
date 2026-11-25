@@ -1,0 +1,137 @@
+{
+  "images": 200,
+  "gt_objects": 2961,
+  "mAP50": 0.8170379432867353,
+  "mAP50-95": 0.607787510834337,
+  "per_class_mAP50-95": {
+    "helmet": 0.7285,
+    "gloves": 0.7243,
+    "vest": 0.7509,
+    "boots": 0.6471,
+    "goggles": 0.7319,
+    "Person": 0.8593,
+    "no_helmet": 0.4678,
+    "no_goggle": 0.1631,
+    "no_gloves": 0.4721,
+    "no_boots": 0.6237,
+    "forklift": 0.6306,
+    "no_vest": 0.494
+  },
+  "op_conf": 0.25,
+  "tp": 2451,
+  "fp": 284,
+  "fn": 510,
+  "precision": 0.8961608775137112,
+  "recall": 0.8277608915906788,
+  "fp_per_image": 1.42,
+  "fp_types": {
+    "background": 64,
+    "localization": 138,
+    "wrong_class": 77,
+    "duplicate": 5
+  },
+  "top_confusions": {
+    "boots (true: no_boots)": 23,
+    "no_boots (true: boots)": 11,
+    "helmet (true: no_helmet)": 11,
+    "vest (true: no_vest)": 8,
+    "gloves (true: no_gloves)": 5,
+    "no_vest (true: vest)": 4,
+    "goggles (true: no_goggle)": 3,
+    "Person (true: vest)": 2
+  },
+  "contradiction_pairs": 21,
+  "per_class_op": {
+    "helmet": {
+      "tp": 259,
+      "fp": 20,
+      "fn": 35,
+      "precision": 0.9283,
+      "recall": 0.881
+    },
+    "gloves": {
+      "tp": 323,
+      "fp": 32,
+      "fn": 58,
+      "precision": 0.9099,
+      "recall": 0.8478
+    },
+    "vest": {
+      "tp": 310,
+      "fp": 11,
+      "fn": 30,
+      "precision": 0.9657,
+      "recall": 0.9118
+    },
+    "boots": {
+      "tp": 377,
+      "fp": 85,
+      "fn": 104,
+      "precision": 0.816,
+      "recall": 0.7838
+    },
+    "goggles": {
+      "tp": 135,
+      "fp": 6,
+      "fn": 4,
+      "precision": 0.9574,
+      "recall": 0.9712
+    },
+    "Person": {
+      "tp": 458,
+      "fp": 22,
+      "fn": 23,
+      "precision": 0.9542,
+      "recall": 0.9522
+    },
+    "no_helmet": {
+      "tp": 129,
+      "fp": 20,
+      "fn": 50,
+      "precision": 0.8658,
+      "recall": 0.7207
+    },
+    "no_goggle": {
+      "tp": 43,
+      "fp": 19,
+      "fn": 39,
+      "precision": 0.6935,
+      "recall": 0.5244
+    },
+    "no_gloves": {
+      "tp": 138,
+      "fp": 25,
+      "fn": 65,
+      "precision": 0.8466,
+      "recall": 0.6798
+    },
+    "no_boots": {
+      "tp": 128,
+      "fp": 21,
+      "fn": 50,
+      "precision": 0.8591,
+      "recall": 0.7191
+    },
+    "forklift": {
+      "tp": 61,
+      "fp": 12,
+      "fn": 12,
+      "precision": 0.8356,
+      "recall": 0.8356
+    },
+    "no_vest": {
+      "tp": 90,
+      "fp": 11,
+      "fn": 40,
+      "precision": 0.8911,
+      "recall": 0.6923
+    }
+  },
+  "f1": 0.8606039325842696,
+  "settings": {
+    "conf": 0.25,
+    "nms_iou": 0.5,
+    "imgsz": 640,
+    "matching": "greedy by confidence, same class, IoU >= 0.5"
+  }
+}

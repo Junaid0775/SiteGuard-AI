@@ -1,0 +1,18 @@
+{
+  "started": "2026-11-23T03:11:32",
+  "finished": "2026-11-23T03:11:50",
+  "weights": "experiments/accuracy_improvement/training/E1_m640_base/weights/best.pt",
+  "weights_sha256": "13c71d3024306cf889033762dea6aaa9352be9abaa4aa6a6a83bad5d275c815e",
+  "split": "test",
+  "images": 160,
+  "split_list_sha256": "cbc2ef25b8e25f26f1b57f0c14c5ecfa8d43e81e9328371742d21f783aeef5c2",
+  "dataset": "experiments/accuracy_improvement/datasets/v1_original_labels",
+  "imgsz": 640,
+  "op_conf": 0.25,
+  "op_nms_iou": 0.5,
+  "device": "mps",
+  "ultralytics": "8.4.215",
+  "torch": "2.15.0",
+  "python": "3.12.16",
+  "protocol": "evaluation protocol v1 (REPORT-020)"
+}

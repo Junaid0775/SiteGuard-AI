@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "original_yaml == configs/dataset.yaml": true,
+    "configs == generated resolved yaml": true,
+    "checkpoint names == configs": true,
+    "label class ids == 0..11 (all present)": true,
+    "inference output names subset of checkpoint names": true,
+    "compliance CLASS_TO_ITEM keys subset of names": true,
+    "compliance PERSON_CLASS in names": true,
+    "NEGATIVE_CLASS values (event categories) subset of names": true,
+    "report CATEGORY_LABELS keys == event categories": true,
+    "visualisation colours: negatives red / positives green / Person blue": true
+  },
+  "label_counts_by_id": {
+    "0": 1576,
+    "1": 1929,
+    "2": 1816,
+    "3": 2484,
+    "4": 751,
+    "5": 2443,
+    "6": 813,
+    "7": 347,
+    "8": 1042,
+    "9": 747,
+    "10": 348,
+    "11": 567
+  },
+  "names": {
+    "0": "helmet",
+    "1": "gloves",
+    "2": "vest",
+    "3": "boots",
+    "4": "goggles",
+    "5": "Person",
+    "6": "no_helmet",
+    "7": "no_goggle",
+    "8": "no_gloves",
+    "9": "no_boots",
+    "10": "forklift",
+    "11": "no_vest"
+  }
+}

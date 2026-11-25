@@ -1,0 +1,78 @@
+{
+  "inventory": {
+    "train_images": 800,
+    "train_labels": 800,
+    "train_images_without_label": 0,
+    "train_labels_without_image": 0,
+    "val_images": 200,
+    "val_labels": 200,
+    "val_images_without_label": 0,
+    "val_labels_without_image": 0,
+    "total_annotations": 14863,
+    "invalid_rows": 0,
+    "unreadable_images": 0,
+    "empty_label_files": 0,
+    "duplicate_filenames_across_splits": 0,
+    "class_ids_present": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "dimension_stats": {
+    "width": {
+      "min": 1152.0,
+      "max": 2048.0,
+      "mean": 1798.6,
+      "median": 2048.0
+    },
+    "height": {
+      "min": 848.0,
+      "max": 2048.0,
+      "mean": 1609.8,
+      "median": 1360.0
+    },
+    "aspect_w_over_h": {
+      "min": 0.5625,
+      "max": 1.7777777777777777,
+      "mean": 1.2,
+      "median": 1.5058823529411764
+    }
+  },
+  "orientation": {
+    "landscape": 577,
+    "portrait": 282,
+    "square": 141
+  },
+  "exact_duplicate_groups": 0,
+  "perceptual_hash_pairs": {
+    "dhash_min_nonself": 3,
+    "pairs_dhash_le5": 3,
+    "pairs_dhash_le10": 13,
+    "pairs_phash_le8": 1,
+    "pairs_phash_le10": 1
+  },
+  "near_duplicate_pairs": 1,
+  "near_duplicate_cross_split": 1,
+  "similar_pairs": 12,
+  "suspects": {
+    "ppe_without_person": 75,
+    "missing_ppe_without_person": 51,
+    "extreme_aspect": 15,
+    "item_as_large_as_person": 7
+  },
+  "suspects_by_priority": {
+    "low": 75,
+    "high": 51,
+    "medium": 22
+  }
+}

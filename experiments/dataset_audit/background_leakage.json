@@ -1,0 +1,192 @@
+{
+  "method": "64x64 grayscale; labelled boxes masked; Pearson correlation over pixels that are background in BOTH images; pairs need >= 40% shared background; best train match per val image",
+  "val_images": 200,
+  "val_best_match_counts": {
+    ">=0.95": 1,
+    ">=0.9": 1,
+    ">=0.85": 1,
+    ">=0.8": 4
+  },
+  "top": [
+    {
+      "val": "source-9e10b0409f922546c35b276eb5a5756e.jpg",
+      "train": "source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg",
+      "corr": 0.9907,
+      "shared_px": 2943
+    },
+    {
+      "val": "source-ab1fb85dccb8e6325a99fca62a476ef7.jpg",
+      "train": "source-a837cc97b55c4d2c0e40fbdfc3013ad9.jpg",
+      "corr": 0.808,
+      "shared_px": 3566
+    },
+    {
+      "val": "source-884ce8ac82984a62565821b150882347.jpg",
+      "train": "source-a837cc97b55c4d2c0e40fbdfc3013ad9.jpg",
+      "corr": 0.807,
+      "shared_px": 3564
+    },
+    {
+      "val": "source-150feca69395fa769adccdc8e157e935.jpg",
+      "train": "source-7f1b7b899de5eda3fe364c0355ea93bd.jpg",
+      "corr": 0.8021,
+      "shared_px": 3336
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-096.jpg",
+      "train": "ultralytics-ppe-nov2026-160.jpg",
+      "corr": 0.7719,
+      "shared_px": 1712
+    },
+    {
+      "val": "source-a8c726058fc542d983d5eb9427f86f09.jpg",
+      "train": "source-f4532be7ff670b1a99ec14fdae4b0557.jpg",
+      "corr": 0.7697,
+      "shared_px": 3900
+    },
+    {
+      "val": "source-63861e8188160ca09d7e331600db6cad.jpg",
+      "train": "source-0736c04fa3c777e89006eff256fe0a81.jpg",
+      "corr": 0.7694,
+      "shared_px": 3619
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-450.jpg",
+      "train": "source-6f8a01a3545c92180e1f948999207b9b.jpg",
+      "corr": 0.7665,
+      "shared_px": 1857
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-621.jpg",
+      "train": "ultralytics-ppe-nov2026-213.jpg",
+      "corr": 0.7578,
+      "shared_px": 1795
+    },
+    {
+      "val": "source-7721c50dc1f5f6aeb19990a9916e863c.jpg",
+      "train": "source-122e66278827dc8846c75fb8c7a7a01b.jpg",
+      "corr": 0.7419,
+      "shared_px": 3589
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-622.jpg",
+      "train": "ultralytics-ppe-nov2026-215.jpg",
+      "corr": 0.7363,
+      "shared_px": 2768
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-246.jpg",
+      "train": "ultralytics-ppe-nov2026-128.jpg",
+      "corr": 0.7329,
+      "shared_px": 1970
+    },
+    {
+      "val": "source-1bf1b490d2ff04f9db9bb55f74db9bd5.jpg",
+      "train": "source-705e8005b026f2e8fa4556bd135d1f13.jpg",
+      "corr": 0.7228,
+      "shared_px": 2645
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-271.jpg",
+      "train": "ultralytics-ppe-nov2026-706.jpg",
+      "corr": 0.7139,
+      "shared_px": 1639
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-148.jpg",
+      "train": "source-58c7f3d161f4a1348b91f9808ba107a3.jpg",
+      "corr": 0.7132,
+      "shared_px": 2366
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-672.jpg",
+      "train": "source-a837cc97b55c4d2c0e40fbdfc3013ad9.jpg",
+      "corr": 0.7042,
+      "shared_px": 2840
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-623.jpg",
+      "train": "ultralytics-ppe-nov2026-456.jpg",
+      "corr": 0.6998,
+      "shared_px": 1706
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-296.jpg",
+      "train": "ultralytics-ppe-nov2026-078.jpg",
+      "corr": 0.6909,
+      "shared_px": 1689
+    },
+    {
+      "val": "source-4cd393d3dd8a7a83a25d413bdeadfd23.jpg",
+      "train": "source-58c7f3d161f4a1348b91f9808ba107a3.jpg",
+      "corr": 0.6908,
+      "shared_px": 3085
+    },
+    {
+      "val": "source-9b649b7415bcb389744b5dcc00c39a00.jpg",
+      "train": "source-b389d7e14d9086cef980ae814b3c2bb1.jpg",
+      "corr": 0.6843,
+      "shared_px": 3328
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-272.jpg",
+      "train": "ultralytics-ppe-nov2026-637.jpg",
+      "corr": 0.6836,
+      "shared_px": 1642
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-598.jpg",
+      "train": "ultralytics-ppe-nov2026-607.jpg",
+      "corr": 0.6827,
+      "shared_px": 1676
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-046.jpg",
+      "train": "source-0736c04fa3c777e89006eff256fe0a81.jpg",
+      "corr": 0.6825,
+      "shared_px": 1961
+    },
+    {
+      "val": "source-4c206d0f090805255c642a9a3d58d0e5.jpg",
+      "train": "ultralytics-ppe-nov2026-637.jpg",
+      "corr": 0.6794,
+      "shared_px": 1743
+    },
+    {
+      "val": "source-b58c93c47793ff3f0010e6cf29c7ca98.jpg",
+      "train": "source-6cec9c3de8d7970fe1dfe824f18573c2.jpg",
+      "corr": 0.6678,
+      "shared_px": 3627
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-625.jpg",
+      "train": "ultralytics-ppe-nov2026-533.jpg",
+      "corr": 0.6513,
+      "shared_px": 2194
+    },
+    {
+      "val": "source-5a67f7bc0dd29deee4039b7c839d6663.jpg",
+      "train": "ultralytics-ppe-nov2026-015.jpg",
+      "corr": 0.6461,
+      "shared_px": 1657
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-646.jpg",
+      "train": "ultralytics-ppe-nov2026-160.jpg",
+      "corr": 0.6448,
+      "shared_px": 1782
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-072.jpg",
+      "train": "source-6cec9c3de8d7970fe1dfe824f18573c2.jpg",
+      "corr": 0.6378,
+      "shared_px": 2044
+    },
+    {
+      "val": "ultralytics-ppe-nov2026-525.jpg",
+      "train": "ultralytics-ppe-nov2026-318.jpg",
+      "corr": 0.6367,
+      "shared_px": 1669
+    }
+  ]
+}

@@ -1,0 +1,2722 @@
+{
+  "app": {
+    "path": "app.py",
+    "lines": 743,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "default_cfg",
+        "line": 77
+      },
+      {
+        "kind": "function",
+        "name": "get_detector",
+        "line": 101
+      },
+      {
+        "kind": "function",
+        "name": "get_store",
+        "line": 106
+      },
+      {
+        "kind": "function",
+        "name": "get_analyzer",
+        "line": 110
+      },
+      {
+        "kind": "function",
+        "name": "detector_or_stop",
+        "line": 120
+      },
+      {
+        "kind": "function",
+        "name": "model_ready",
+        "line": 128
+      },
+      {
+        "kind": "function",
+        "name": "read_json",
+        "line": 136
+      },
+      {
+        "kind": "function",
+        "name": "rgb",
+        "line": 143
+      },
+      {
+        "kind": "function",
+        "name": "status_badge",
+        "line": 147
+      },
+      {
+        "kind": "function",
+        "name": "page_header",
+        "line": 151
+      },
+      {
+        "kind": "function",
+        "name": "settings_signature",
+        "line": 158
+      },
+      {
+        "kind": "function",
+        "name": "save_inspection",
+        "line": 162
+      },
+      {
+        "kind": "function",
+        "name": "plotly_style",
+        "line": 171
+      },
+      {
+        "kind": "function",
+        "name": "compliance_panel",
+        "line": 176
+      },
+      {
+        "kind": "function",
+        "name": "page_overview",
+        "line": 217
+      },
+      {
+        "kind": "function",
+        "name": "page_live",
+        "line": 268
+      },
+      {
+        "kind": "function",
+        "name": "page_image",
+        "line": 363
+      },
+      {
+        "kind": "function",
+        "name": "page_video",
+        "line": 413
+      },
+      {
+        "kind": "function",
+        "name": "page_events",
+        "line": 473
+      },
+      {
+        "kind": "function",
+        "name": "page_analytics",
+        "line": 517
+      },
+      {
+        "kind": "function",
+        "name": "page_evaluation",
+        "line": 576
+      },
+      {
+        "kind": "function",
+        "name": "page_settings",
+        "line": 684
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR",
+          "OUTPUTS_DIR",
+          "SETTINGS_CONFIG",
+          "TRAINED_DIR",
+          "ensure_output_dirs",
+          "load_settings"
+        ],
+        "line": 27
+      },
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "COMPLIANT_EVIDENCE",
+          "POTENTIAL_VIOLATION",
+          "STATUS_LABELS",
+          "SUPPORTED_ITEMS",
+          "UNCERTAIN",
+          "ComplianceAnalyzer",
+          "ComplianceRules"
+        ],
+        "line": 35
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "ModelNotFoundError",
+          "PPEDetector"
+        ],
+        "line": 44
+      },
+      {
+        "from": "src.detection.image_processor",
+        "names": [
+          "SUPPORTED_IMAGE_TYPES",
+          "InvalidImageError",
+          "decode_image_bytes",
+          "encode_jpeg",
+          "inspect_image"
+        ],
+        "line": 45
+      },
+      {
+        "from": "src.detection.video_processor",
+        "names": [
+          "SUPPORTED_VIDEO_TYPES",
+          "InvalidVideoError",
+          "process_video"
+        ],
+        "line": 46
+      },
+      {
+        "from": "src.events.event_manager",
+        "names": [
+          "EventManager"
+        ],
+        "line": 47
+      },
+      {
+        "from": "src.events.event_store",
+        "names": [
+          "REVIEW_STATUSES",
+          "EventStore",
+          "InspectionRecord"
+        ],
+        "line": 48
+      },
+      {
+        "from": "src.reporting.report_generator",
+        "names": [
+          "CATEGORY_LABELS",
+          "DISCLAIMER",
+          "events_report_frame",
+          "events_to_csv_bytes",
+          "inspections_report_frame"
+        ],
+        "line": 49
+      },
+      {
+        "from": "src.detection.camera_processor",
+        "names": [
+          "LiveFrameProcessor"
+        ],
+        "line": 277
+      }
+    ],
+    "called_names": [
+      "ComplianceAnalyzer",
+      "DataFrame",
+      "EventManager",
+      "EventStore",
+      "InspectionRecord",
+      "LiveFrameProcessor",
+      "NamedTemporaryFile",
+      "PPEDetector",
+      "Path",
+      "add_inspection",
+      "apply",
+      "bar",
+      "bool",
+      "button",
+      "cache_clear",
+      "cache_resource",
+      "caption",
+      "class_counts",
+      "columns",
+      "combine",
+      "compliance_panel",
+      "container",
+      "copy",
+      "cvtColor",
+      "dataframe",
+      "date",
+      "date_input",
+      "decode_image_bytes",
+      "default_cfg",
+      "detection_rows",
+      "detector_or_stop",
+      "dict",
+      "divider",
+      "download_button",
+      "drop",
+      "dumps",
+      "encode",
+      "encode_jpeg",
+      "ensure_output_dirs",
+      "error",
+      "events_report_frame",
+      "events_to_csv_bytes",
+      "exists",
+      "expander",
+      "file_uploader",
+      "fillna",
+      "float",
+      "form",
+      "form_submit_button",
+      "fragment",
+      "from_ndarray",
+      "from_settings",
+      "get",
+      "get_analyzer",
+      "get_detector",
+      "get_store",
+      "getvalue",
+      "glob",
+      "groupby",
+      "head",
+      "hexdigest",
+      "image",
+      "index",
+      "info",
+      "inspect_image",
+      "inspections_report_frame",
+      "int",
+      "isinstance",
+      "isoformat",
+      "items",
+      "join",
+      "json",
+      "len",
+      "line",
+      "list",
+      "list_events",
+      "list_inspections",
+      "live_stats",
+      "load",
+      "load_settings",
+      "loads",
+      "map",
+      "markdown",
+      "max",
+      "melt",
+      "metric",
+      "min",
+      "mkdir",
+      "model_ready",
+      "multiselect",
+      "now",
+      "number_input",
+      "page_header",
+      "plotly_chart",
+      "plotly_style",
+      "pop",
+      "process",
+      "process_video",
+      "progress",
+      "radio",
+      "read_bytes",
+      "read_csv",
+      "read_json",
+      "read_text",
+      "rename",
+      "replace",
+      "rerun",
+      "resample",
+      "reset_index",
+      "rgb",
+      "round",
+      "safe_dump",
+      "safe_load",
+      "save_inspection",
+      "select_slider",
+      "selectbox",
+      "set_index",
+      "set_page_config",
+      "setdefault",
+      "settings_signature",
+      "sha1",
+      "size",
+      "slider",
+      "snapshot",
+      "sort_values",
+      "sorted",
+      "spinner",
+      "startswith",
+      "status_badge",
+      "stop",
+      "str",
+      "strftime",
+      "strip",
+      "subheader",
+      "success",
+      "sum",
+      "tabs",
+      "text_area",
+      "time",
+      "title",
+      "to_datetime",
+      "to_ndarray",
+      "today",
+      "toggle",
+      "tolist",
+      "total_seconds",
+      "type",
+      "unassigned_negative",
+      "unique",
+      "unlink",
+      "update",
+      "update_layout",
+      "update_review_status",
+      "update_traces",
+      "uuid4",
+      "value_counts",
+      "values",
+      "video",
+      "warning",
+      "webrtc_streamer",
+      "write",
+      "write_text"
+    ],
+    "imported_by": []
+  },
+  "src.compliance.compliance_analyzer": {
+    "path": "src/compliance/compliance_analyzer.py",
+    "lines": 182,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "ComplianceRules",
+        "line": 53,
+        "methods": [
+          "from_settings"
+        ]
+      },
+      {
+        "kind": "class",
+        "name": "ItemAssessment",
+        "line": 81,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "WorkerAssessment",
+        "line": 90,
+        "methods": [
+          "violations"
+        ]
+      },
+      {
+        "kind": "class",
+        "name": "ComplianceResult",
+        "line": 103,
+        "methods": [
+          "counts",
+          "unassigned_negative",
+          "table_rows"
+        ]
+      },
+      {
+        "kind": "class",
+        "name": "ComplianceAnalyzer",
+        "line": 133,
+        "methods": [
+          "__init__",
+          "assess_item",
+          "analyze"
+        ]
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.worker_association",
+        "names": [
+          "CLASS_TO_ITEM",
+          "PERSON_CLASS",
+          "AssociationParams",
+          "associate_items",
+          "iou"
+        ],
+        "line": 28
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "Detection"
+        ],
+        "line": 35
+      },
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "load_settings"
+        ],
+        "line": 36
+      }
+    ],
+    "called_names": [
+      "AssociationParams",
+      "ComplianceResult",
+      "ItemAssessment",
+      "WorkerAssessment",
+      "all",
+      "append",
+      "assess_item",
+      "associate_items",
+      "capitalize",
+      "cls",
+      "dict",
+      "enumerate",
+      "field",
+      "float",
+      "from_settings",
+      "get",
+      "iou",
+      "items",
+      "list",
+      "load_settings",
+      "round",
+      "sorted",
+      "tuple",
+      "update",
+      "values"
+    ],
+    "imported_by": [
+      "app",
+      "src.detection.annotate",
+      "src.detection.camera_processor",
+      "src.detection.image_processor",
+      "src.detection.video_processor",
+      "src.evaluation.live_audit",
+      "src.events.event_manager"
+    ]
+  },
+  "src.compliance.worker_association": {
+    "path": "src/compliance/worker_association.py",
+    "lines": 134,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "box_area",
+        "line": 55
+      },
+      {
+        "kind": "function",
+        "name": "intersection",
+        "line": 59
+      },
+      {
+        "kind": "function",
+        "name": "iou",
+        "line": 65
+      },
+      {
+        "kind": "function",
+        "name": "containment",
+        "line": 71
+      },
+      {
+        "kind": "function",
+        "name": "expand_box",
+        "line": 77
+      },
+      {
+        "kind": "class",
+        "name": "AssociationParams",
+        "line": 83,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "association_score",
+        "line": 89
+      },
+      {
+        "kind": "class",
+        "name": "AssociationResult",
+        "line": 105,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "associate_items",
+        "line": 113
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "Detection"
+        ],
+        "line": 26
+      }
+    ],
+    "called_names": [
+      "AssociationResult",
+      "abs",
+      "append",
+      "association_score",
+      "box_area",
+      "containment",
+      "enumerate",
+      "expand_box",
+      "field",
+      "get",
+      "id",
+      "intersection",
+      "len",
+      "max",
+      "min",
+      "range",
+      "sorted"
+    ],
+    "imported_by": [
+      "src.compliance.compliance_analyzer",
+      "src.detection.annotate",
+      "src.events.event_manager"
+    ]
+  },
+  "src.detection.annotate": {
+    "path": "src/detection/annotate.py",
+    "lines": 74,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "class_color",
+        "line": 30
+      },
+      {
+        "kind": "function",
+        "name": "_label",
+        "line": 38
+      },
+      {
+        "kind": "function",
+        "name": "draw_detections",
+        "line": 46
+      },
+      {
+        "kind": "function",
+        "name": "draw_compliance",
+        "line": 60
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "COMPLIANT_EVIDENCE",
+          "POTENTIAL_VIOLATION",
+          "UNCERTAIN",
+          "ComplianceResult"
+        ],
+        "line": 8
+      },
+      {
+        "from": "src.compliance.worker_association",
+        "names": [
+          "CLASS_TO_ITEM",
+          "PERSON_CLASS"
+        ],
+        "line": 14
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "Detection"
+        ],
+        "line": 15
+      }
+    ],
+    "called_names": [
+      "_label",
+      "class_color",
+      "copy",
+      "draw_detections",
+      "getTextSize",
+      "int",
+      "join",
+      "max",
+      "min",
+      "putText",
+      "rectangle",
+      "round"
+    ],
+    "imported_by": [
+      "src.detection.camera_processor",
+      "src.detection.image_processor",
+      "src.detection.video_processor",
+      "src.evaluation.live_audit"
+    ]
+  },
+  "src.detection.camera_processor": {
+    "path": "src/detection/camera_processor.py",
+    "lines": 143,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "LiveStats",
+        "line": 32,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "LiveFrameProcessor",
+        "line": 45,
+        "methods": [
+          "__init__",
+          "process",
+          "snapshot"
+        ]
+      },
+      {
+        "kind": "class",
+        "name": "OpenCVFrameSource",
+        "line": 119,
+        "methods": [
+          "__init__",
+          "open",
+          "read",
+          "close"
+        ]
+      },
+      {
+        "kind": "function",
+        "name": "recent_event_rows",
+        "line": 142
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer",
+          "ComplianceResult"
+        ],
+        "line": 23
+      },
+      {
+        "from": "src.detection.annotate",
+        "names": [
+          "draw_compliance"
+        ],
+        "line": 24
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "PPEDetector"
+        ],
+        "line": 25
+      },
+      {
+        "from": "src.events.event_manager",
+        "names": [
+          "EventManager"
+        ],
+        "line": 26
+      },
+      {
+        "from": "src.events.event_store",
+        "names": [
+          "EventStore",
+          "SafetyEvent"
+        ],
+        "line": 27
+      },
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "load_settings"
+        ],
+        "line": 28
+      }
+    ],
+    "called_names": [
+      "EventManager",
+      "LiveStats",
+      "Lock",
+      "VideoCapture",
+      "analyze",
+      "appendleft",
+      "bool",
+      "deque",
+      "detect",
+      "dict",
+      "draw_compliance",
+      "field",
+      "get",
+      "int",
+      "isOpened",
+      "len",
+      "list",
+      "load_settings",
+      "max",
+      "monotonic",
+      "perf_counter",
+      "process",
+      "read",
+      "release",
+      "round",
+      "table_rows",
+      "time",
+      "type"
+    ],
+    "imported_by": [
+      "app",
+      "src.evaluation.live_audit"
+    ]
+  },
+  "src.detection.detector": {
+    "path": "src/detection/detector.py",
+    "lines": 170,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "ModelNotFoundError",
+        "line": 23,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "Detection",
+        "line": 28,
+        "methods": [
+          "box",
+          "width",
+          "height",
+          "area",
+          "center",
+          "to_dict"
+        ]
+      },
+      {
+        "kind": "function",
+        "name": "resolve_device",
+        "line": 63
+      },
+      {
+        "kind": "function",
+        "name": "file_sha256",
+        "line": 75
+      },
+      {
+        "kind": "class",
+        "name": "PPEDetector",
+        "line": 83,
+        "methods": [
+          "__init__",
+          "load",
+          "model",
+          "names",
+          "detect",
+          "info"
+        ]
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "TRAINED_DIR",
+          "configure_ultralytics",
+          "load_settings",
+          "project_path"
+        ],
+        "line": 20
+      }
+    ],
+    "called_names": [
+      "Detection",
+      "Lock",
+      "ModelNotFoundError",
+      "ValueError",
+      "YOLO",
+      "append",
+      "asdict",
+      "astype",
+      "configure_ultralytics",
+      "cpu",
+      "exists",
+      "file_sha256",
+      "float",
+      "hexdigest",
+      "int",
+      "is_available",
+      "isinstance",
+      "items",
+      "iter",
+      "len",
+      "load",
+      "load_settings",
+      "loads",
+      "max",
+      "numpy",
+      "open",
+      "predict",
+      "project_path",
+      "read",
+      "read_text",
+      "resolve_device",
+      "round",
+      "sha256",
+      "stat",
+      "str",
+      "update",
+      "zip"
+    ],
+    "imported_by": [
+      "app",
+      "src.compliance.compliance_analyzer",
+      "src.compliance.worker_association",
+      "src.detection.annotate",
+      "src.detection.camera_processor",
+      "src.detection.image_processor",
+      "src.detection.video_processor",
+      "src.evaluation.live_audit"
+    ]
+  },
+  "src.detection.image_processor": {
+    "path": "src/detection/image_processor.py",
+    "lines": 86,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "InvalidImageError",
+        "line": 20,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "decode_image_bytes",
+        "line": 24
+      },
+      {
+        "kind": "function",
+        "name": "load_image",
+        "line": 42
+      },
+      {
+        "kind": "function",
+        "name": "encode_jpeg",
+        "line": 49
+      },
+      {
+        "kind": "class",
+        "name": "ImageInspection",
+        "line": 57,
+        "methods": [
+          "detection_rows",
+          "class_counts"
+        ]
+      },
+      {
+        "kind": "function",
+        "name": "inspect_image",
+        "line": 76
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer",
+          "ComplianceResult"
+        ],
+        "line": 11
+      },
+      {
+        "from": "src.detection.annotate",
+        "names": [
+          "draw_compliance"
+        ],
+        "line": 12
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "Detection",
+          "PPEDetector"
+        ],
+        "line": 13
+      }
+    ],
+    "called_names": [
+      "ImageInspection",
+      "InvalidImageError",
+      "Path",
+      "RuntimeError",
+      "analyze",
+      "decode_image_bytes",
+      "detect",
+      "draw_compliance",
+      "exists",
+      "frombuffer",
+      "get",
+      "imdecode",
+      "imencode",
+      "int",
+      "join",
+      "len",
+      "lower",
+      "lstrip",
+      "max",
+      "read_bytes",
+      "round",
+      "sorted",
+      "tobytes"
+    ],
+    "imported_by": [
+      "app",
+      "src.evaluation.live_audit"
+    ]
+  },
+  "src.detection.video_processor": {
+    "path": "src/detection/video_processor.py",
+    "lines": 132,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "InvalidVideoError",
+        "line": 27,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "VideoSummary",
+        "line": 32,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "open_writer",
+        "line": 47
+      },
+      {
+        "kind": "function",
+        "name": "process_video",
+        "line": 57
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer",
+          "ComplianceResult"
+        ],
+        "line": 17
+      },
+      {
+        "from": "src.detection.annotate",
+        "names": [
+          "draw_compliance"
+        ],
+        "line": 18
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "PPEDetector"
+        ],
+        "line": 19
+      },
+      {
+        "from": "src.events.event_manager",
+        "names": [
+          "EventManager"
+        ],
+        "line": 20
+      },
+      {
+        "from": "src.events.event_store",
+        "names": [
+          "SafetyEvent"
+        ],
+        "line": 21
+      },
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "load_settings"
+        ],
+        "line": 22
+      }
+    ],
+    "called_names": [
+      "InvalidVideoError",
+      "Path",
+      "RuntimeError",
+      "VideoCapture",
+      "VideoSummary",
+      "VideoWriter",
+      "VideoWriter_fourcc",
+      "analyze",
+      "detect",
+      "draw_compliance",
+      "field",
+      "get",
+      "int",
+      "isOpened",
+      "len",
+      "load_settings",
+      "max",
+      "min",
+      "mkdir",
+      "open_writer",
+      "process",
+      "progress",
+      "read",
+      "release",
+      "round",
+      "should_stop",
+      "str",
+      "time",
+      "write"
+    ],
+    "imported_by": [
+      "app"
+    ]
+  },
+  "src.evaluation.evaluate": {
+    "path": "src/evaluation/evaluate.py",
+    "lines": 83,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "evaluate",
+        "line": 26
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 67
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR",
+          "configure_ultralytics",
+          "load_settings",
+          "project_path"
+        ],
+        "line": 20
+      },
+      {
+        "from": "src.utils.dataset_tools",
+        "names": [
+          "prepare_default_dataset"
+        ],
+        "line": 21
+      },
+      {
+        "from": "src.training.train",
+        "names": [
+          "pick_device"
+        ],
+        "line": 30
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "Path",
+      "YOLO",
+      "add_argument",
+      "class_result",
+      "configure_ultralytics",
+      "dumps",
+      "enumerate",
+      "evaluate",
+      "float",
+      "hasattr",
+      "int",
+      "isoformat",
+      "items",
+      "load_settings",
+      "main",
+      "now",
+      "parse_args",
+      "pick_device",
+      "prepare_default_dataset",
+      "print",
+      "project_path",
+      "round",
+      "str",
+      "val",
+      "write_text"
+    ],
+    "imported_by": []
+  },
+  "src.evaluation.live_audit": {
+    "path": "src/evaluation/live_audit.py",
+    "lines": 1058,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "Sample",
+        "line": 66,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "load_val_samples",
+        "line": 75
+      },
+      {
+        "kind": "function",
+        "name": "_scaled",
+        "line": 89
+      },
+      {
+        "kind": "function",
+        "name": "resize_long",
+        "line": 94
+      },
+      {
+        "kind": "function",
+        "name": "yuv420_roundtrip",
+        "line": 103
+      },
+      {
+        "kind": "function",
+        "name": "add_noise",
+        "line": 111
+      },
+      {
+        "kind": "function",
+        "name": "codec_roundtrip",
+        "line": 115
+      },
+      {
+        "kind": "function",
+        "name": "motion_blur",
+        "line": 151
+      },
+      {
+        "kind": "function",
+        "name": "low_light",
+        "line": 157
+      },
+      {
+        "kind": "function",
+        "name": "crop_sample",
+        "line": 163
+      },
+      {
+        "kind": "function",
+        "name": "webcam_framing",
+        "line": 182
+      },
+      {
+        "kind": "class",
+        "name": "Predictor",
+        "line": 199,
+        "methods": [
+          "__init__",
+          "__call__"
+        ]
+      },
+      {
+        "kind": "function",
+        "name": "box_iou",
+        "line": 221
+      },
+      {
+        "kind": "function",
+        "name": "box_ioa",
+        "line": 233
+      },
+      {
+        "kind": "function",
+        "name": "match_greedy",
+        "line": 243
+      },
+      {
+        "kind": "function",
+        "name": "classify_false_positive",
+        "line": 262
+      },
+      {
+        "kind": "function",
+        "name": "contradiction_pairs",
+        "line": 278
+      },
+      {
+        "kind": "function",
+        "name": "evaluate",
+        "line": 291
+      },
+      {
+        "kind": "function",
+        "name": "false_positive_log",
+        "line": 360
+      },
+      {
+        "kind": "class",
+        "name": "Condition",
+        "line": 389,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "_with_image",
+        "line": 401
+      },
+      {
+        "kind": "function",
+        "name": "_identity",
+        "line": 408
+      },
+      {
+        "kind": "function",
+        "name": "_cam720",
+        "line": 412
+      },
+      {
+        "kind": "function",
+        "name": "_cam480",
+        "line": 416
+      },
+      {
+        "kind": "function",
+        "name": "_framing",
+        "line": 420
+      },
+      {
+        "kind": "function",
+        "name": "_framing_reference",
+        "line": 425
+      },
+      {
+        "kind": "function",
+        "name": "build_conditions",
+        "line": 433
+      },
+      {
+        "kind": "function",
+        "name": "run_conditions",
+        "line": 472
+      },
+      {
+        "kind": "function",
+        "name": "save_examples",
+        "line": 526
+      },
+      {
+        "kind": "function",
+        "name": "pan_sequence",
+        "line": 552
+      },
+      {
+        "kind": "function",
+        "name": "run_overlay",
+        "line": 559
+      },
+      {
+        "kind": "function",
+        "name": "run_latency",
+        "line": 588
+      },
+      {
+        "kind": "function",
+        "name": "run_colour",
+        "line": 622
+      },
+      {
+        "kind": "function",
+        "name": "encode_sequence",
+        "line": 646
+      },
+      {
+        "kind": "function",
+        "name": "_load_yolo_boxes",
+        "line": 672
+      },
+      {
+        "kind": "function",
+        "name": "_det_rows",
+        "line": 680
+      },
+      {
+        "kind": "function",
+        "name": "_compare_sets",
+        "line": 684
+      },
+      {
+        "kind": "function",
+        "name": "run_webcam",
+        "line": 698
+      },
+      {
+        "kind": "function",
+        "name": "run_webcam_sweep",
+        "line": 848
+      },
+      {
+        "kind": "function",
+        "name": "_as_detections",
+        "line": 876
+      },
+      {
+        "kind": "function",
+        "name": "compliance_effect",
+        "line": 882
+      },
+      {
+        "kind": "function",
+        "name": "run_compliance_effect",
+        "line": 923
+      },
+      {
+        "kind": "function",
+        "name": "run_object_scale",
+        "line": 949
+      },
+      {
+        "kind": "function",
+        "name": "run_device_parity",
+        "line": 983
+      },
+      {
+        "kind": "function",
+        "name": "run_equivalence",
+        "line": 1007
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 1028
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR",
+          "TRAINED_DIR",
+          "class_names",
+          "configure_ultralytics",
+          "source_dataset_dir"
+        ],
+        "line": 50
+      },
+      {
+        "from": "src.utils.dataset_tools",
+        "names": [
+          "parse_label_file"
+        ],
+        "line": 51
+      },
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer"
+        ],
+        "line": 590
+      },
+      {
+        "from": "src.detection.annotate",
+        "names": [
+          "draw_compliance"
+        ],
+        "line": 591
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "PPEDetector"
+        ],
+        "line": 592
+      },
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer"
+        ],
+        "line": 700
+      },
+      {
+        "from": "src.detection.camera_processor",
+        "names": [
+          "LiveFrameProcessor"
+        ],
+        "line": 701
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "PPEDetector"
+        ],
+        "line": 702
+      },
+      {
+        "from": "src.detection.image_processor",
+        "names": [
+          "inspect_image"
+        ],
+        "line": 703
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "Detection"
+        ],
+        "line": 877
+      },
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "ComplianceAnalyzer"
+        ],
+        "line": 886
+      },
+      {
+        "from": "src.detection.detector",
+        "names": [
+          "PPEDetector"
+        ],
+        "line": 1009
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "BytesIO",
+      "ComplianceAnalyzer",
+      "Condition",
+      "Counter",
+      "Detection",
+      "Fraction",
+      "LiveFrameProcessor",
+      "PPEDetector",
+      "Path",
+      "Predictor",
+      "Sample",
+      "YOLO",
+      "_as_detections",
+      "_compare_sets",
+      "_det_rows",
+      "_load_yolo_boxes",
+      "_scaled",
+      "_with_image",
+      "abs",
+      "add",
+      "add_argument",
+      "add_noise",
+      "add_stream",
+      "all",
+      "allclose",
+      "analyze",
+      "any",
+      "ap_per_class",
+      "append",
+      "arange",
+      "argmax",
+      "argsort",
+      "array",
+      "ascontiguousarray",
+      "astype",
+      "base",
+      "box_ioa",
+      "box_iou",
+      "build_conditions",
+      "class_names",
+      "classify_false_positive",
+      "clip",
+      "close",
+      "codec_roundtrip",
+      "compliance_effect",
+      "concatenate",
+      "configure_ultralytics",
+      "contradiction_pairs",
+      "copy",
+      "cpu",
+      "crop_sample",
+      "decode",
+      "default_rng",
+      "detect",
+      "dict",
+      "draw_compliance",
+      "dumps",
+      "encode",
+      "encode_sequence",
+      "enumerate",
+      "evaluate",
+      "exists",
+      "false_positive_log",
+      "field",
+      "filter2D",
+      "float",
+      "fn",
+      "from_ndarray",
+      "full",
+      "get",
+      "glob",
+      "imread",
+      "imwrite",
+      "inspect_image",
+      "int",
+      "isinstance",
+      "isoformat",
+      "items",
+      "key",
+      "len",
+      "lexsort",
+      "linspace",
+      "list",
+      "load",
+      "load_val_samples",
+      "loads",
+      "low_light",
+      "main",
+      "map",
+      "match_greedy",
+      "max",
+      "maximum",
+      "mean",
+      "min",
+      "minimum",
+      "mkdir",
+      "most_common",
+      "motion_blur",
+      "mux",
+      "normal",
+      "now",
+      "numpy",
+      "ones",
+      "open",
+      "pan_sequence",
+      "parse_args",
+      "parse_label_file",
+      "percentile",
+      "perf_counter",
+      "pr",
+      "pred",
+      "predict",
+      "print",
+      "process",
+      "prod",
+      "putText",
+      "range",
+      "read_text",
+      "rectangle",
+      "reformat",
+      "reshape",
+      "resize",
+      "resize_long",
+      "round",
+      "run_colour",
+      "run_compliance_effect",
+      "run_conditions",
+      "run_device_parity",
+      "run_equivalence",
+      "run_latency",
+      "run_live",
+      "run_object_scale",
+      "run_overlay",
+      "run_webcam",
+      "run_webcam_sweep",
+      "save_examples",
+      "seek",
+      "set",
+      "setdefault",
+      "sorted",
+      "source_dataset_dir",
+      "split",
+      "startswith",
+      "str",
+      "subset",
+      "sum",
+      "time",
+      "to_ndarray",
+      "transform",
+      "update",
+      "values",
+      "webcam_framing",
+      "where",
+      "write",
+      "write_text",
+      "yuv420_roundtrip",
+      "zeros",
+      "zip"
+    ],
+    "imported_by": []
+  },
+  "src.evaluation.viewpoint_evaluation": {
+    "path": "src/evaluation/viewpoint_evaluation.py",
+    "lines": 217,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "load_metadata",
+        "line": 54
+      },
+      {
+        "kind": "function",
+        "name": "build_groups",
+        "line": 59
+      },
+      {
+        "kind": "function",
+        "name": "val_only_group_names",
+        "line": 84
+      },
+      {
+        "kind": "function",
+        "name": "check_no_leakage",
+        "line": 90
+      },
+      {
+        "kind": "function",
+        "name": "prepare",
+        "line": 100
+      },
+      {
+        "kind": "function",
+        "name": "evaluate",
+        "line": 125
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 191
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR",
+          "GENERATED_DATA_DIR",
+          "VIEWPOINT_CSV",
+          "configure_ultralytics",
+          "project_path"
+        ],
+        "line": 40
+      },
+      {
+        "from": "src.utils.dataset_tools",
+        "names": [
+          "build_mirror",
+          "write_dataset_yaml",
+          "write_image_list"
+        ],
+        "line": 47
+      },
+      {
+        "from": "src.training.train",
+        "names": [
+          "pick_device"
+        ],
+        "line": 137
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "DictReader",
+      "Path",
+      "RuntimeError",
+      "YOLO",
+      "add_argument",
+      "add_parser",
+      "add_subparsers",
+      "all",
+      "build_groups",
+      "build_mirror",
+      "check_no_leakage",
+      "class_result",
+      "configure_ultralytics",
+      "dumps",
+      "enumerate",
+      "evaluate",
+      "float",
+      "get",
+      "hasattr",
+      "int",
+      "isoformat",
+      "items",
+      "len",
+      "list",
+      "load_metadata",
+      "loads",
+      "main",
+      "mkdir",
+      "now",
+      "open",
+      "parse_args",
+      "pick_device",
+      "prepare",
+      "print",
+      "project_path",
+      "read_text",
+      "round",
+      "str",
+      "sum",
+      "val",
+      "val_only_group_names",
+      "write_dataset_yaml",
+      "write_image_list",
+      "write_text"
+    ],
+    "imported_by": []
+  },
+  "src.events.event_manager": {
+    "path": "src/events/event_manager.py",
+    "lines": 159,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "_Candidate",
+        "line": 40,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "_Recent",
+        "line": 50,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "new_event_id",
+        "line": 56
+      },
+      {
+        "kind": "class",
+        "name": "EventManager",
+        "line": 60,
+        "methods": [
+          "__init__",
+          "_in_cooldown",
+          "process",
+          "_match_candidate",
+          "_create_event"
+        ]
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.compliance.compliance_analyzer",
+        "names": [
+          "NEGATIVE_CLASS",
+          "ComplianceResult"
+        ],
+        "line": 33
+      },
+      {
+        "from": "src.compliance.worker_association",
+        "names": [
+          "iou"
+        ],
+        "line": 34
+      },
+      {
+        "from": "src.events.event_store",
+        "names": [
+          "EventStore",
+          "SafetyEvent"
+        ],
+        "line": 35
+      },
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "load_settings",
+          "project_path"
+        ],
+        "line": 36
+      }
+    ],
+    "called_names": [
+      "Lock",
+      "SafetyEvent",
+      "_Candidate",
+      "_Recent",
+      "_create_event",
+      "_in_cooldown",
+      "_match_candidate",
+      "add",
+      "add_event",
+      "any",
+      "append",
+      "copy",
+      "extend",
+      "float",
+      "id",
+      "imwrite",
+      "int",
+      "iou",
+      "isoformat",
+      "load_settings",
+      "max",
+      "mkdir",
+      "new_event_id",
+      "now",
+      "project_path",
+      "rectangle",
+      "round",
+      "set",
+      "str",
+      "strftime",
+      "uuid4"
+    ],
+    "imported_by": [
+      "app",
+      "src.detection.camera_processor",
+      "src.detection.video_processor"
+    ]
+  },
+  "src.events.event_store": {
+    "path": "src/events/event_store.py",
+    "lines": 172,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "SafetyEvent",
+        "line": 61,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "InspectionRecord",
+        "line": 77,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "EventStore",
+        "line": 89,
+        "methods": [
+          "__init__",
+          "_connect",
+          "add_event",
+          "update_review_status",
+          "list_events",
+          "count_events",
+          "add_inspection",
+          "list_inspections"
+        ]
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "load_settings",
+          "project_path"
+        ],
+        "line": 25
+      }
+    ],
+    "called_names": [
+      "Lock",
+      "ValueError",
+      "_connect",
+      "append",
+      "asdict",
+      "close",
+      "commit",
+      "connect",
+      "dumps",
+      "execute",
+      "executescript",
+      "fetchone",
+      "field",
+      "get",
+      "int",
+      "isoformat",
+      "join",
+      "list",
+      "load_settings",
+      "mkdir",
+      "project_path",
+      "read_sql_query",
+      "values"
+    ],
+    "imported_by": [
+      "app",
+      "src.detection.camera_processor",
+      "src.detection.video_processor",
+      "src.events.event_manager"
+    ]
+  },
+  "src.reporting.report_generator": {
+    "path": "src/reporting/report_generator.py",
+    "lines": 86,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "events_report_frame",
+        "line": 41
+      },
+      {
+        "kind": "function",
+        "name": "events_to_csv_bytes",
+        "line": 52
+      },
+      {
+        "kind": "function",
+        "name": "save_events_report",
+        "line": 56
+      },
+      {
+        "kind": "function",
+        "name": "inspections_report_frame",
+        "line": 64
+      },
+      {
+        "kind": "function",
+        "name": "summary_report",
+        "line": 74
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "OUTPUTS_DIR"
+        ],
+        "line": 11
+      }
+    ],
+    "called_names": [
+      "DataFrame",
+      "add_prefix",
+      "apply",
+      "astype",
+      "concat",
+      "copy",
+      "drop",
+      "encode",
+      "events_report_frame",
+      "events_to_csv_bytes",
+      "fillna",
+      "int",
+      "isinstance",
+      "isoformat",
+      "json_normalize",
+      "len",
+      "list",
+      "loads",
+      "map",
+      "mkdir",
+      "now",
+      "rename",
+      "reset_index",
+      "round",
+      "strftime",
+      "sum",
+      "to_csv",
+      "to_dict",
+      "value_counts",
+      "values",
+      "write_bytes"
+    ],
+    "imported_by": [
+      "app"
+    ]
+  },
+  "src.training.train": {
+    "path": "src/training/train.py",
+    "lines": 212,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "pick_device",
+        "line": 39
+      },
+      {
+        "kind": "function",
+        "name": "backup_if_exists",
+        "line": 52
+      },
+      {
+        "kind": "function",
+        "name": "promote_checkpoints",
+        "line": 62
+      },
+      {
+        "kind": "function",
+        "name": "library_versions",
+        "line": 80
+      },
+      {
+        "kind": "function",
+        "name": "write_metadata",
+        "line": 94
+      },
+      {
+        "kind": "function",
+        "name": "parse_args",
+        "line": 111
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 129
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR",
+          "TRAINED_DIR",
+          "configure_ultralytics",
+          "load_settings",
+          "project_path"
+        ],
+        "line": 28
+      },
+      {
+        "from": "src.utils.dataset_tools",
+        "names": [
+          "prepare_default_dataset",
+          "validate_dataset"
+        ],
+        "line": 35
+      },
+      {
+        "from": "src.utils.logging_config",
+        "names": [
+          "setup_logging"
+        ],
+        "line": 36
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "Path",
+      "SystemExit",
+      "YOLO",
+      "add_argument",
+      "backup_if_exists",
+      "bool",
+      "configure_ultralytics",
+      "copy2",
+      "dict",
+      "dumps",
+      "exists",
+      "float",
+      "info",
+      "int",
+      "is_available",
+      "isoformat",
+      "items",
+      "library_versions",
+      "load_settings",
+      "machine",
+      "main",
+      "mkdir",
+      "move",
+      "now",
+      "parse_args",
+      "pick_device",
+      "platform",
+      "prepare_default_dataset",
+      "project_path",
+      "promote_checkpoints",
+      "round",
+      "setup_logging",
+      "split",
+      "str",
+      "strftime",
+      "time",
+      "to_dict",
+      "train",
+      "validate_dataset",
+      "vars",
+      "warning",
+      "with_name",
+      "write_metadata",
+      "write_text"
+    ],
+    "imported_by": [
+      "src.evaluation.evaluate",
+      "src.evaluation.viewpoint_evaluation"
+    ]
+  },
+  "src.utils.dataset_tools": {
+    "path": "src/utils/dataset_tools.py",
+    "lines": 259,
+    "definitions": [
+      {
+        "kind": "class",
+        "name": "LabelFormatError",
+        "line": 39,
+        "methods": []
+      },
+      {
+        "kind": "class",
+        "name": "LabelRow",
+        "line": 44,
+        "methods": []
+      },
+      {
+        "kind": "function",
+        "name": "parse_label_line",
+        "line": 52
+      },
+      {
+        "kind": "function",
+        "name": "parse_label_file",
+        "line": 71
+      },
+      {
+        "kind": "function",
+        "name": "list_images",
+        "line": 79
+      },
+      {
+        "kind": "function",
+        "name": "is_image_readable",
+        "line": 85
+      },
+      {
+        "kind": "class",
+        "name": "ValidationReport",
+        "line": 94,
+        "methods": [
+          "ok",
+          "to_dict"
+        ]
+      },
+      {
+        "kind": "function",
+        "name": "validate_dataset",
+        "line": 121
+      },
+      {
+        "kind": "function",
+        "name": "build_mirror",
+        "line": 173
+      },
+      {
+        "kind": "function",
+        "name": "write_dataset_yaml",
+        "line": 198
+      },
+      {
+        "kind": "function",
+        "name": "write_image_list",
+        "line": 218
+      },
+      {
+        "kind": "function",
+        "name": "prepare_default_dataset",
+        "line": 225
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 231
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "GENERATED_DATA_DIR",
+          "class_names",
+          "mirror_dataset_dir",
+          "source_dataset_dir"
+        ],
+        "line": 28
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "Counter",
+      "FileExistsError",
+      "LabelFormatError",
+      "LabelRow",
+      "Path",
+      "SystemExit",
+      "ValidationReport",
+      "add_argument",
+      "all",
+      "append",
+      "build_mirror",
+      "class_names",
+      "copy",
+      "dict",
+      "dumps",
+      "enumerate",
+      "exists",
+      "field",
+      "float",
+      "get",
+      "glob",
+      "hexdigest",
+      "imread",
+      "int",
+      "is_image_readable",
+      "is_symlink",
+      "items",
+      "iterdir",
+      "join",
+      "len",
+      "list_images",
+      "loads",
+      "lower",
+      "main",
+      "mirror_dataset_dir",
+      "mkdir",
+      "open",
+      "parse_args",
+      "parse_label_line",
+      "prepare_default_dataset",
+      "print",
+      "read_bytes",
+      "read_text",
+      "readlink",
+      "safe_dump",
+      "setdefault",
+      "sha256",
+      "sorted",
+      "source_dataset_dir",
+      "split",
+      "splitlines",
+      "startswith",
+      "str",
+      "strip",
+      "sum",
+      "symlink_to",
+      "to_dict",
+      "validate_dataset",
+      "values",
+      "write",
+      "write_dataset_yaml",
+      "write_text"
+    ],
+    "imported_by": [
+      "src.evaluation.evaluate",
+      "src.evaluation.live_audit",
+      "src.evaluation.viewpoint_evaluation",
+      "src.training.train"
+    ]
+  },
+  "src.utils.logging_config": {
+    "path": "src/utils/logging_config.py",
+    "lines": 31,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "setup_logging",
+        "line": 11
+      },
+      {
+        "kind": "function",
+        "name": "get_logger",
+        "line": 30
+      }
+    ],
+    "internal_imports": [],
+    "called_names": [
+      "FileHandler",
+      "Formatter",
+      "StreamHandler",
+      "addHandler",
+      "getLogger",
+      "mkdir",
+      "setFormatter",
+      "setLevel"
+    ],
+    "imported_by": [
+      "src.training.train"
+    ]
+  },
+  "src.utils.paths": {
+    "path": "src/utils/paths.py",
+    "lines": 109,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "configure_ultralytics",
+        "line": 41
+      },
+      {
+        "kind": "function",
+        "name": "project_path",
+        "line": 54
+      },
+      {
+        "kind": "function",
+        "name": "load_yaml",
+        "line": 60
+      },
+      {
+        "kind": "function",
+        "name": "load_settings",
+        "line": 66
+      },
+      {
+        "kind": "function",
+        "name": "load_dataset_config",
+        "line": 71
+      },
+      {
+        "kind": "function",
+        "name": "source_dataset_dir",
+        "line": 75
+      },
+      {
+        "kind": "function",
+        "name": "mirror_dataset_dir",
+        "line": 87
+      },
+      {
+        "kind": "function",
+        "name": "class_names",
+        "line": 92
+      },
+      {
+        "kind": "function",
+        "name": "ensure_output_dirs",
+        "line": 98
+      }
+    ],
+    "internal_imports": [],
+    "called_names": [
+      "Path",
+      "expanduser",
+      "get",
+      "int",
+      "is_absolute",
+      "items",
+      "load_dataset_config",
+      "load_yaml",
+      "lru_cache",
+      "mkdir",
+      "open",
+      "project_path",
+      "resolve",
+      "safe_load",
+      "setdefault",
+      "str",
+      "update"
+    ],
+    "imported_by": [
+      "app",
+      "scripts.build_viewpoint_metadata",
+      "scripts.capture_webcam_frames",
+      "scripts.make_contact_sheets",
+      "scripts.make_test_video",
+      "src.compliance.compliance_analyzer",
+      "src.detection.camera_processor",
+      "src.detection.detector",
+      "src.detection.video_processor",
+      "src.evaluation.evaluate",
+      "src.evaluation.live_audit",
+      "src.evaluation.viewpoint_evaluation",
+      "src.events.event_manager",
+      "src.events.event_store",
+      "src.reporting.report_generator",
+      "src.training.train",
+      "src.utils.dataset_tools"
+    ]
+  },
+  "scripts.build_viewpoint_metadata": {
+    "path": "scripts/build_viewpoint_metadata.py",
+    "lines": 65,
+    "definitions": [],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "DATA_DIR",
+          "VIEWPOINT_CSV"
+        ],
+        "line": 15
+      }
+    ],
+    "called_names": [
+      "Counter",
+      "DictReader",
+      "Path",
+      "SystemExit",
+      "any",
+      "enumerate",
+      "insert",
+      "int",
+      "len",
+      "list",
+      "open",
+      "print",
+      "range",
+      "read_text",
+      "resolve",
+      "split",
+      "splitlines",
+      "startswith",
+      "str",
+      "strip",
+      "values",
+      "writer",
+      "writerow"
+    ],
+    "imported_by": []
+  },
+  "scripts.capture_webcam_frames": {
+    "path": "scripts/capture_webcam_frames.py",
+    "lines": 70,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 31
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "EXPERIMENTS_DIR"
+        ],
+        "line": 26
+      }
+    ],
+    "called_names": [
+      "ArgumentParser",
+      "Path",
+      "SystemExit",
+      "VideoCapture",
+      "add_argument",
+      "append",
+      "dumps",
+      "imwrite",
+      "insert",
+      "isOpened",
+      "isoformat",
+      "len",
+      "main",
+      "max",
+      "mkdir",
+      "now",
+      "parse_args",
+      "print",
+      "read",
+      "release",
+      "resolve",
+      "round",
+      "set",
+      "str",
+      "time",
+      "write_text"
+    ],
+    "imported_by": []
+  },
+  "scripts.engineering.code_map": {
+    "path": "scripts/engineering/code_map.py",
+    "lines": 56,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "module_name",
+        "line": 19
+      },
+      {
+        "kind": "function",
+        "name": "analyse",
+        "line": 24
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 45
+      }
+    ],
+    "internal_imports": [],
+    "called_names": [
+      "Path",
+      "add",
+      "analyse",
+      "append",
+      "as_posix",
+      "dumps",
+      "isinstance",
+      "items",
+      "join",
+      "len",
+      "main",
+      "module_name",
+      "parse",
+      "print",
+      "read_text",
+      "relative_to",
+      "resolve",
+      "rglob",
+      "set",
+      "sorted",
+      "splitlines",
+      "startswith",
+      "walk",
+      "with_suffix",
+      "write_text"
+    ],
+    "imported_by": []
+  },
+  "scripts.engineering.hash_manifest": {
+    "path": "scripts/engineering/hash_manifest.py",
+    "lines": 112,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "sha256",
+        "line": 41
+      },
+      {
+        "kind": "function",
+        "name": "role_for",
+        "line": 49
+      },
+      {
+        "kind": "function",
+        "name": "rows_for",
+        "line": 56
+      },
+      {
+        "kind": "function",
+        "name": "write_csv",
+        "line": 67
+      },
+      {
+        "kind": "function",
+        "name": "create",
+        "line": 76
+      },
+      {
+        "kind": "function",
+        "name": "verify",
+        "line": 90
+      }
+    ],
+    "internal_imports": [],
+    "called_names": [
+      "DictReader",
+      "DictWriter",
+      "Path",
+      "SystemExit",
+      "as_posix",
+      "create",
+      "exists",
+      "fromtimestamp",
+      "glob",
+      "hexdigest",
+      "is_file",
+      "isoformat",
+      "iter",
+      "len",
+      "list",
+      "mkdir",
+      "open",
+      "print",
+      "read",
+      "relative_to",
+      "resolve",
+      "rglob",
+      "role_for",
+      "rows_for",
+      "set",
+      "sha256",
+      "sorted",
+      "startswith",
+      "stat",
+      "update",
+      "verify",
+      "write_csv",
+      "writeheader",
+      "writerows"
+    ],
+    "imported_by": []
+  },
+  "scripts.make_contact_sheets": {
+    "path": "scripts/make_contact_sheets.py",
+    "lines": 47,
+    "definitions": [],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "DATA_DIR",
+          "source_dataset_dir"
+        ],
+        "line": 15
+      }
+    ],
+    "called_names": [
+      "Path",
+      "append",
+      "divmod",
+      "enumerate",
+      "full",
+      "glob",
+      "imread",
+      "imwrite",
+      "insert",
+      "int",
+      "len",
+      "min",
+      "mkdir",
+      "open",
+      "print",
+      "putText",
+      "range",
+      "rectangle",
+      "resize",
+      "resolve",
+      "sorted",
+      "source_dataset_dir",
+      "str",
+      "writer",
+      "writerow"
+    ],
+    "imported_by": []
+  },
+  "scripts.make_test_video": {
+    "path": "scripts/make_test_video.py",
+    "lines": 61,
+    "definitions": [
+      {
+        "kind": "function",
+        "name": "frames_for",
+        "line": 25
+      },
+      {
+        "kind": "function",
+        "name": "main",
+        "line": 38
+      }
+    ],
+    "internal_imports": [
+      {
+        "from": "src.utils.paths",
+        "names": [
+          "DATA_DIR",
+          "source_dataset_dir"
+        ],
+        "line": 20
+      }
+    ],
+    "called_names": [
+      "Path",
+      "VideoWriter",
+      "VideoWriter_fourcc",
+      "frames_for",
+      "glob",
+      "imread",
+      "insert",
+      "int",
+      "isOpened",
+      "join",
+      "len",
+      "main",
+      "max",
+      "min",
+      "mkdir",
+      "print",
+      "range",
+      "release",
+      "resize",
+      "resolve",
+      "sorted",
+      "source_dataset_dir",
+      "startswith",
+      "str",
+      "write",
+      "write_text"
+    ],
+    "imported_by": []
+  }
+}

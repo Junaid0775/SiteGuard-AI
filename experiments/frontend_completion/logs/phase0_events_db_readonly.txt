@@ -1,0 +1,8 @@
+tables: ['events', 'inspections']
+events: rows=33 cols=['event_id', 'timestamp', 'source_type', 'source_name', 'category', 'confidence', 'worker_ref', 'worker_box', 'media_time_s', 'evidence_path', 'review_status', 'notes']
+inspections: rows=6 cols=['inspection_id', 'timestamp', 'source_type', 'source_name', 'frames_processed', 'person_detections', 'class_counts', 'events_created', 'settings']
+events by category: [('no_gloves', 10), ('no_helmet', 12), ('no_vest', 11)]
+events by review_status: [('pending_review', 33)]
+events by source_type: [('image', 2), ('live_camera', 31)]
+event time range: ('2026-11-19T19:33:24', '2026-11-20T21:19:07')
+inspections time range: ('2026-11-19T19:36:04', '2026-11-20T21:19:11', 6)

@@ -1,0 +1,43 @@
+# Streamlit configuration for SiteGuard AI.
+# Dark industrial theme (frontend completion, 2026-11-23): charcoal surfaces, one restrained
+# safety-orange accent, neutral greys. Status colours are always paired with a text label in the app.
+# Previous version (light/dark following the OS): experiments/frontend_completion/backups/20261123-phase0/config.toml
+
+[theme]
+base = "dark"
+primaryColor = "#E07A3F"
+backgroundColor = "#121417"
+secondaryBackgroundColor = "#1A1E23"
+textColor = "#E4E6E8"
+font = "sans serif"
+baseRadius = "small"
+buttonRadius = "small"
+borderColor = "#2E353E"
+showWidgetBorder = true
+showSidebarBorder = true
+linkColor = "#F0A070"
+dataframeHeaderBackgroundColor = "#222830"
+dataframeBorderColor = "#2E353E"
+redColor = "#E5484D"
+greenColor = "#3FA66B"
+orangeColor = "#E07A3F"
+yellowColor = "#D9A23B"
+blueColor = "#5B8DEF"
+grayColor = "#9AA3AE"
+chartCategoricalColors = ["#E07A3F", "#7C8B9C", "#4F6D8A", "#B9C2CC", "#8A6F52", "#5E7D6E"]
+
+[theme.sidebar]
+backgroundColor = "#16191D"
+secondaryBackgroundColor = "#1F242A"
+borderColor = "#2E353E"
+
+[server]
+headless = true
+maxUploadSize = 500        # MB, allows short site videos
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false   # no usage telemetry
+
+[client]
+toolbarMode = "minimal"   # no developer menu / Deploy button: this app is local only, never deployed

@@ -1,0 +1,155 @@
+{
+  "yolo26n": {
+    "model": "yolo26n",
+    "frames_in": 270,
+    "frames_out": 270,
+    "fps_in": 15.0,
+    "fps_out": 15.0,
+    "size_in": [
+      1280,
+      720
+    ],
+    "size_out": [
+      1280,
+      720
+    ],
+    "frame_order_strictly_increasing": true,
+    "boxes_only_from_source_frame": true,
+    "frames_analysed": 270,
+    "processing_s": 2.86,
+    "analysed_fps_offline": 94.3,
+    "inference_ms": {
+      "mean": 9.26,
+      "median": 8.41,
+      "p95": 14.11,
+      "max": 18.03,
+      "n": 270
+    },
+    "events": 16,
+    "event_times_on_frame_grid": false,
+    "evidence_images_exist": true,
+    "event_categories": [
+      "no_gloves",
+      "no_gloves",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest"
+    ]
+  },
+  "yolo26m_e30": {
+    "model": "yolo26m_e30",
+    "frames_in": 270,
+    "frames_out": 270,
+    "fps_in": 15.0,
+    "fps_out": 15.0,
+    "size_in": [
+      1280,
+      720
+    ],
+    "size_out": [
+      1280,
+      720
+    ],
+    "frame_order_strictly_increasing": true,
+    "boxes_only_from_source_frame": true,
+    "frames_analysed": 270,
+    "processing_s": 7.28,
+    "analysed_fps_offline": 37.1,
+    "inference_ms": {
+      "mean": 25.72,
+      "median": 25.51,
+      "p95": 27.11,
+      "max": 31.79,
+      "n": 270
+    },
+    "events": 19,
+    "event_times_on_frame_grid": false,
+    "evidence_images_exist": true,
+    "event_categories": [
+      "no_gloves",
+      "no_gloves",
+      "no_gloves",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest"
+    ]
+  },
+  "e3_candidate": {
+    "model": "e3_candidate",
+    "frames_in": 270,
+    "frames_out": 270,
+    "fps_in": 15.0,
+    "fps_out": 15.0,
+    "size_in": [
+      1280,
+      720
+    ],
+    "size_out": [
+      1280,
+      720
+    ],
+    "frame_order_strictly_increasing": true,
+    "boxes_only_from_source_frame": true,
+    "frames_analysed": 270,
+    "processing_s": 11.87,
+    "analysed_fps_offline": 22.8,
+    "inference_ms": {
+      "mean": 42.68,
+      "median": 42.22,
+      "p95": 45.11,
+      "max": 52.93,
+      "n": 270
+    },
+    "events": 22,
+    "event_times_on_frame_grid": false,
+    "evidence_images_exist": true,
+    "event_categories": [
+      "no_gloves",
+      "no_gloves",
+      "no_gloves",
+      "no_gloves",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest"
+    ]
+  }
+}

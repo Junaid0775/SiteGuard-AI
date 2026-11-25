@@ -1,0 +1,14 @@
+image_a,image_b,split_pair,family_pair,dhash_hamming,phash_hamming,thumb_corr,background_masked_corr,masked_pixels,same_size
+train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,train/source-efc23273c04e007083114c0f217335f0.jpg,train-train,source-source,3,12,0.8723,0.9918,744,1
+train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,val/source-9e10b0409f922546c35b276eb5a5756e.jpg,train-val,source-source,5,12,0.8439,0.9911,717,1
+train/source-efc23273c04e007083114c0f217335f0.jpg,val/source-9e10b0409f922546c35b276eb5a5756e.jpg,train-val,source-source,4,6,0.9257,0.9746,717,1
+train/ultralytics-ppe-nov2026-069.jpg,train/ultralytics-ppe-nov2026-310.jpg,train-train,ultralytics-ppe-ultralytics-ppe,7,20,0.5201,0.7786,487,0
+train/ultralytics-ppe-nov2026-069.jpg,val/ultralytics-ppe-nov2026-472.jpg,train-val,ultralytics-ppe-ultralytics-ppe,10,26,0.2905,0.1627,142,0
+train/ultralytics-ppe-nov2026-163.jpg,train/ultralytics-ppe-nov2026-429.jpg,train-train,ultralytics-ppe-ultralytics-ppe,9,22,0.648,0.6348,352,0
+train/ultralytics-ppe-nov2026-251.jpg,train/ultralytics-ppe-nov2026-427.jpg,train-train,ultralytics-ppe-ultralytics-ppe,10,30,-0.0117,-0.2007,707,0
+train/ultralytics-ppe-nov2026-363.jpg,train/ultralytics-ppe-nov2026-415.jpg,train-train,ultralytics-ppe-ultralytics-ppe,10,34,0.3664,0.5259,433,0
+train/ultralytics-ppe-nov2026-460.jpg,val/source-8497dd5065ce426e2d223085b4a773a0.jpg,train-val,source-ultralytics-ppe,8,24,0.53,0.645,502,0
+train/ultralytics-ppe-nov2026-490.jpg,train/ultralytics-ppe-nov2026-626.jpg,train-train,ultralytics-ppe-ultralytics-ppe,10,18,0.5811,nan,17,0
+train/ultralytics-ppe-nov2026-541.jpg,val/ultralytics-ppe-nov2026-549.jpg,train-val,ultralytics-ppe-ultralytics-ppe,10,24,0.3224,nan,0,0
+train/ultralytics-ppe-nov2026-569.jpg,val/source-9b649b7415bcb389744b5dcc00c39a00.jpg,train-val,source-ultralytics-ppe,9,20,0.6231,0.637,784,0
+train/ultralytics-ppe-nov2026-569.jpg,val/ultralytics-ppe-nov2026-298.jpg,train-val,ultralytics-ppe-ultralytics-ppe,10,36,0.1426,0.3162,416,1

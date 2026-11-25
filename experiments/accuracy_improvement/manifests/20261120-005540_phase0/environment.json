@@ -1,0 +1,117 @@
+{
+  "recorded_at": "2026-11-20T00:55:51",
+  "python": {
+    "version": "3.12.16",
+    "executable": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/.venv/bin/python",
+    "prefix": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/.venv",
+    "base_prefix": "/Users/junaidahmad/.local/share/uv/python/cpython-3.12.16-macos-aarch64-none",
+    "is_virtualenv": true,
+    "implementation": "CPython"
+  },
+  "distributions": {
+    "ultralytics": "8.4.215",
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "opencv-python": "5.1.0.95",
+    "opencv-python-headless": null,
+    "opencv-contrib-python": null,
+    "numpy": "2.5.5",
+    "pillow": "13.0.0",
+    "albumentations": null,
+    "streamlit": "1.67.0",
+    "streamlit-webrtc": "0.79.1",
+    "pandas": "3.1.1",
+    "scipy": null,
+    "pyyaml": "6.0.3",
+    "matplotlib": "3.11.2",
+    "plotly": "7.1.0",
+    "pytest": "9.2.0",
+    "av": "19.0.2",
+    "aiortc": "1.16.0"
+  },
+  "runtime_import_versions": {
+    "torch": "2.15.0",
+    "cv2": "5.1.0",
+    "numpy": "2.5.5",
+    "PIL": "13.0.0",
+    "albumentations": null,
+    "ultralytics": "8.4.215"
+  },
+  "mps": {
+    "built": true,
+    "available": true,
+    "matmul_2048x2048_x10_ms": 70.3,
+    "result_device": "mps:0",
+    "recommended_max_memory_gb": 12.71,
+    "driver_allocated_mb_after_test": 1074.2
+  },
+  "project_device_selection": {
+    "inference_resolve_device('auto')": "mps",
+    "training_pick_device('auto')": "mps"
+  },
+  "ultralytics_settings": {
+    "datasets_dir": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/datasets",
+    "runs_dir": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments",
+    "weights_dir": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained",
+    "sync": false
+  },
+  "hardware": {
+    "model": "Mac17,3",
+    "cpu": "Apple M5",
+    "memory_gb": 16.0,
+    "logical_cpus": "10",
+    "performance_cores": "4",
+    "efficiency_cores": "6"
+  },
+  "os": {
+    "sw_vers": [
+      "ProductName:  macOS",
+      "ProductVersion:  27.0.1",
+      "BuildVersion:  26A434"
+    ],
+    "uname": {
+      "system": "Darwin",
+      "node": "Junaids-MacBook-Air.local",
+      "release": "27.0.0",
+      "version": "Darwin Kernel Version 27.0.0: Tue Aug 11 21:02:59 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T8142",
+      "machine": "arm64",
+      "processor": "arm"
+    }
+  },
+  "memory": {
+    "system_free_percent": 70,
+    "swapusage": "total = 5120.00M  used = 3683.25M  free = 1436.75M  (encrypted)",
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                     7605.",
+      "Pages active:                                 349692.",
+      "Pages inactive:                               348448.",
+      "Pages speculative:                               237.",
+      "Pages throttled:                                   0.",
+      "Pages wired down:                             205966.",
+      "Pages purgeable:                                3185.",
+      "\"Translation faults\":                      218920858.",
+      "Pages copy-on-write:                         4898333.",
+      "Pages zero filled:                         174548228.",
+      "Pages reactivated:                          44808103."
+    ]
+  },
+  "power": {
+    "pmset_batt": [
+      "Now drawing from 'Battery Power'",
+      " -InternalBattery-0 (id=23593059)\t26%; discharging; 7:53 remaining present: true"
+    ],
+    "pmset_therm": [
+      "Note: No thermal warning level has been recorded",
+      "Note: No performance warning level has been recorded",
+      "Note: No CPU power status has been recorded"
+    ],
+    "low_power_mode": [
+      "lowpowermode         0"
+    ]
+  },
+  "disk": {
+    "free_gb": 737.2,
+    "total_gb": 994.6
+  }
+}

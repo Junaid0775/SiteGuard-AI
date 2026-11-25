@@ -1,0 +1,118 @@
+{
+  "yolo26n": {
+    "model": "yolo26n",
+    "frames_in": 270,
+    "frames_out": 270,
+    "fps_in": 15.0,
+    "fps_out": 15.0,
+    "size_in": [
+      1280,
+      720
+    ],
+    "size_out": [
+      1280,
+      720
+    ],
+    "frame_order_strictly_increasing": true,
+    "boxes_only_from_source_frame": true,
+    "frames_analysed": 270,
+    "processing_s": 2.7,
+    "analysed_fps_offline": 100.1,
+    "inference_ms": {
+      "mean": 8.5,
+      "median": 8.04,
+      "p95": 11.61,
+      "max": 23.0,
+      "n": 270
+    },
+    "events": 16,
+    "event_times_on_frame_grid": false,
+    "evidence_images_exist": true,
+    "event_categories": [
+      "no_gloves",
+      "no_gloves",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest"
+    ],
+    "event_time_check_corrected": {
+      "events": 16,
+      "max_frame_offset": 0.05,
+      "tolerance_frames": 0.075,
+      "all_events_map_to_a_unique_frame": true,
+      "event_wall_timestamps_monotonic": true,
+      "evidence_files": 16
+    }
+  },
+  "yolo26m": {
+    "model": "yolo26m",
+    "frames_in": 270,
+    "frames_out": 270,
+    "fps_in": 15.0,
+    "fps_out": 15.0,
+    "size_in": [
+      1280,
+      720
+    ],
+    "size_out": [
+      1280,
+      720
+    ],
+    "frame_order_strictly_increasing": true,
+    "boxes_only_from_source_frame": true,
+    "frames_analysed": 270,
+    "processing_s": 6.9,
+    "analysed_fps_offline": 39.1,
+    "inference_ms": {
+      "mean": 24.46,
+      "median": 24.33,
+      "p95": 25.38,
+      "max": 26.4,
+      "n": 270
+    },
+    "events": 19,
+    "event_times_on_frame_grid": false,
+    "evidence_images_exist": true,
+    "event_categories": [
+      "no_gloves",
+      "no_gloves",
+      "no_gloves",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_helmet",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest",
+      "no_vest"
+    ],
+    "event_time_check_corrected": {
+      "events": 19,
+      "max_frame_offset": 0.05,
+      "tolerance_frames": 0.075,
+      "all_events_map_to_a_unique_frame": true,
+      "event_wall_timestamps_monotonic": true,
+      "evidence_files": 19
+    }
+  },
+  "note": "event_times_on_frame_grid=False came from an over-strict check: events store media_time_s rounded to 0.01 s (event_manager.py). With the correct tolerance (0.005 s) every event maps to exactly one source frame."
+}

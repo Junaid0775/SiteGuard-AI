@@ -1,0 +1,16 @@
+{
+  "run_dir": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/siteguard_yolo26n",
+  "promoted": {
+    "best.pt": {
+      "from": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/siteguard_yolo26n/weights/best.pt",
+      "to": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/trained/best.pt",
+      "backup": null
+    },
+    "last.pt": {
+      "from": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/siteguard_yolo26n/weights/last.pt",
+      "to": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/trained/last.pt",
+      "backup": null
+    }
+  },
+  "at": "2026-11-19T18:59:42"
+}

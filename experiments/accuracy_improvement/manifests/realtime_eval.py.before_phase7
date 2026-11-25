@@ -1,0 +1,272 @@
+"""Phase 8 real-time webcam and video evaluation for YOLO26n and YOLO26m (spec §10).
+
+    .venv/bin/python scripts/engineering/realtime_eval.py offline          # everything that needs no camera
+    .venv/bin/python scripts/engineering/realtime_eval.py camera --seconds 12   # physical MacBook camera (no frames saved)
+
+Categories are reported separately (never combined into one number):
+  video        : uploaded test clip through the video pipeline (+ integrity checks)
+  webcam_replay: 149 captured webcam frames replayed at their real timing through LiveFrameProcessor (raw, and VP8 1 Mbps)
+  motion       : panned val images, displayed-box accuracy (R1 policy) at 0/10/20 px per frame
+  low_light    : synthetic darkening / dimming / blur of val images (no real low-light footage exists)
+  camera       : physical camera -> OpenCV capture -> LiveFrameProcessor (capture / analysed / rendered FPS, latency, drops)
+Outputs: experiments/engineering_phase/final_validation/realtime_<category>.json
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import re
+import subprocess
+import sys
+import threading
+import time
+from pathlib import Path
+
+import cv2
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from src.compliance.compliance_analyzer import ComplianceAnalyzer  # noqa: E402
+from src.detection.camera_processor import LiveFrameProcessor  # noqa: E402
+from src.detection.detector import PPEDetector  # noqa: E402
+from src.detection.video_processor import process_video  # noqa: E402
+from src.evaluation.live_audit import (  # noqa: E402
+    OP_CONF, Predictor, Sample, _cam720, _load_yolo_boxes, box_iou, encode_sequence, evaluate, load_val_samples,
+    low_light, motion_blur, pan_sequence,
+)
+from src.events.event_manager import EventManager  # noqa: E402
+
+OUT = ROOT / "experiments/engineering_phase/final_validation"
+MODELS = {"yolo26n": ROOT / "models/trained/best.pt",
+          "yolo26m": ROOT / "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt"}
+WEBCAM = ROOT / "experiments/live_audit/webcam"
+
+
+def mem_free() -> float | None:
+    try:
+        m = re.search(r"percentage:\s*(\d+)", subprocess.run(["memory_pressure"], capture_output=True, text=True, timeout=20).stdout)
+        return float(m.group(1)) if m else None
+    except Exception:
+        return None
+
+
+def rows(dets) -> np.ndarray:
+    return np.array([[d.x1, d.y1, d.x2, d.y2, d.confidence, d.class_id] for d in dets], float).reshape(-1, 6)
+
+
+# ------------------------------------------------------------------ video
+def video(det: PPEDetector, name: str) -> dict:
+    clip = ROOT / "data/test_media/test_site_clip.mp4"
+    out_dir = OUT / "video_runs"; out_dir.mkdir(parents=True, exist_ok=True)
+    ev_dir = out_dir / f"evidence_{name}"
+    em = EventManager(None, "video", clip.name, evidence_dir=ev_dir)
+    t0 = time.time()
+    s = process_video(clip, out_dir / f"{name}.mp4", det, ComplianceAnalyzer(), em, frame_stride=1, image_size=640)
+    wall = time.time() - t0
+    log = list(csv.DictReader(open(s.frame_log_path)))
+    cin, cout = cv2.VideoCapture(str(clip)), cv2.VideoCapture(str(s.output_path))
+    props = lambda c: (int(c.get(cv2.CAP_PROP_FRAME_COUNT)), round(c.get(cv2.CAP_PROP_FPS), 3), int(c.get(cv2.CAP_PROP_FRAME_WIDTH)), int(c.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+    pin, pout = props(cin), props(cout)
+    cin.release(); cout.release()
+    idx = [int(r["frame_index"]) for r in log]
+    analysed_ok = all(r["boxes_from_frame"] == r["frame_index"] for r in log if r["analysed"] == "1")
+    ev_times_ok = all(abs((e.media_time_s * s.fps) - round(e.media_time_s * s.fps)) < 1e-6 for e in s.events)
+    evidence_ok = all(e.evidence_path and Path(e.evidence_path).exists() for e in s.events)
+    return {"model": name, "frames_in": pin[0], "frames_out": pout[0], "fps_in": pin[1], "fps_out": pout[1], "size_in": pin[2:], "size_out": pout[2:],
+            "frame_order_strictly_increasing": idx == list(range(len(idx))), "boxes_only_from_source_frame": analysed_ok,
+            "frames_analysed": s.frames_processed, "processing_s": round(wall, 2), "analysed_fps_offline": round(s.frames_processed / wall, 1),
+            "inference_ms": s.inference_ms, "events": len(s.events), "event_times_on_frame_grid": ev_times_ok,
+            "evidence_images_exist": evidence_ok, "event_categories": sorted(e.category for e in s.events)}
+
+
+# ------------------------------------------------------- live replay helper
+def paced_live_run(det: PPEDetector, frames: list[np.ndarray], times: list[float]) -> tuple[dict, list]:
+    """Producer delivers frames at their captured timestamps; consumer = streamlit-webrtc-like latest-frame worker."""
+    proc = LiveFrameProcessor(det, ComplianceAnalyzer(), None, process_every_n=1, image_size=640)
+    q, lock, done = [], threading.Lock(), threading.Event()
+    per_frame = []  # (frame index, analysed?, detections rows)
+
+    def producer():
+        t0 = time.monotonic()
+        for i, (f, t) in enumerate(zip(frames, times)):
+            delay = t0 + t - time.monotonic()
+            if delay > 0:
+                time.sleep(delay)
+            with lock:
+                q.append((i, f))
+        done.set()
+
+    th = threading.Thread(target=producer); th.start()
+    mem = [mem_free()]
+    while not (done.is_set() and not q):
+        with lock:
+            batch, q[:] = list(q), []
+        if not batch:
+            time.sleep(0.001); continue
+        i, f = batch[-1]
+        before = proc.stats.frames_analysed
+        proc.process_latest(f, dropped=len(batch) - 1)
+        analysed = proc.stats.frames_analysed > before
+        pkt = proc._last_packet
+        per_frame.append((i, analysed, rows(pkt.detections) if analysed and pkt is not None else None))
+    th.join()
+    mem.append(mem_free())
+    s = proc.snapshot()
+    keep = {k: s[k] for k in ("frames_received", "frames_dropped_queue", "frames_analysed", "frames_rendered", "errors", "inference_ms",
+                              "receive_to_render_ms", "displayed_result_age_ms", "received_fps", "analysed_fps", "rendered_fps")}
+    keep["memory_free_pct_before_after"] = mem
+    return keep, per_frame
+
+
+def stability(per_frame: list) -> dict:
+    """Consecutive analysed frames: flicker, class flips, confidence change, box jitter (same-class IoU >= 0.5 matching)."""
+    seq = [(i, r) for i, a, r in per_frame if a and r is not None]
+    appear = disappear = flips = matched = 0
+    dconf, jitter = [], []
+    for (i0, a), (i1, b) in zip(seq, seq[1:]):
+        if len(a) and len(b):
+            iou = box_iou(a[:, :4], b[:, :4])
+            same = iou * (a[:, 5][:, None] == b[:, 5][None, :])
+            used_b = set()
+            for k in range(len(a)):
+                j = int(np.argmax(same[k]))
+                if same[k, j] >= 0.5 and j not in used_b:
+                    used_b.add(j); matched += 1
+                    dconf.append(abs(a[k, 4] - b[j, 4])); jitter.append(1 - iou[k, j])
+                elif iou[k].max() >= 0.5 and a[k, 5] != b[int(np.argmax(iou[k])), 5]:
+                    flips += 1
+                else:
+                    disappear += 1
+            appear += len(b) - len(used_b)
+        else:
+            appear += len(b); disappear += len(a)
+    pairs = max(1, len(seq) - 1)
+    return {"analysed_frames": len(seq), "matched_box_pairs": matched, "class_flips_per_frame": round(flips / pairs, 3),
+            "appear_per_frame": round(appear / pairs, 3), "disappear_per_frame": round(disappear / pairs, 3),
+            "mean_abs_conf_change": round(float(np.mean(dconf)), 4) if dconf else None,
+            "mean_box_jitter_1_minus_iou": round(float(np.mean(jitter)), 4) if jitter else None}
+
+
+def webcam_replay(det: PPEDetector, name: str) -> dict:
+    meta = json.loads((WEBCAM / "capture_meta.json").read_text())
+    files = [WEBCAM / "frames" / m["file"] for m in meta["frames"]]
+    times = [m["t"] for m in meta["frames"]]
+    raw = [cv2.imread(str(f)) for f in files]
+    lab = {i: f for i, f in enumerate(files) if (WEBCAM / "labels" / f"{f.stem}.txt").exists()}
+    out = {"model": name, "frames": len(raw), "capture_fps_measured_at_capture": meta.get("measured_fps"), "labelled_frames": len(lab)}
+    for stream_name, stream in (("raw", raw), ("vp8_1mbps", encode_sequence(raw, "libvpx", 1_000_000, float(meta.get("measured_fps") or 30)))):
+        perf, per_frame = paced_live_run(det, stream, times)
+        disp = {i: r for i, a, r in per_frame}  # every_n = 1: rendered frame i shows detections of frame i (or none if dropped)
+        samples, preds = [], []
+        for i, f in lab.items():
+            if i in disp and disp[i] is not None:
+                h, w = stream[i].shape[:2]
+                samples.append(Sample(f.stem, stream[i], _load_yolo_boxes(WEBCAM / "labels" / f"{f.stem}.txt", w, h),
+                                      _load_yolo_boxes(WEBCAM / "labels" / f"{f.stem}.ignore.txt", w, h)))
+                preds.append(disp[i])
+        acc = evaluate(samples, preds) if samples else None
+        out[stream_name] = {"performance": perf, "stability": stability(per_frame),
+                            "displayed_accuracy_labelled": {k: acc[k] for k in ("images", "gt_objects", "tp", "fp", "fn", "precision", "recall", "fp_types")} if acc else None,
+                            "stale_box_frames": 0, "stale_box_note": "every displayed frame carries detections of its own source frame (R1 invariant; tested)"}
+    return out
+
+
+def motion(name: str) -> dict:
+    samples = load_val_samples(40)
+    pred = Predictor(weights=MODELS[name])
+    res = {}
+    for speed in (0, 10, 20):
+        seqs = [pan_sequence(s, 15, speed) for s in samples]
+        frames = [f for seq in seqs for f in seq]
+        r = evaluate(frames, [pred(f.image, imgsz=640, conf=OP_CONF) for f in frames])
+        res[f"speed{speed}"] = {k: r[k] for k in ("tp", "fp", "fn", "precision", "recall")}
+    return res
+
+
+def low_light_blur(name: str) -> dict:
+    samples = load_val_samples()
+    pred = Predictor(weights=MODELS[name])
+    res = {}
+    for label, fn in (("cam720_clean", lambda im: im), ("cam720_dim", lambda im: low_light(im, 0.5, 4.0)),
+                      ("cam720_dark", lambda im: low_light(im, 0.25, 8.0)), ("cam720_blur17", lambda im: motion_blur(im, 17))):
+        data = [Sample(s.name, fn(_cam720(s).image), _cam720(s).gt) for s in samples]
+        r = evaluate(data, [pred(s.image, imgsz=640, conf=0.001) for s in data])
+        res[label] = {k: r[k] for k in ("mAP50", "mAP50-95", "precision", "recall", "fp_per_image", "contradiction_pairs")}
+    return res
+
+
+def camera(det: PPEDetector, name: str, seconds: float) -> dict:
+    """Physical camera hardware integration test. Frames are NOT saved."""
+    cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+    if not cap.isOpened():
+        return {"model": name, "error": "camera could not be opened (permission or device)"}
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280); cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    for _ in range(20):
+        cap.read()  # auto-exposure warm-up
+    proc = LiveFrameProcessor(det, ComplianceAnalyzer(), None, process_every_n=1, image_size=640)
+    slot, lock, stop = {"frames": []}, threading.Lock(), threading.Event()
+    cap_times = []
+
+    def grab():
+        while not stop.is_set():
+            ok, f = cap.read()
+            if ok:
+                cap_times.append(time.monotonic())
+                with lock:
+                    slot["frames"].append(f)
+
+    th = threading.Thread(target=grab, daemon=True); th.start()
+    mem = [mem_free()]
+    t_end = time.monotonic() + seconds
+    while time.monotonic() < t_end:
+        with lock:
+            batch, slot["frames"] = slot["frames"], []
+        if not batch:
+            time.sleep(0.001); continue
+        proc.process_latest(batch[-1], dropped=len(batch) - 1)
+    stop.set(); th.join(timeout=2); cap.release()
+    mem.append(mem_free())
+    s = proc.snapshot()
+    span = cap_times[-1] - cap_times[0] if len(cap_times) > 1 else None
+    return {"model": name, "seconds": seconds, "camera_capture_fps": round((len(cap_times) - 1) / span, 2) if span else None,
+            "frame_size": "1280x720 requested", **{k: s[k] for k in ("frames_received", "frames_dropped_queue", "frames_analysed",
+            "frames_rendered", "errors", "inference_ms", "receive_to_render_ms", "displayed_result_age_ms", "analysed_fps", "rendered_fps")},
+            "memory_free_pct_before_after": mem, "frames_saved": 0}
+
+
+def main() -> None:
+    a = argparse.ArgumentParser()
+    a.add_argument("what", choices=["offline", "camera"])
+    a.add_argument("--seconds", type=float, default=12.0)
+    args = a.parse_args()
+    OUT.mkdir(parents=True, exist_ok=True)
+    if args.what == "camera":
+        res = {}
+        for name, w in MODELS.items():
+            det = PPEDetector(weights=w).load()
+            for _ in range(5):
+                det.detect(np.zeros((720, 1280, 3), np.uint8))
+            res[name] = camera(det, name, args.seconds)
+            print(name, res[name], flush=True)
+        (OUT / "realtime_camera.json").write_text(json.dumps(res, indent=2))
+        return
+    res = {"video": {}, "webcam_replay": {}, "motion": {}, "low_light": {}}
+    for name, w in MODELS.items():
+        det = PPEDetector(weights=w).load()
+        for _ in range(5):
+            det.detect(np.zeros((720, 1280, 3), np.uint8))
+        print("video", name, flush=True); res["video"][name] = video(det, name)
+        if (WEBCAM / "capture_meta.json").exists():
+            print("webcam", name, flush=True); res["webcam_replay"][name] = webcam_replay(det, name)
+        print("motion", name, flush=True); res["motion"][name] = motion(name)
+        print("low light", name, flush=True); res["low_light"][name] = low_light_blur(name)
+    for cat, v in res.items():
+        (OUT / f"realtime_{cat}.json").write_text(json.dumps(v, indent=2, default=str))
+    print(json.dumps(res, indent=1, default=str)[:6000])
+
+
+if __name__ == "__main__":
+    main()

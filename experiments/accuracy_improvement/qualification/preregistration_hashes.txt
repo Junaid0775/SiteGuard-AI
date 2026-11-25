@@ -1,0 +1,1 @@
+2026-11-23T03:09:16 PREREGISTRATION-phase5-7.md sha256 e0b3d97c4e640f24926f5ff628e6dd3bce4c0c7dd03e9dd1a68ae6c525cbec2c ; frozen_candidate.json sha256 893978a1aeadf43fddd55053ca641f75a722e7bf3144240d6b26c49eb1661c4c (recorded immediately before the first locked-test access)

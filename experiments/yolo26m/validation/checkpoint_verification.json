@@ -1,0 +1,90 @@
+{
+  "best_path": "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt",
+  "best_sha256": "399c4e5be335e3544afe185c7abb08d5fc894a382b891d970f71b94df3f1773f",
+  "last_sha256": "5412989709673b497de966a3958fbbd40abd7921470ccddc1c2f18b76f05596f",
+  "size_bytes": 44029401,
+  "yolo26n_production_sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b",
+  "distinct_from_yolo26n": true,
+  "yaml": "yolo26m.yaml",
+  "nc": 12,
+  "names_match_dataset": true,
+  "params_unfused": 21791392,
+  "test_inference_boxes": 58,
+  "inference_device": "mps",
+  "ckpt_date": "2026-11-19T22:57:18.641859+05:30",
+  "ckpt_version": "8.4.215",
+  "train_args_batch": 4,
+  "train_args_epochs": 30,
+  "best_epoch_by_mAP50-95": 30,
+  "best_epoch_mAP50-95": 0.6196,
+  "epoch_seconds_mean": 189.7,
+  "loss_trend": {
+    "1": {
+      "train/box_loss": 1.1995,
+      "train/cls_loss": 2.5657,
+      "val/box_loss": 1.0444,
+      "val/cls_loss": 1.4552,
+      "metrics/mAP50-95(B)": 0.4927
+    },
+    "5": {
+      "train/box_loss": 1.1619,
+      "train/cls_loss": 0.8307,
+      "val/box_loss": 1.0092,
+      "val/cls_loss": 0.7135,
+      "metrics/mAP50-95(B)": 0.5582
+    },
+    "10": {
+      "train/box_loss": 1.1265,
+      "train/cls_loss": 0.6911,
+      "val/box_loss": 0.9776,
+      "val/cls_loss": 0.6053,
+      "metrics/mAP50-95(B)": 0.5755
+    },
+    "15": {
+      "train/box_loss": 1.0501,
+      "train/cls_loss": 0.597,
+      "val/box_loss": 0.9541,
+      "val/cls_loss": 0.5805,
+      "metrics/mAP50-95(B)": 0.588
+    },
+    "20": {
+      "train/box_loss": 0.9585,
+      "train/cls_loss": 0.5177,
+      "val/box_loss": 0.9079,
+      "val/cls_loss": 0.5321,
+      "metrics/mAP50-95(B)": 0.6119
+    },
+    "25": {
+      "train/box_loss": 0.8943,
+      "train/cls_loss": 0.4486,
+      "val/box_loss": 0.8947,
+      "val/cls_loss": 0.5157,
+      "metrics/mAP50-95(B)": 0.6138
+    },
+    "30": {
+      "train/box_loss": 0.8337,
+      "train/cls_loss": 0.4066,
+      "val/box_loss": 0.8717,
+      "val/cls_loss": 0.5053,
+      "metrics/mAP50-95(B)": 0.6196
+    }
+  },
+  "memory": {
+    "samples": 189,
+    "free_pct_min": 18.0,
+    "free_pct_median": 26.0,
+    "swap_mb_start": 5855.31,
+    "swap_mb_max": 5855.31,
+    "swap_mb_end": 3931.31
+  },
+  "log_warnings": [],
+  "ultralytics_gpu_mem_gb": {
+    "max": 6.86,
+    "median": 6.54
+  },
+  "training_metadata": {
+    "duration_seconds": 5673.7,
+    "epochs_completed": 30,
+    "best_fitness": 0.6196
+  }
+}

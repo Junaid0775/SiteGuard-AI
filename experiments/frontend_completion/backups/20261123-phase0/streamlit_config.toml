@@ -1,0 +1,27 @@
+# Streamlit configuration for SiteGuard AI.
+# Light/dark mode follows the viewer's system setting and can be switched in
+# the app menu (top right > Settings). Orange is used as a restrained accent.
+
+[theme]
+primaryColor = "#D9622B"
+font = "sans serif"
+
+[theme.light]
+primaryColor = "#C8561F"
+backgroundColor = "#F7F7F5"
+secondaryBackgroundColor = "#ECECE8"
+textColor = "#1F2328"
+
+[theme.dark]
+primaryColor = "#E8793F"
+backgroundColor = "#15171A"
+secondaryBackgroundColor = "#202328"
+textColor = "#E6E6E3"
+
+[server]
+headless = true
+maxUploadSize = 500        # MB, allows short site videos
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false   # no usage telemetry

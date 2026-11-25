@@ -1,0 +1,206 @@
+{
+  "smoke_m_768_b4": {
+    "state": "done",
+    "started": "2026-11-20T01:29:17",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 1 --imgsz 768 --batch 4 --patience 15 --seed 42 --fraction 0.1 --name smoke_m_768_b4 --project experiments/accuracy_improvement/training --no-promote",
+    "returncode": 0,
+    "train_finished": "2026-11-20T01:30:17",
+    "finished": "2026-11-20T01:30:17"
+  },
+  "smoke_m_896_b4": {
+    "state": "done",
+    "started": "2026-11-20T01:30:17",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 1 --imgsz 896 --batch 4 --patience 15 --seed 42 --fraction 0.1 --name smoke_m_896_b4 --project experiments/accuracy_improvement/training --no-promote",
+    "returncode": 0,
+    "train_finished": "2026-11-20T01:31:47",
+    "finished": "2026-11-20T01:31:47"
+  },
+  "smoke_m_1024_b4": {
+    "state": "done",
+    "started": "2026-11-20T01:31:47",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 1 --imgsz 1024 --batch 4 --patience 15 --seed 42 --fraction 0.1 --name smoke_m_1024_b4 --project experiments/accuracy_improvement/training --no-promote",
+    "returncode": 0,
+    "train_finished": "2026-11-20T01:33:17",
+    "finished": "2026-11-20T01:33:17"
+  },
+  "E1_m640_base": {
+    "state": "done",
+    "at": "2026-11-20T01:35:23",
+    "battery": 17,
+    "started": "2026-11-22T18:59:51",
+    "command": "-m src.training.train --resume experiments/accuracy_improvement/training/E1_m640_base/weights/last.pt --no-promote",
+    "returncode": 0,
+    "train_finished": "2026-11-22T19:56:29",
+    "note": "Auto-started 21:23:03 when mains power was connected (charger at 21:22:19, battery 11%). User reported the MacBook getting hot during a video call while fast-charging (11% -> 32% by 21:37). Stopped by the assistant at 21:49 (SIGINT ignored for 60 s, then SIGTERM, rc -15). 7 of 30 epochs complete; resume from weights/last.pt. Watcher removed: nothing restarts automatically.",
+    "stopped_at": "2026-11-20T21:49:05",
+    "eval_started": "2026-11-22T19:56:29",
+    "dev_summary": {
+      "split": "dev",
+      "images": 200,
+      "gt_objects": 2961,
+      "ultralytics": {
+        "precision": 0.8855,
+        "recall": 0.7664,
+        "mAP50": 0.8228,
+        "mAP50-95": 0.6076
+      },
+      "audit_evaluator": {
+        "mAP50": 0.8082,
+        "mAP50-95": 0.5996
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.8842,
+        "recall": 0.8251,
+        "f1": 0.8536,
+        "tp": 2443,
+        "fp": 320,
+        "fn": 518,
+        "background_fp": 80
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.676,
+        "no_gloves": 0.7044,
+        "no_goggle": 0.5122,
+        "no_boots": 0.7303,
+        "no_vest": 0.6846
+      },
+      "person_recall_op": 0.9626,
+      "latency_ms_mean": 36.76,
+      "weights_sha256": "13c71d3024306cf889033762dea6aaa9352be9abaa4aa6a6a83bad5d275c815e"
+    },
+    "finished": "2026-11-22T19:56:57"
+  },
+  "E3_m896": {
+    "state": "done",
+    "started": "2026-11-22T19:56:57",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 30 --imgsz 896 --batch 4 --patience 15 --seed 42 --fraction 1.0 --name E3_m896 --project experiments/accuracy_improvement/training --no-promote",
+    "returncode": 0,
+    "train_finished": "2026-11-22T23:19:03",
+    "eval_started": "2026-11-22T23:19:03",
+    "dev_summary": {
+      "split": "dev",
+      "images": 200,
+      "gt_objects": 2961,
+      "ultralytics": {
+        "precision": 0.922,
+        "recall": 0.7961,
+        "mAP50": 0.8539,
+        "mAP50-95": 0.6278
+      },
+      "audit_evaluator": {
+        "mAP50": 0.8427,
+        "mAP50-95": 0.617
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.8925,
+        "recall": 0.8578,
+        "f1": 0.8748,
+        "tp": 2540,
+        "fp": 306,
+        "fn": 421,
+        "background_fp": 74
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.7654,
+        "no_gloves": 0.7192,
+        "no_goggle": 0.6098,
+        "no_boots": 0.7753,
+        "no_vest": 0.7385
+      },
+      "person_recall_op": 0.9667,
+      "latency_ms_mean": 51.28,
+      "weights_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6"
+    },
+    "finished": "2026-11-22T23:19:35"
+  },
+  "E5_m640_clspw": {
+    "state": "done",
+    "started": "2026-11-22T23:19:35",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 30 --imgsz 640 --batch 4 --patience 15 --seed 42 --fraction 1.0 --name E5_m640_clspw --project experiments/accuracy_improvement/training --no-promote --hyp experiments/accuracy_improvement/training/configs/E5_m640_clspw.hyp.yaml",
+    "returncode": 0,
+    "train_finished": "2026-11-23T00:39:38",
+    "eval_started": "2026-11-23T00:39:38",
+    "dev_summary": {
+      "split": "dev",
+      "images": 200,
+      "gt_objects": 2961,
+      "ultralytics": {
+        "precision": 0.8913,
+        "recall": 0.7807,
+        "mAP50": 0.8324,
+        "mAP50-95": 0.617
+      },
+      "audit_evaluator": {
+        "mAP50": 0.817,
+        "mAP50-95": 0.6078
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.8962,
+        "recall": 0.8278,
+        "f1": 0.8606,
+        "tp": 2451,
+        "fp": 284,
+        "fn": 510,
+        "background_fp": 64
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.7207,
+        "no_gloves": 0.6798,
+        "no_goggle": 0.5244,
+        "no_boots": 0.7191,
+        "no_vest": 0.6923
+      },
+      "person_recall_op": 0.9522,
+      "latency_ms_mean": 29.86,
+      "weights_sha256": "b1c162ce69e9875f86195a532e0a881e7643930d1a6c6bfd5c009bebd5463f7b"
+    },
+    "finished": "2026-11-23T00:40:00"
+  },
+  "E4_m640_aug": {
+    "state": "done",
+    "started": "2026-11-23T00:40:00",
+    "command": "-m src.training.train --weights models/pretrained/yolo26m.pt --data experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml --epochs 30 --imgsz 640 --batch 4 --patience 15 --seed 42 --fraction 1.0 --name E4_m640_aug --project experiments/accuracy_improvement/training --no-promote --hyp experiments/accuracy_improvement/training/configs/E4_m640_aug.hyp.yaml",
+    "returncode": 0,
+    "train_finished": "2026-11-23T01:56:39",
+    "eval_started": "2026-11-23T01:56:39",
+    "dev_summary": {
+      "split": "dev",
+      "images": 200,
+      "gt_objects": 2961,
+      "ultralytics": {
+        "precision": 0.8921,
+        "recall": 0.7739,
+        "mAP50": 0.8321,
+        "mAP50-95": 0.6127
+      },
+      "audit_evaluator": {
+        "mAP50": 0.8176,
+        "mAP50-95": 0.6028
+      },
+      "operating_point": {
+        "conf": 0.25,
+        "precision": 0.9038,
+        "recall": 0.8247,
+        "f1": 0.8624,
+        "tp": 2442,
+        "fp": 260,
+        "fn": 519,
+        "background_fp": 61
+      },
+      "missing_ppe_recall_op": {
+        "no_helmet": 0.7039,
+        "no_gloves": 0.6798,
+        "no_goggle": 0.5122,
+        "no_boots": 0.7416,
+        "no_vest": 0.6923
+      },
+      "person_recall_op": 0.9563,
+      "latency_ms_mean": 34.19,
+      "weights_sha256": "973f04c98c71d59fe3da6bce05e028ba892f5197c12c9d985eb45d775f239267"
+    },
+    "finished": "2026-11-23T01:57:03"
+  }
+}

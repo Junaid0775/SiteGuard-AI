@@ -1,0 +1,9 @@
+{
+  "images": 60,
+  "note": "wall clock of predict + copy to numpy (forces MPS completion); full-resolution dataset images",
+  "mean_ms": 29.86,
+  "median_ms": 28.99,
+  "p95_ms": 32.26,
+  "max_ms": 41.23,
+  "mps_driver_allocated_mb": 2320.0
+}

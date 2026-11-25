@@ -1,0 +1,5 @@
+{
+  "checks": 60,
+  "app_vs_audit_identical": 60,
+  "filter_equivalence_identical": 60
+}

@@ -1,0 +1,30 @@
+{
+  "webcam_tight": [
+    7.63,
+    2.2
+  ],
+  "webcam_paced30": [
+    25.53,
+    2.2
+  ],
+  "clip_tight": [
+    7.68,
+    19.7
+  ],
+  "clip_paced30": [
+    25.83,
+    19.7
+  ],
+  "webcam_ultra_speed_ms": {
+    "preprocess": 1.57,
+    "inference": 8.77,
+    "postprocess": 9.49
+  },
+  "webcam_raw_candidates_conf0.001": 37,
+  "clip_ultra_speed_ms": {
+    "preprocess": 0.89,
+    "inference": 6.29,
+    "postprocess": 10.83
+  },
+  "clip_raw_candidates_conf0.001": 71
+}

@@ -1,0 +1,36 @@
+{
+  "hypothesis": "Training at this image size fits in 16 GB unified memory without swap growth",
+  "changed": [
+    "imgsz"
+  ],
+  "fixed": "YOLO26m pretrained, batch 4 (unless stated), defaults otherwise",
+  "expected": "Memory and time grow roughly with pixel count",
+  "success": "Completes; system free memory stays >= 10 %; swap does not grow materially",
+  "name": "smoke_m_1024_b4",
+  "arguments": [
+    "--weights",
+    "models/pretrained/yolo26m.pt",
+    "--data",
+    "experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "--epochs",
+    "1",
+    "--imgsz",
+    "1024",
+    "--batch",
+    "4",
+    "--patience",
+    "15",
+    "--seed",
+    "42",
+    "--fraction",
+    "0.1",
+    "--name",
+    "smoke_m_1024_b4",
+    "--project",
+    "experiments/accuracy_improvement/training",
+    "--no-promote"
+  ],
+  "hyp": {},
+  "written": "2026-11-20T01:31:47",
+  "resume": false
+}

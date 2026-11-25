@@ -1,0 +1,74 @@
+"""Draw detections and compliance results onto an image (OpenCV, BGR colours)."""
+
+from __future__ import annotations
+
+import cv2
+import numpy as np
+
+from src.compliance.compliance_analyzer import (
+    COMPLIANT_EVIDENCE,
+    POTENTIAL_VIOLATION,
+    UNCERTAIN,
+    ComplianceResult,
+)
+from src.compliance.worker_association import CLASS_TO_ITEM, PERSON_CLASS
+from src.detection.detector import Detection
+
+# BGR colours
+POSITIVE_COLOR = (80, 160, 40)     # PPE present: green
+NEGATIVE_COLOR = (40, 40, 210)     # missing-PPE class: red
+PERSON_COLOR = (170, 120, 60)      # worker box: steel blue
+OTHER_COLOR = (0, 190, 230)        # forklift etc.: amber
+STATUS_COLORS = {
+    POTENTIAL_VIOLATION: (30, 30, 200),
+    COMPLIANT_EVIDENCE: (70, 150, 40),
+    UNCERTAIN: (0, 150, 240),
+}
+STATUS_SHORT = {POTENTIAL_VIOLATION: "Potential", COMPLIANT_EVIDENCE: "Compliant", UNCERTAIN: "Uncertain"}
+
+
+def class_color(name: str) -> tuple[int, int, int]:
+    if name == PERSON_CLASS:
+        return PERSON_COLOR
+    if name in CLASS_TO_ITEM:
+        return NEGATIVE_COLOR if CLASS_TO_ITEM[name][1] else POSITIVE_COLOR
+    return OTHER_COLOR
+
+
+def _label(img: np.ndarray, text: str, x: int, y: int, color: tuple[int, int, int], scale: float) -> None:
+    thickness = max(1, int(round(scale * 2)))
+    (tw, th), base = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, scale, thickness)
+    y_top = max(0, y - th - base - 4)
+    cv2.rectangle(img, (x, y_top), (x + tw + 6, y_top + th + base + 4), color, -1)
+    cv2.putText(img, text, (x + 3, y_top + th + 2), cv2.FONT_HERSHEY_SIMPLEX, scale, (255, 255, 255), thickness, cv2.LINE_AA)
+
+
+def draw_detections(image: np.ndarray, detections: list[Detection], include_person: bool = True) -> np.ndarray:
+    out = image.copy()
+    scale = max(0.4, min(1.2, out.shape[1] / 1600))
+    thick = max(1, int(round(out.shape[1] / 600)))
+    for d in detections:
+        if d.class_name == PERSON_CLASS and not include_person:
+            continue
+        color = class_color(d.class_name)
+        p1, p2 = (int(d.x1), int(d.y1)), (int(d.x2), int(d.y2))
+        cv2.rectangle(out, p1, p2, color, thick)
+        _label(out, f"{d.class_name} {d.confidence:.2f}", p1[0], p1[1], color, scale * 0.8)
+    return out
+
+
+def draw_compliance(image: np.ndarray, result: ComplianceResult, show_items: bool = True) -> np.ndarray:
+    """Worker boxes coloured by status, plus the PPE/no-PPE boxes."""
+    item_dets = [d for d in result.all_detections if d.class_name != PERSON_CLASS] if show_items else []
+    out = draw_detections(image, item_dets, include_person=False)
+    scale = max(0.4, min(1.0, out.shape[1] / 1800))
+    thick = max(2, int(round(out.shape[1] / 450)))
+    for w in result.workers:
+        color = STATUS_COLORS[w.status]
+        p = w.person
+        cv2.rectangle(out, (int(p.x1), int(p.y1)), (int(p.x2), int(p.y2)), color, thick)
+        text = f"{w.worker_ref} {STATUS_SHORT[w.status]}"
+        if w.violations:
+            text += ": " + ", ".join(f"no {v.item}" for v in w.violations)
+        _label(out, text, int(p.x1), int(p.y2) + int(30 * scale) if p.y1 < 40 else int(p.y1), color, scale)
+    return out

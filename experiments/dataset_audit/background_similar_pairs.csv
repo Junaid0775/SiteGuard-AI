@@ -1,0 +1,10 @@
+path_a,split_a,path_b,split_b,masked_dhash,masked_phash,cross_split,review_status
+images/train/ultralytics-ppe-nov2026-103.jpg,train,images/train/ultralytics-ppe-nov2026-203.jpg,train,0,0,False,pending
+images/train/ultralytics-ppe-nov2026-103.jpg,train,images/train/ultralytics-ppe-nov2026-611.jpg,train,0,0,False,pending
+images/train/ultralytics-ppe-nov2026-103.jpg,train,images/val/ultralytics-ppe-nov2026-549.jpg,val,0,0,True,pending
+images/train/ultralytics-ppe-nov2026-203.jpg,train,images/train/ultralytics-ppe-nov2026-611.jpg,train,0,0,False,pending
+images/train/ultralytics-ppe-nov2026-203.jpg,train,images/val/ultralytics-ppe-nov2026-549.jpg,val,0,0,True,pending
+images/train/ultralytics-ppe-nov2026-611.jpg,train,images/val/ultralytics-ppe-nov2026-549.jpg,val,0,0,True,pending
+images/train/source-3978abe9cfed5d8a5faa5a98dfe4b00a.jpg,train,images/train/source-efc23273c04e007083114c0f217335f0.jpg,train,0,4,False,pending
+images/train/ultralytics-ppe-nov2026-490.jpg,train,images/train/ultralytics-ppe-nov2026-626.jpg,train,3,8,False,pending
+images/train/ultralytics-ppe-nov2026-486.jpg,train,images/train/ultralytics-ppe-nov2026-593.jpg,train,4,8,False,pending

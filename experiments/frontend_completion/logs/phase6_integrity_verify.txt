@@ -1,0 +1,9 @@
+dataset.csv: listed=2004 changed=0 missing=0 volatile_changed=0 new=0
+protected.csv: listed=851 changed=4 missing=0 volatile_changed=0
+    CHANGED .streamlit/config.toml
+    CHANGED README.md
+    CHANGED app.py
+    CHANGED experiments/frontend_completion/logs/phase0_baseline.txt
+user_data.csv: listed=317 changed=1 missing=0 volatile_changed=0
+    CHANGED outputs/logs/siteguard_app.log
+critical violations (dataset or key checkpoint): 0

@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-11-23T11:30:03",
+  "manifest_dir": "experiments/accuracy_improvement/manifests/20261123-110740_frontend_phase0",
+  "dataset.csv": {
+    "listed": 2004,
+    "changed": [],
+    "missing": [],
+    "volatile_changed": [],
+    "new_files": []
+  },
+  "protected.csv": {
+    "listed": 851,
+    "changed": [
+      ".streamlit/config.toml",
+      "README.md",
+      "app.py",
+      "experiments/frontend_completion/logs/phase0_baseline.txt"
+    ],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "user_data.csv": {
+    "listed": 317,
+    "changed": [
+      "outputs/logs/siteguard_app.log"
+    ],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "critical_violations": 0
+}

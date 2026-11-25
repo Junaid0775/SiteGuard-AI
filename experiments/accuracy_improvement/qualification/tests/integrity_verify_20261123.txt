@@ -1,0 +1,12 @@
+dataset.csv: listed=2004 changed=0 missing=0 volatile_changed=0 new=0
+protected.csv: listed=824 changed=7 missing=0 volatile_changed=0
+    CHANGED app.py
+    CHANGED configs/settings.yaml
+    CHANGED docs/IMPLEMENTATION_LOG.md
+    CHANGED experiments/training.log
+    CHANGED scripts/engineering/realtime_eval.py
+    CHANGED src/detection/detector.py
+    CHANGED src/training/train.py
+user_data.csv: listed=313 changed=1 missing=0 volatile_changed=0
+    CHANGED outputs/siteguard_events.db
+critical violations (dataset or key checkpoint): 0

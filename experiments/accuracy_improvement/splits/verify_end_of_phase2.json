@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-11-20T01:19:27",
+  "manifest_dir": "experiments/accuracy_improvement/manifests/20261120-005540_phase0",
+  "dataset.csv": {
+    "listed": 2004,
+    "changed": [],
+    "missing": [],
+    "volatile_changed": [],
+    "new_files": []
+  },
+  "protected.csv": {
+    "listed": 824,
+    "changed": [
+      "docs/IMPLEMENTATION_LOG.md"
+    ],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "user_data.csv": {
+    "listed": 313,
+    "changed": [],
+    "missing": [],
+    "volatile_changed": []
+  },
+  "critical_violations": 0
+}

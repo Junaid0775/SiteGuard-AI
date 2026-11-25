@@ -1,0 +1,6 @@
+item,persons,positive_only,missing_only,both,neither,neither_share
+helmet,2443,1511,780,28,124,0.051
+vest,2443,1803,561,15,64,0.026
+gloves,2443,1040,584,51,768,0.314
+boots,2443,1293,386,9,755,0.309
+goggles,2443,742,350,10,1341,0.549

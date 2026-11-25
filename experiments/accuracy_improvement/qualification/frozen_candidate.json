@@ -1,0 +1,88 @@
+{
+  "frozen_at": "2026-11-23T02:47:31",
+  "candidate": "E3_m896",
+  "checkpoint": "experiments/accuracy_improvement/training/E3_m896/weights/best.pt",
+  "checkpoint_sha256": "590d7d6e8510f3c121ee74df38bf10028b67b212cd35c50da0916bce9f6b60e6",
+  "checkpoint_bytes": 44059865,
+  "last_checkpoint_sha256": "a4e66c027fa142c860fbc78a4701868afd75beb3800dd120dd9a3968c002a1ef",
+  "args_yaml_sha256": "05e614daa4728ee81bf82f48f7e3290243bee3ca23dde2e25fab2cb30739ac3f",
+  "results_csv_sha256": "3073e4a1e56312abecf98c771fb7c65cdef1ed679238bfd8ab61ea7ad4bebad9",
+  "pretrained_weights": "models/pretrained/yolo26m.pt",
+  "pretrained_sha256": "401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7",
+  "inference": {
+    "imgsz": 896,
+    "conf": 0.25,
+    "nms_iou": 0.5,
+    "head": "Ultralytics predict default (one-to-many head + NMS)"
+  },
+  "compliance_thresholds_unchanged": {
+    "required_ppe": [
+      "helmet",
+      "vest",
+      "gloves"
+    ],
+    "person_confidence": 0.4,
+    "violation_confidence": 0.5,
+    "evidence_confidence": 0.4,
+    "min_containment": 0.6,
+    "ambiguity_margin": 0.15,
+    "person_box_margin": 0.1,
+    "conflict_iou": 0.5
+  },
+  "training_arguments": {
+    "model": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/pretrained/yolo26m.pt",
+    "data": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "epochs": 30,
+    "patience": 15,
+    "batch": 4,
+    "imgsz": 896,
+    "device": "mps",
+    "workers": 4,
+    "optimizer": "auto",
+    "seed": 42,
+    "deterministic": true,
+    "amp": true,
+    "lr0": 0.01,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "cos_lr": false,
+    "close_mosaic": 10,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "scale": 0.5,
+    "translate": 0.1,
+    "fliplr": 0.5,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "cls_pw": 0.0,
+    "multi_scale": 0.0,
+    "cache": false
+  },
+  "training_duration_seconds_wall": 12107.6,
+  "epochs_completed": 30,
+  "best_fitness_dev": 0.62766,
+  "dev_metrics_at_best": {
+    "metrics/precision(B)": 0.9220113540570619,
+    "metrics/recall(B)": 0.7961241573007197,
+    "metrics/mAP50(B)": 0.8538667523305716,
+    "metrics/mAP50-95(B)": 0.6278004077905605
+  },
+  "split_list_sha256": {
+    "train": "6d9138035fd2665e768e0b4beed7d01e72999771c9e6cee1591085bde649f70f",
+    "dev": "eb1854d404cfe55a27398655b2dde8e3655dfe3321f5d059f808c43b6b024ae9",
+    "test": "cbc2ef25b8e25f26f1b57f0c14c5ecfa8d43e81e9328371742d21f783aeef5c2"
+  },
+  "dataset": "experiments/accuracy_improvement/datasets/v1_original_labels (symlinks to ../construction-ppe, labels unchanged)",
+  "versions": {
+    "python": "3.12.16",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.15.0",
+    "ultralytics": "8.4.215",
+    "mps_available": true
+  },
+  "selection_rule": "qualification/PREREGISTRATION-phase5-7.md section 1"
+}

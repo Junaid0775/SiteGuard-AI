@@ -1,0 +1,31 @@
+{
+  "device": "mps",
+  "imgsz": 640,
+  "runs": 100,
+  "model_load_s": 0.02,
+  "first_predict_s (incl. backend setup + warm-up)": 0.196,
+  "wall_ms_per_image (full-res val images, incl. decode-free preprocessing)": {
+    "mean": 29.49,
+    "median": 28.32,
+    "p95": 38.95,
+    "max": 39.36
+  },
+  "ultralytics_preprocess_ms": {
+    "mean": 0.75,
+    "median": 0.76,
+    "p95": 1.02,
+    "max": 1.11
+  },
+  "ultralytics_inference_ms": {
+    "mean": 18.61,
+    "median": 25.04,
+    "p95": 36.89,
+    "max": 37.23
+  },
+  "ultralytics_postprocess_ms": {
+    "mean": 10.05,
+    "median": 1.0,
+    "p95": 23.85,
+    "max": 25.34
+  }
+}

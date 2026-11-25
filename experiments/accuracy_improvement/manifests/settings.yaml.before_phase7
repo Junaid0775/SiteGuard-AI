@@ -1,0 +1,59 @@
+# SiteGuard AI - application and training settings
+# All paths are relative to the SiteGuard-AI project folder.
+
+model:
+  # Custom fine-tuned checkpoint used by the application.
+  trained_weights: models/trained/best.pt
+  # Pretrained starting checkpoint for transfer learning (downloaded on first use).
+  pretrained_name: yolo26n.pt
+  pretrained_dir: models/pretrained
+
+inference:
+  confidence_threshold: 0.25   # minimum confidence to keep a detection
+  iou_threshold: 0.5           # NMS IoU threshold. USED: Ultralytics predict defaults to nms=None, i.e. the
+                               # one-to-many head + NMS (verified in REPORT-009/010); nms=False would select the NMS-free head
+  image_size: 640              # inference resolution (pixels, longest side)
+  device: auto                 # auto | mps | cpu
+
+compliance:
+  # PPE items the site requires. Allowed: helmet, vest, gloves, boots, goggles.
+  required_ppe: [helmet, vest, gloves]
+  person_confidence: 0.40      # minimum confidence for a Person box to count as a worker
+  violation_confidence: 0.50   # minimum confidence of a no_* box to raise a potential violation
+  evidence_confidence: 0.40    # minimum confidence of a PPE box to count as compliant evidence
+  min_containment: 0.60        # share of the PPE/no_* box area that must lie inside the person box
+  ambiguity_margin: 0.15       # if two workers score within this margin, the association is ambiguous
+  person_box_margin: 0.10      # expand person boxes by this fraction (helmets often stick out)
+  conflict_iou: 0.50           # PPE box and no_* box of the same item overlapping this much = conflicting evidence
+
+events:
+  database: outputs/siteguard_events.db
+  evidence_dir: outputs/evidence
+  cooldown_seconds: 30         # suppress repeat events for the same worker region and category
+  match_iou: 0.30              # IoU used to decide "same worker region" between frames
+  min_consecutive_hits: 3      # video/live: violation must be seen in this many processed frames first
+  candidate_timeout_seconds: 3 # forget a pending candidate not seen for this long
+
+video:
+  frame_stride: 1              # 1 = analyse every frame (R1). N > 1 = analyse every Nth frame; the other frames
+                               # are written WITHOUT boxes and tagged 'not analysed' (old boxes are never reused)
+  max_frames: 3000             # safety limit for uploaded video length
+
+live:
+  process_every_n_frames: 1    # 1 = analyse every delivered frame (R1). N > 1 = analyse every Nth frame and show the
+                               # last correctly annotated frame in between (never old boxes on a new frame)
+  image_size: null             # R2: null = use inference.image_size (one authoritative size, 640). Set a number
+                               # only for a documented experiment
+
+training:
+  run_name: siteguard_yolo26n
+  epochs: 30
+  image_size: 640
+  batch: 8
+  workers: 4
+  patience: 15                 # early stopping patience (epochs without improvement)
+  seed: 42
+  device: auto
+  cache: false                 # false keeps memory use low on a 16 GB machine
+  optimizer: auto
+  amp: true

@@ -1,0 +1,80 @@
+{
+  "yolo26n": {
+    "model": "yolo26n",
+    "seconds": 12.0,
+    "camera_capture_fps": 29.93,
+    "frame_size": "1280x720 requested",
+    "frames_received": 359,
+    "frames_dropped_queue": 0,
+    "frames_analysed": 359,
+    "frames_rendered": 359,
+    "errors": 0,
+    "inference_ms": {
+      "mean": 18.69,
+      "median": 18.06,
+      "p95": 24.16,
+      "max": 33.47,
+      "n": 359
+    },
+    "receive_to_render_ms": {
+      "mean": 19.09,
+      "median": 18.59,
+      "p95": 24.68,
+      "max": 34.02,
+      "n": 359
+    },
+    "displayed_result_age_ms": {
+      "mean": 19.09,
+      "median": 18.59,
+      "p95": 24.68,
+      "max": 34.02,
+      "n": 359
+    },
+    "analysed_fps": 29.94,
+    "rendered_fps": 29.94,
+    "memory_free_pct_before_after": [
+      68.0,
+      69.0
+    ],
+    "frames_saved": 0
+  },
+  "yolo26m": {
+    "model": "yolo26m",
+    "seconds": 12.0,
+    "camera_capture_fps": 30.07,
+    "frame_size": "1280x720 requested",
+    "frames_received": 361,
+    "frames_dropped_queue": 1,
+    "frames_analysed": 360,
+    "frames_rendered": 360,
+    "errors": 0,
+    "inference_ms": {
+      "mean": 26.89,
+      "median": 26.64,
+      "p95": 28.43,
+      "max": 51.66,
+      "n": 360
+    },
+    "receive_to_render_ms": {
+      "mean": 27.11,
+      "median": 26.84,
+      "p95": 28.73,
+      "max": 52.17,
+      "n": 360
+    },
+    "displayed_result_age_ms": {
+      "mean": 27.11,
+      "median": 26.84,
+      "p95": 28.73,
+      "max": 52.17,
+      "n": 360
+    },
+    "analysed_fps": 30.05,
+    "rendered_fps": 30.05,
+    "memory_free_pct_before_after": [
+      68.0,
+      62.0
+    ],
+    "frames_saved": 0
+  }
+}

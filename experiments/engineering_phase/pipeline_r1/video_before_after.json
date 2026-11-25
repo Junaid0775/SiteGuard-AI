@@ -1,0 +1,55 @@
+{
+  "stride5_new_policy": {
+    "frame_stride": 5,
+    "frames_read": 270,
+    "frames_analysed": 54,
+    "frames_not_analysed_tagged": 216,
+    "frames_with_reused_boxes": 0,
+    "seconds": 0.87,
+    "events": 16,
+    "suppressed_repeats": 105,
+    "inference_ms": {
+      "mean": 10.51,
+      "median": 10.21,
+      "p95": 14.12,
+      "max": 18.4,
+      "n": 54
+    },
+    "frame_log": "experiments/engineering_phase/pipeline_r1/video_runs/stride5_new_policy.mp4.frames.csv",
+    "output_size": [
+      1280,
+      720
+    ],
+    "fps": 15.0
+  },
+  "stride1_every_frame": {
+    "frame_stride": 1,
+    "frames_read": 270,
+    "frames_analysed": 270,
+    "frames_not_analysed_tagged": 0,
+    "frames_with_reused_boxes": 0,
+    "seconds": 2.52,
+    "events": 16,
+    "suppressed_repeats": 738,
+    "inference_ms": {
+      "mean": 8.4,
+      "median": 8.12,
+      "p95": 10.09,
+      "max": 15.28,
+      "n": 270
+    },
+    "frame_log": "experiments/engineering_phase/pipeline_r1/video_runs/stride1_every_frame.mp4.frames.csv",
+    "output_size": [
+      1280,
+      720
+    ],
+    "fps": 15.0
+  },
+  "pre_R1_stride5_reference": {
+    "frame_stride": 5,
+    "frames_read": 270,
+    "frames_analysed": 54,
+    "frames_with_reused_boxes": 216,
+    "note": "frames_with_reused_boxes follows from the old code (video_processor.py:116); event selection on analysed frames is unchanged, so its events equal stride5_new_policy"
+  }
+}

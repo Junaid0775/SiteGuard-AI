@@ -1,0 +1,170 @@
+"""YOLO detector wrapper.
+
+`PPEDetector` loads the custom-trained checkpoint (models/trained/best.pt) and
+returns plain `Detection` objects, so the rest of the app never touches
+Ultralytics result objects directly.
+
+Class names are read from the checkpoint itself (model.names), never hardcoded.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import threading
+from dataclasses import asdict, dataclass
+from pathlib import Path
+
+import numpy as np
+
+from src.utils.paths import TRAINED_DIR, configure_ultralytics, load_settings, project_path
+
+
+class ModelNotFoundError(FileNotFoundError):
+    """Raised when the trained checkpoint does not exist yet."""
+
+
+@dataclass
+class Detection:
+    class_id: int
+    class_name: str
+    confidence: float
+    x1: float
+    y1: float
+    x2: float
+    y2: float
+
+    @property
+    def box(self) -> tuple[float, float, float, float]:
+        return (self.x1, self.y1, self.x2, self.y2)
+
+    @property
+    def width(self) -> float:
+        return max(0.0, self.x2 - self.x1)
+
+    @property
+    def height(self) -> float:
+        return max(0.0, self.y2 - self.y1)
+
+    @property
+    def area(self) -> float:
+        return self.width * self.height
+
+    @property
+    def center(self) -> tuple[float, float]:
+        return ((self.x1 + self.x2) / 2, (self.y1 + self.y2) / 2)
+
+    def to_dict(self) -> dict:
+        d = asdict(self)
+        d["confidence"] = round(self.confidence, 4)
+        return d
+
+
+def resolve_device(requested: str = "auto") -> str:
+    import torch
+
+    if requested != "auto":
+        return requested
+    if torch.backends.mps.is_available():
+        return "mps"
+    if torch.cuda.is_available():
+        return "0"
+    return "cpu"
+
+
+def file_sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+class PPEDetector:
+    """Thin, thread-safe wrapper around an Ultralytics YOLO detection model."""
+
+    def __init__(
+        self,
+        weights: str | Path | None = None,
+        device: str | None = None,
+        confidence: float | None = None,
+        iou: float | None = None,
+        image_size: int | None = None,
+    ) -> None:
+        settings = load_settings()
+        inf = settings["inference"]
+        self.weights = project_path(weights or settings["model"]["trained_weights"])
+        self.device = resolve_device(device or inf["device"])
+        self.confidence = float(confidence if confidence is not None else inf["confidence_threshold"])
+        self.iou = float(iou if iou is not None else inf["iou_threshold"])
+        self.image_size = int(image_size or inf["image_size"])
+        self._model = None
+        self._lock = threading.Lock()  # the webcam callback runs in another thread
+
+    # ------------------------------------------------------------------ loading
+    def load(self) -> "PPEDetector":
+        if self._model is not None:
+            return self
+        if not self.weights.exists():
+            raise ModelNotFoundError(
+                f"Trained model not found at {self.weights}. Run: .venv/bin/python -m src.training.train"
+            )
+        configure_ultralytics()
+        from ultralytics import YOLO
+
+        self._model = YOLO(str(self.weights))
+        if self._model.task != "detect":
+            raise ValueError(f"Expected a detection model, got task '{self._model.task}'")
+        return self
+
+    @property
+    def model(self):
+        if self._model is None:
+            self.load()
+        return self._model
+
+    @property
+    def names(self) -> dict[int, str]:
+        return {int(k): str(v) for k, v in self.model.names.items()}
+
+    # ---------------------------------------------------------------- inference
+    def detect(self, image_bgr: np.ndarray, confidence: float | None = None, image_size: int | None = None) -> list[Detection]:
+        """Run the model on one BGR image (OpenCV format) and return detections."""
+        if image_bgr is None or not isinstance(image_bgr, np.ndarray) or image_bgr.ndim != 3 or image_bgr.size == 0:
+            raise ValueError("detect() expects a non-empty HxWx3 BGR numpy array")
+        conf = self.confidence if confidence is None else float(confidence)
+        imgsz = self.image_size if image_size is None else int(image_size)
+        with self._lock:
+            result = self.model.predict(
+                image_bgr, conf=conf, iou=self.iou, imgsz=imgsz, device=self.device, verbose=False
+            )[0]
+        names = result.names
+        detections: list[Detection] = []
+        if result.boxes is None or len(result.boxes) == 0:
+            return detections
+        xyxy = result.boxes.xyxy.cpu().numpy()
+        confs = result.boxes.conf.cpu().numpy()
+        classes = result.boxes.cls.cpu().numpy().astype(int)
+        for (x1, y1, x2, y2), c, k in zip(xyxy, confs, classes):
+            detections.append(Detection(int(k), str(names[int(k)]), float(c), float(x1), float(y1), float(x2), float(y2)))
+        return detections
+
+    # --------------------------------------------------------------------- info
+    def info(self) -> dict:
+        """Model facts for the dashboard (path, checksum, classes, training source)."""
+        data = {
+            "weights": str(self.weights),
+            "exists": self.weights.exists(),
+            "device": self.device,
+            "confidence": self.confidence,
+            "image_size": self.image_size,
+        }
+        if not self.weights.exists():
+            return data
+        data["size_mb"] = round(self.weights.stat().st_size / 1e6, 2)
+        data["sha256"] = file_sha256(self.weights)[:16]
+        data["class_names"] = self.names
+        source = TRAINED_DIR / "MODEL_SOURCE.json"
+        if source.exists():
+            data["source"] = json.loads(source.read_text(encoding="utf-8"))
+        return data

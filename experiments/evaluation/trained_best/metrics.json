@@ -1,0 +1,106 @@
+{
+  "created": "2026-11-19T18:59:58",
+  "weights": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/models/trained/best.pt",
+  "dataset_yaml": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/data/generated/dataset_resolved.yaml",
+  "split": "val (official dataset validation split, 200 images)",
+  "image_size": 640,
+  "overall": {
+    "precision": 0.8322,
+    "recall": 0.6809,
+    "mAP50": 0.7339,
+    "mAP50-95": 0.5227
+  },
+  "per_class": {
+    "helmet": {
+      "precision": 0.9012,
+      "recall": 0.7755,
+      "mAP50": 0.8246,
+      "mAP50-95": 0.6266,
+      "instances": 294
+    },
+    "gloves": {
+      "precision": 0.8418,
+      "recall": 0.7349,
+      "mAP50": 0.793,
+      "mAP50-95": 0.6006,
+      "instances": 381
+    },
+    "vest": {
+      "precision": 0.9359,
+      "recall": 0.8294,
+      "mAP50": 0.8873,
+      "mAP50-95": 0.6853,
+      "instances": 340
+    },
+    "boots": {
+      "precision": 0.8121,
+      "recall": 0.6819,
+      "mAP50": 0.7711,
+      "mAP50-95": 0.5724,
+      "instances": 481
+    },
+    "goggles": {
+      "precision": 0.8292,
+      "recall": 0.9209,
+      "mAP50": 0.9242,
+      "mAP50-95": 0.5608,
+      "instances": 139
+    },
+    "Person": {
+      "precision": 0.9329,
+      "recall": 0.8965,
+      "mAP50": 0.9399,
+      "mAP50-95": 0.7809,
+      "instances": 481
+    },
+    "no_helmet": {
+      "precision": 0.894,
+      "recall": 0.5531,
+      "mAP50": 0.652,
+      "mAP50-95": 0.3829,
+      "instances": 179
+    },
+    "no_goggle": {
+      "precision": 0.3818,
+      "recall": 0.1281,
+      "mAP50": 0.1483,
+      "mAP50-95": 0.0451,
+      "instances": 82
+    },
+    "no_gloves": {
+      "precision": 0.8981,
+      "recall": 0.5644,
+      "mAP50": 0.6199,
+      "mAP50-95": 0.3841,
+      "instances": 203
+    },
+    "no_boots": {
+      "precision": 0.8388,
+      "recall": 0.6726,
+      "mAP50": 0.7475,
+      "mAP50-95": 0.5741,
+      "instances": 178
+    },
+    "forklift": {
+      "precision": 0.8006,
+      "recall": 0.7945,
+      "mAP50": 0.8071,
+      "mAP50-95": 0.5847,
+      "instances": 73
+    },
+    "no_vest": {
+      "precision": 0.92,
+      "recall": 0.6194,
+      "mAP50": 0.6918,
+      "mAP50-95": 0.4746,
+      "instances": 130
+    }
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.17,
+    "inference": 4.27,
+    "loss": 0.0,
+    "postprocess": 3.63
+  },
+  "plots_dir": "/Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/evaluation/trained_best"
+}

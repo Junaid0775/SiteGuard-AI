@@ -1,0 +1,39 @@
+# SiteGuard AI - dataset configuration (Ultralytics YOLO format)
+#
+# This file is a corrected copy of construction-ppe/data.yaml.
+# The original file is NOT modified.
+#
+# Why a separate file?
+#   The original uses `path: construction-ppe`, a relative path. Ultralytics
+#   resolves relative paths against the current working directory or its own
+#   global DATASETS_DIR setting, so it breaks when commands are run from other
+#   folders. Here, `source_dataset` is resolved relative to the SiteGuard-AI
+#   project root by src/utils/paths.py.
+#
+# Why a mirror?
+#   Ultralytics writes `labels/train.cache` next to the label files. To avoid
+#   adding files to the original dataset, src/utils/dataset_tools.py builds a
+#   symlink mirror under data/dataset_mirror/. The mirror links to the original
+#   files. It does not copy or change them. Training reads from the mirror.
+#
+# The 12-class mapping below is identical to the original data.yaml.
+# Do not reorder it: the IDs are stored in every label file.
+
+source_dataset: ../construction-ppe   # relative to the SiteGuard-AI folder
+mirror_dir: data/dataset_mirror        # relative to the SiteGuard-AI folder
+train: images/train
+val: images/val
+
+names:
+  0: helmet
+  1: gloves
+  2: vest
+  3: boots
+  4: goggles
+  5: Person
+  6: no_helmet
+  7: no_goggle
+  8: no_gloves
+  9: no_boots
+  10: forklift
+  11: no_vest

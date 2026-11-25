@@ -1,0 +1,44 @@
+{
+  "hypothesis": "A conservative scale range (0.75-1.25 instead of 0.5-1.5) stops augmentation from shrinking tiny objects below resolvability (boxes < 4 px: 4.4 % -> 2.5 % of augmented training boxes) and milder colour changes keep PPE colours realistic",
+  "changed": [
+    "scale 0.5 -> 0.25",
+    "hsv_h 0.015 -> 0.01, hsv_s 0.7 -> 0.4, hsv_v 0.4 -> 0.3"
+  ],
+  "fixed": "YOLO26m architecture and pretrained weights; train/dev split v1; AdamW auto (lr0 0.000625); nominal batch 64; seed 42; Ultralytics 8.4.215 defaults except the changed variable",
+  "expected": "Small gain on small objects; possibly less robustness to unusual colours/lighting",
+  "success": "Dev missing-PPE recall and mAP50 at least equal to E1",
+  "name": "E4_m640_aug",
+  "arguments": [
+    "--weights",
+    "models/pretrained/yolo26m.pt",
+    "--data",
+    "experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml",
+    "--epochs",
+    "30",
+    "--imgsz",
+    "640",
+    "--batch",
+    "4",
+    "--patience",
+    "15",
+    "--seed",
+    "42",
+    "--fraction",
+    "1.0",
+    "--name",
+    "E4_m640_aug",
+    "--project",
+    "experiments/accuracy_improvement/training",
+    "--no-promote",
+    "--hyp",
+    "experiments/accuracy_improvement/training/configs/E4_m640_aug.hyp.yaml"
+  ],
+  "hyp": {
+    "scale": 0.25,
+    "hsv_h": 0.01,
+    "hsv_s": 0.4,
+    "hsv_v": 0.3
+  },
+  "written": "2026-11-23T00:40:00",
+  "resume": false
+}

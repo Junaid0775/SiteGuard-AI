@@ -1,0 +1,81 @@
+{
+  "created": "2026-11-20T00:55:41",
+  "tag": "phase0",
+  "counts": {
+    "dataset": 2004,
+    "protected": 824,
+    "user_data": 313
+  },
+  "bytes": {
+    "dataset": 647834864,
+    "protected": 755594614,
+    "user_data": 62694486
+  },
+  "active_checkpoint_setting": "models/trained/best.pt",
+  "key_checkpoints": {
+    "models/trained/best.pt": {
+      "sha256": "890dc61fd024b247eda19753a1787a5b9ac16ff0236b2f72e06ae6814c995b9b",
+      "size_bytes": 5443013,
+      "role": "ACTIVE application checkpoint (YOLO26n) - never overwrite"
+    },
+    "models/trained/last.pt": {
+      "sha256": "c32a10ec685b9e71f0621189af9ca96b899c52db823cf859aadddbf5a24d750d",
+      "size_bytes": 5443013,
+      "role": "YOLO26n last-epoch checkpoint - preserve"
+    },
+    "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt": {
+      "sha256": "399c4e5be335e3544afe185c7abb08d5fc894a382b891d970f71b94df3f1773f",
+      "size_bytes": 44029401,
+      "role": "previously evaluated YOLO26m checkpoint - never overwrite"
+    },
+    "experiments/yolo26m/training/yolo26m_e30_b4/weights/last.pt": {
+      "sha256": "5412989709673b497de966a3958fbbd40abd7921470ccddc1c2f18b76f05596f",
+      "size_bytes": 44029401,
+      "role": "YOLO26m last-epoch checkpoint - preserve"
+    },
+    "models/pretrained/yolo26n.pt": {
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "size_bytes": 5544453,
+      "role": "pretrained YOLO26n starting weights"
+    },
+    "models/pretrained/yolo26m.pt": {
+      "sha256": "401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7",
+      "size_bytes": 44255705,
+      "role": "pretrained YOLO26m starting weights"
+    }
+  },
+  "events_database": {
+    "path": "outputs/siteguard_events.db",
+    "sha256": "86ba4321ac50c93ccd8b18c0279d2ee4e8d0105709f4cb2d05d298d9aa8b8575",
+    "size_bytes": 32768
+  },
+  "dataset_checks": {
+    "files": 2004,
+    "pre_project_baseline": {
+      "entries": 2004,
+      "matched": 2004,
+      "changed": [],
+      "missing": [],
+      "not_in_baseline": []
+    },
+    "dataset_own_manifest_jsonl": {
+      "entries": 1000,
+      "image_hash_matched": 1000,
+      "image_hash_mismatched": 0,
+      "image_absent": 0,
+      "split_counts": {
+        "val": 200,
+        "train": 800
+      }
+    }
+  },
+  "dataset_mirror": {
+    "symlinks": 2000,
+    "resolve_into_original_dataset": 2000,
+    "broken": 0,
+    "regular_files": [
+      "data/dataset_mirror/labels/train.cache",
+      "data/dataset_mirror/labels/val.cache"
+    ]
+  }
+}

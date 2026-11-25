@@ -1,0 +1,139 @@
+{
+  "reference": "dev_E1_m640_base",
+  "B": 1000,
+  "seed": 0,
+  "split": "dev",
+  "unit": "image (paired)",
+  "results": {
+    "dev_yolo26n_active_baseline": {
+      "mAP50_audit": {
+        "mean": -0.0765,
+        "ci95": [
+          -0.0948,
+          -0.0581
+        ],
+        "share_positive": 0.0
+      },
+      "recall@0.25": {
+        "mean": -0.0795,
+        "ci95": [
+          -0.0938,
+          -0.066
+        ],
+        "share_positive": 0.0
+      },
+      "mean_missing_recall@0.25": {
+        "mean": -0.1314,
+        "ci95": [
+          -0.1648,
+          -0.0992
+        ],
+        "share_positive": 0.0
+      }
+    },
+    "dev_yolo26m_e30_b4_baseline": {
+      "mAP50_audit": {
+        "mean": 0.007,
+        "ci95": [
+          -0.0045,
+          0.0187
+        ],
+        "share_positive": 0.857
+      },
+      "recall@0.25": {
+        "mean": 0.003,
+        "ci95": [
+          -0.0045,
+          0.0101
+        ],
+        "share_positive": 0.765
+      },
+      "mean_missing_recall@0.25": {
+        "mean": -0.0067,
+        "ci95": [
+          -0.0305,
+          0.0177
+        ],
+        "share_positive": 0.303
+      }
+    },
+    "dev_E3_m896": {
+      "mAP50_audit": {
+        "mean": 0.0343,
+        "ci95": [
+          0.021,
+          0.0478
+        ],
+        "share_positive": 1.0
+      },
+      "recall@0.25": {
+        "mean": 0.0325,
+        "ci95": [
+          0.0208,
+          0.0447
+        ],
+        "share_positive": 1.0
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.0598,
+        "ci95": [
+          0.0338,
+          0.0905
+        ],
+        "share_positive": 1.0
+      }
+    },
+    "dev_E4_m640_aug": {
+      "mAP50_audit": {
+        "mean": 0.0103,
+        "ci95": [
+          -0.0017,
+          0.0239
+        ],
+        "share_positive": 0.954
+      },
+      "recall@0.25": {
+        "mean": -0.0001,
+        "ci95": [
+          -0.0094,
+          0.0093
+        ],
+        "share_positive": 0.483
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.0044,
+        "ci95": [
+          -0.0214,
+          0.0295
+        ],
+        "share_positive": 0.643
+      }
+    },
+    "dev_E5_m640_clspw": {
+      "mAP50_audit": {
+        "mean": 0.0092,
+        "ci95": [
+          -0.0018,
+          0.02
+        ],
+        "share_positive": 0.953
+      },
+      "recall@0.25": {
+        "mean": 0.0027,
+        "ci95": [
+          -0.0052,
+          0.0109
+        ],
+        "share_positive": 0.736
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.0057,
+        "ci95": [
+          -0.0145,
+          0.0251
+        ],
+        "share_positive": 0.71
+      }
+    }
+  }
+}

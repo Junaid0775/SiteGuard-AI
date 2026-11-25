@@ -1,0 +1,12 @@
+........................................................................ [ 93%]
+.....                                                                    [100%]
+============================= slowest 8 durations ==============================
+1.14s call     tests/test_app.py::test_image_upload_flow_records_events_and_csv
+0.68s call     tests/test_app.py::test_video_upload_flow
+0.56s call     tests/test_app.py::test_page_renders_without_exception[Overview]
+0.54s call     tests/test_dataset.py::test_full_dataset_validation
+0.35s call     tests/test_pipeline_integration.py::test_real_video_processing_with_dedup
+0.30s call     tests/test_app.py::test_page_renders_without_exception[Live Monitoring]
+0.26s call     tests/test_app.py::test_page_renders_without_exception[Model Evaluation]
+0.21s call     tests/test_image_and_model.py::test_detection_output_format
+77 passed in 5.78s

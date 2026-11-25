@@ -1,0 +1,49 @@
+{
+  "stride5_events": 16,
+  "stride1_events": 16,
+  "stride5_events_matched_in_stride1 (same category, <=0.5 s, IoU>=0.5)": 1,
+  "first_event_time_s": {
+    "stride5": 0.67,
+    "stride1": 0.13
+  },
+  "median_time_shift_s (stride1 earlier = negative)": -0.54,
+  "matched_one_to_one_tol1.0s_iou0.3": 15,
+  "matched_one_to_one_tol1.5s_iou0.3": 15,
+  "categories_stride5": [
+    "no_gloves",
+    "no_gloves",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest"
+  ],
+  "categories_stride1": [
+    "no_gloves",
+    "no_gloves",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_helmet",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest",
+    "no_vest"
+  ],
+  "interpretation": "Persistence is 3 ANALYSED frames in both runs (rule unchanged). At stride 1 the 3 frames span 0.13 s of video instead of 0.67-1.0 s at stride 5, so events fire earlier; see REPORT-012 section 11."
+}

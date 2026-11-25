@@ -1,0 +1,18 @@
+# LOCKED TEST - use only for Phase 6 qualification of a frozen candidate (spec §8).
+# Every access must be logged in experiments/accuracy_improvement/qualification/locked_test_access_log.csv
+path: /Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/experiments/accuracy_improvement/datasets/v1_original_labels
+val: images/test
+names:
+  0: helmet
+  1: gloves
+  2: vest
+  3: boots
+  4: goggles
+  5: Person
+  6: no_helmet
+  7: no_goggle
+  8: no_gloves
+  9: no_boots
+  10: forklift
+  11: no_vest
+train:  # empty on purpose: evaluation only

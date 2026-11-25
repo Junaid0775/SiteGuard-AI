@@ -1,0 +1,13 @@
+check_time: 2026-11-23 12:35:40
+exists: yes
+realpath: /Users/junaidahmad/Desktop/471 Project/SiteGuard-AI/outputs/evidence/EVT-20261123-031826-215199.jpg
+basename_matches: yes
+size_bytes: 78413
+mtime: 2026-11-23 03:18:26
+sha256: f9d2380ca37b803c3c3ff8ba0612c876ac2065eb666eab1dd35b9425c34bc3eb
+db_events_with_this_id: 0
+db_events_referencing_this_file: 0
+db_events_total: 40
+deleted_at: 2026-11-23 12:35:48
+exists_after: no
+other evidence: IDENTICAL (131 files)

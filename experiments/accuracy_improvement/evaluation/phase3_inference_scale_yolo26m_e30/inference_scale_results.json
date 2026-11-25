@@ -1,0 +1,822 @@
+{
+  "weights": "experiments/yolo26m/training/yolo26m_e30_b4/weights/best.pt",
+  "split": "dev",
+  "results": [
+    {
+      "config": "full_640",
+      "mAP50": 0.815,
+      "mAP50-95": 0.6073,
+      "precision_op": 0.8849,
+      "recall_op": 0.8281,
+      "f1_op": 0.8555,
+      "fp": 319,
+      "fp_types": {
+        "wrong_class": 74,
+        "background": 89,
+        "localization": 151,
+        "duplicate": 5
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7151,
+        "no_gloves": 0.6995,
+        "no_goggle": 0.4756,
+        "no_boots": 0.691,
+        "no_vest": 0.6923
+      },
+      "person_recall_op": 0.9563,
+      "duplicate_pairs_op": 42,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.9487,
+        "8-16px": 0.6879,
+        "<8px": 0.3882,
+        ">=32px": 0.9646
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.932,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.312,
+          16
+        ],
+        "no_boots|<8px": [
+          0.065,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.828,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.984,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.653,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.192,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.974,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.714,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.473,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.4,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.783,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.828,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.404,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.9,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.688,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.192,
+          26
+        ],
+        "no_vest|<8px": [
+          0.0,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.974,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.6283,
+          "precision_op": 0.8111,
+          "recall_op": 0.6939,
+          "missing_recall_op": {
+            "no_helmet": 0.5312,
+            "no_gloves": 0.4421,
+            "no_goggle": 0.6667,
+            "no_boots": 0.18,
+            "no_vest": 0.4237
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.9063,
+          "precision_op": 0.9335,
+          "recall_op": 0.9313,
+          "missing_recall_op": {
+            "no_helmet": 0.9277,
+            "no_gloves": 0.9259,
+            "no_goggle": 0.4219,
+            "no_boots": 0.8906,
+            "no_vest": 0.9155
+          }
+        }
+      },
+      "latency_ms_mean": 31.8,
+      "latency_ms_p95": 39.3
+    },
+    {
+      "config": "full_768",
+      "mAP50": 0.8318,
+      "mAP50-95": 0.6117,
+      "precision_op": 0.8881,
+      "recall_op": 0.8446,
+      "f1_op": 0.8658,
+      "fp": 315,
+      "fp_types": {
+        "background": 85,
+        "localization": 152,
+        "wrong_class": 74,
+        "duplicate": 4
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7207,
+        "no_gloves": 0.7291,
+        "no_goggle": 0.5244,
+        "no_boots": 0.764,
+        "no_vest": 0.7231
+      },
+      "person_recall_op": 0.9522,
+      "duplicate_pairs_op": 33,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.9473,
+        "8-16px": 0.7364,
+        "<8px": 0.44,
+        ">=32px": 0.9661
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.959,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.562,
+          16
+        ],
+        "no_boots|<8px": [
+          0.161,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.897,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.937,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.735,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.288,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.974,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.714,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.527,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.45,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.783,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.759,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.456,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.9,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.75,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.231,
+          26
+        ],
+        "no_vest|<8px": [
+          0.083,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.987,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.6691,
+          "precision_op": 0.8094,
+          "recall_op": 0.7257,
+          "missing_recall_op": {
+            "no_helmet": 0.5521,
+            "no_gloves": 0.5158,
+            "no_goggle": 0.7222,
+            "no_boots": 0.32,
+            "no_vest": 0.4746
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.9142,
+          "precision_op": 0.9428,
+          "recall_op": 0.9361,
+          "missing_recall_op": {
+            "no_helmet": 0.9157,
+            "no_gloves": 0.9167,
+            "no_goggle": 0.4688,
+            "no_boots": 0.9375,
+            "no_vest": 0.9296
+          }
+        }
+      },
+      "latency_ms_mean": 40.8,
+      "latency_ms_p95": 52.8
+    },
+    {
+      "config": "full_896",
+      "mAP50": 0.8379,
+      "mAP50-95": 0.6031,
+      "precision_op": 0.8743,
+      "recall_op": 0.8548,
+      "f1_op": 0.8644,
+      "fp": 364,
+      "fp_types": {
+        "localization": 166,
+        "background": 111,
+        "wrong_class": 79,
+        "duplicate": 8
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7821,
+        "no_gloves": 0.7192,
+        "no_goggle": 0.5488,
+        "no_boots": 0.7753,
+        "no_vest": 0.7385
+      },
+      "person_recall_op": 0.9626,
+      "duplicate_pairs_op": 39,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.9459,
+        "8-16px": 0.7607,
+        "<8px": 0.48,
+        ">=32px": 0.9669
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.973,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.562,
+          16
+        ],
+        "no_boots|<8px": [
+          0.258,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.862,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.937,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.694,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.308,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.949,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.571,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.545,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.55,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.739,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.759,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.596,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.957,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.812,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.269,
+          26
+        ],
+        "no_vest|<8px": [
+          0.083,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.987,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.671,
+          "precision_op": 0.7859,
+          "recall_op": 0.7444,
+          "missing_recall_op": {
+            "no_helmet": 0.625,
+            "no_gloves": 0.5053,
+            "no_goggle": 0.7222,
+            "no_boots": 0.4,
+            "no_vest": 0.4915
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.9157,
+          "precision_op": 0.9385,
+          "recall_op": 0.9397,
+          "missing_recall_op": {
+            "no_helmet": 0.9639,
+            "no_gloves": 0.9074,
+            "no_goggle": 0.5,
+            "no_boots": 0.9219,
+            "no_vest": 0.9437
+          }
+        }
+      },
+      "latency_ms_mean": 52.9,
+      "latency_ms_p95": 70.8
+    },
+    {
+      "config": "full_1024",
+      "mAP50": 0.834,
+      "mAP50-95": 0.5856,
+      "precision_op": 0.8695,
+      "recall_op": 0.8548,
+      "f1_op": 0.8621,
+      "fp": 380,
+      "fp_types": {
+        "localization": 186,
+        "background": 115,
+        "wrong_class": 69,
+        "duplicate": 10
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7933,
+        "no_gloves": 0.734,
+        "no_goggle": 0.5244,
+        "no_boots": 0.7809,
+        "no_vest": 0.7308
+      },
+      "person_recall_op": 0.9543,
+      "duplicate_pairs_op": 27,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.9501,
+        "8-16px": 0.7664,
+        "<8px": 0.4918,
+        ">=32px": 0.9584
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.973,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.562,
+          16
+        ],
+        "no_boots|<8px": [
+          0.258,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.879,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.937,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.735,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.404,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.846,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.714,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.564,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.35,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.739,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.793,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.614,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.957,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.812,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.269,
+          26
+        ],
+        "no_vest|<8px": [
+          0.083,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.974,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.6815,
+          "precision_op": 0.7921,
+          "recall_op": 0.7521,
+          "missing_recall_op": {
+            "no_helmet": 0.6458,
+            "no_gloves": 0.5789,
+            "no_goggle": 0.7222,
+            "no_boots": 0.4,
+            "no_vest": 0.5085
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.9059,
+          "precision_op": 0.9254,
+          "recall_op": 0.9337,
+          "missing_recall_op": {
+            "no_helmet": 0.9639,
+            "no_gloves": 0.8704,
+            "no_goggle": 0.4688,
+            "no_boots": 0.9297,
+            "no_vest": 0.9155
+          }
+        }
+      },
+      "latency_ms_mean": 66.5,
+      "latency_ms_p95": 90.9
+    },
+    {
+      "config": "full_1280",
+      "mAP50": 0.8097,
+      "mAP50-95": 0.5432,
+      "precision_op": 0.8438,
+      "recall_op": 0.8409,
+      "f1_op": 0.8424,
+      "fp": 461,
+      "fp_types": {
+        "localization": 227,
+        "background": 128,
+        "wrong_class": 85,
+        "duplicate": 21
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7765,
+        "no_gloves": 0.734,
+        "no_goggle": 0.439,
+        "no_boots": 0.7865,
+        "no_vest": 0.7308
+      },
+      "person_recall_op": 0.9376,
+      "duplicate_pairs_op": 27,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.9459,
+        "8-16px": 0.757,
+        "<8px": 0.4894,
+        ">=32px": 0.9338
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.973,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.562,
+          16
+        ],
+        "no_boots|<8px": [
+          0.387,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.828,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.968,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.735,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.385,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.821,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.571,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.436,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.4,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.696,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.828,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.561,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.957,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.812,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.308,
+          26
+        ],
+        "no_vest|<8px": [
+          0.083,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.961,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.6539,
+          "precision_op": 0.76,
+          "recall_op": 0.7529,
+          "missing_recall_op": {
+            "no_helmet": 0.6146,
+            "no_gloves": 0.5789,
+            "no_goggle": 0.7222,
+            "no_boots": 0.48,
+            "no_vest": 0.5254
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.8568,
+          "precision_op": 0.9075,
+          "recall_op": 0.9086,
+          "missing_recall_op": {
+            "no_helmet": 0.9639,
+            "no_gloves": 0.8704,
+            "no_goggle": 0.3594,
+            "no_boots": 0.9062,
+            "no_vest": 0.9014
+          }
+        }
+      },
+      "latency_ms_mean": 100.3,
+      "latency_ms_p95": 138.9
+    },
+    {
+      "config": "tiled_2x2",
+      "mAP50": 0.8248,
+      "mAP50-95": 0.6088,
+      "precision_op": 0.8144,
+      "recall_op": 0.8625,
+      "f1_op": 0.8378,
+      "fp": 582,
+      "fp_types": {
+        "wrong_class": 106,
+        "localization": 250,
+        "background": 221,
+        "duplicate": 5
+      },
+      "missing_recall_op": {
+        "no_helmet": 0.7989,
+        "no_gloves": 0.7685,
+        "no_goggle": 0.4756,
+        "no_boots": 0.7978,
+        "no_vest": 0.7154
+      },
+      "person_recall_op": 0.9605,
+      "duplicate_pairs_op": 0,
+      "recall_by_short_side_at_640": {
+        "16-32px": 0.953,
+        "8-16px": 0.7551,
+        "<8px": 0.5341,
+        ">=32px": 0.9654
+      },
+      "missing_recall_by_short_side": {
+        "no_boots|16-32px": [
+          0.973,
+          73
+        ],
+        "no_boots|8-16px": [
+          0.562,
+          16
+        ],
+        "no_boots|<8px": [
+          0.355,
+          31
+        ],
+        "no_boots|>=32px": [
+          0.879,
+          58
+        ],
+        "no_gloves|16-32px": [
+          0.984,
+          63
+        ],
+        "no_gloves|8-16px": [
+          0.735,
+          49
+        ],
+        "no_gloves|<8px": [
+          0.404,
+          52
+        ],
+        "no_gloves|>=32px": [
+          0.949,
+          39
+        ],
+        "no_goggle|16-32px": [
+          0.571,
+          7
+        ],
+        "no_goggle|8-16px": [
+          0.491,
+          55
+        ],
+        "no_goggle|<8px": [
+          0.4,
+          20
+        ],
+        "no_helmet|16-32px": [
+          0.783,
+          23
+        ],
+        "no_helmet|8-16px": [
+          0.862,
+          29
+        ],
+        "no_helmet|<8px": [
+          0.632,
+          57
+        ],
+        "no_helmet|>=32px": [
+          0.914,
+          70
+        ],
+        "no_vest|16-32px": [
+          0.688,
+          16
+        ],
+        "no_vest|8-16px": [
+          0.231,
+          26
+        ],
+        "no_vest|<8px": [
+          0.083,
+          12
+        ],
+        "no_vest|>=32px": [
+          0.987,
+          76
+        ]
+      },
+      "family": {
+        "source": {
+          "mAP50": 0.6594,
+          "precision_op": 0.6916,
+          "recall_op": 0.77,
+          "missing_recall_op": {
+            "no_helmet": 0.6771,
+            "no_gloves": 0.5895,
+            "no_goggle": 0.7222,
+            "no_boots": 0.46,
+            "no_vest": 0.4746
+          }
+        },
+        "ultralytics-ppe": {
+          "mAP50": 0.8879,
+          "precision_op": 0.9178,
+          "recall_op": 0.9337,
+          "missing_recall_op": {
+            "no_helmet": 0.9398,
+            "no_gloves": 0.9259,
+            "no_goggle": 0.4062,
+            "no_boots": 0.9297,
+            "no_vest": 0.9155
+          }
+        }
+      },
+      "latency_ms_mean": 143.8,
+      "latency_ms_p95": 187.0
+    }
+  ]
+}

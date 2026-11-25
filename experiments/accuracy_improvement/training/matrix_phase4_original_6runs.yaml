@@ -1,0 +1,59 @@
+# Phase 4 experiment matrix (specification §6.2). One variable changes per ablation, against E1.
+# All runs: YOLO26m from the verified COCO-pretrained weights (sha256 401cea9a...), train = 640 images
+# (splits/train.txt), validation / checkpoint selection = dev (200 images). The locked test is never referenced.
+# Order = expected information value first. The combined configuration (E7) and the extra seeds are added
+# only after E1-E6 show which individual changes help (spec: "only after useful individual ablations").
+defaults:
+  weights: models/pretrained/yolo26m.pt
+  data: experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml
+  imgsz: 640
+  batch: 4
+  epochs: 30
+  patience: 15
+  seed: 42
+  fraction: 1.0
+  evaluate: true
+  fixed: "YOLO26m architecture and pretrained weights; train/dev split v1; AdamW auto (lr0 0.000625); nominal batch 64; seed 42; Ultralytics 8.4.215 defaults except the changed variable"
+
+experiments:
+  - name: E1_m640_base
+    hypothesis: "The earlier YOLO26m configuration, retrained on the 640-image train split, reproduces approximately the earlier dev result (mAP50 0.831) minus the effect of 20 % less training data"
+    changed: ["training data: 800 -> 640 images (locked test removed)"]
+    expected: "Slightly lower dev metrics than the earlier checkpoint (less data)"
+    success: "Completes; dev mAP50 within about 0.03 of 0.831; becomes the controlled baseline for E2-E7"
+
+  - name: E3_m896
+    imgsz: 896
+    hypothesis: "Training and evaluating at 896 px makes the tiny missing-PPE boxes resolvable (boxes < 8 px at 640: 13.7 % of training boxes -> ~5 % at 896-1024) and improves small-object and real-scene recall"
+    changed: ["imgsz 640 -> 896 (training and evaluation)"]
+    expected: "Higher recall on boxes < 16 px and on source-family images; about 2x training time; inference latency about 1.7-2x"
+    success: "Dev mAP50 and missing-PPE recall above E1 with a paired-bootstrap CI that excludes 0; latency measured"
+
+  - name: E6_m640_tiles
+    data: experiments/accuracy_improvement/datasets/v2_train_tiles/dev.yaml
+    hypothesis: "Adding 962 native-resolution tiles cut from training images with tiny missing-PPE boxes teaches the model those objects at a larger apparent scale without changing the inference size"
+    changed: ["training data: + 962 training-derived tiles (v2_train_tiles); inference unchanged at 640"]
+    expected: "Better small-object recall at 640, possibly fewer false negatives on source-family scenes; about 2.5x training time per epoch; risk of more false positives from clipped partial objects"
+    success: "Dev small-object and missing-PPE recall above E1 without a precision drop larger than the recall gain"
+
+  - name: E4_m640_aug
+    hyp: {scale: 0.25, hsv_h: 0.01, hsv_s: 0.4, hsv_v: 0.3}
+    hypothesis: "A conservative scale range (0.75-1.25 instead of 0.5-1.5) stops augmentation from shrinking tiny objects below resolvability (boxes < 4 px: 4.4 % -> 2.5 % of augmented training boxes) and milder colour changes keep PPE colours realistic"
+    changed: ["scale 0.5 -> 0.25", "hsv_h 0.015 -> 0.01, hsv_s 0.7 -> 0.4, hsv_v 0.4 -> 0.3"]
+    expected: "Small gain on small objects; possibly less robustness to unusual colours/lighting"
+    success: "Dev missing-PPE recall and mAP50 at least equal to E1"
+
+  - name: E5_m640_clspw
+    hyp: {cls_pw: 0.5}
+    hypothesis: "Square-root inverse-frequency class weights (cls_pw 0.5) raise the learning signal of the rare missing-PPE classes (no_goggle 219 and no_vest 344 training instances vs boots 1,563)"
+    changed: ["cls_pw 0.0 -> 0.5"]
+    expected: "Higher recall for no_goggle / no_vest / no_boots; possible precision loss on frequent classes"
+    success: "Missing-PPE recall above E1 without a larger loss in precision"
+
+  - name: E2_m640_long
+    epochs: 60
+    patience: 15
+    hypothesis: "The earlier 30-epoch curve had not plateaued (REPORT-014); a longer schedule with early stopping and best-checkpoint retention (selected on dev) improves the result"
+    changed: ["epochs 30 -> 60 (patience 15, best.pt by dev fitness)"]
+    expected: "Higher dev mAP50-95 until early stopping; about 2x training time"
+    success: "Dev metrics above E1; best epoch recorded"

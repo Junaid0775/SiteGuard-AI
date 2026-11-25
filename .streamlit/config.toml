@@ -1,0 +1,45 @@
+# Streamlit configuration for SiteGuard AI.
+# Reference-locked redesign (2026-11-24, docs/frontend_redesign/): navy/graphite with gold. Earlier: dark industrial theme (2026-11-23): charcoal surfaces, one restrained
+# safety-orange accent, neutral greys. Status colours are always paired with a text label in the app.
+# Previous version (light/dark following the OS): experiments/frontend_completion/backups/20261123-phase0/config.toml
+
+[theme]
+base = "dark"
+primaryColor = "#E49A32"
+backgroundColor = "#0B1119"
+secondaryBackgroundColor = "#161D27"
+textColor = "#F3F0E8"
+font = "sans serif"
+baseRadius = "small"
+buttonRadius = "small"
+borderColor = "#283240"
+showWidgetBorder = true
+showSidebarBorder = true
+linkColor = "#E8B86A"
+dataframeHeaderBackgroundColor = "#1C2531"
+dataframeBorderColor = "#283240"
+redColor = "#E5484D"
+greenColor = "#3FA66B"
+orangeColor = "#E49A32"
+yellowColor = "#D6A24D"
+blueColor = "#5B8DEF"
+grayColor = "#9AA3AE"
+chartCategoricalColors = ["#D6A24D", "#7C8B9C", "#4F6D8A", "#B9C2CC", "#8A6F52", "#5E7D6E"]
+
+[theme.sidebar]
+backgroundColor = "#0F1824"
+secondaryBackgroundColor = "#172230"
+borderColor = "#243041"
+
+[server]
+address = "localhost"            # local-only: not reachable from other devices on the network
+enableStaticServing = true         # serves ./static (only the approved background image; enforced by a test)
+headless = true
+maxUploadSize = 500        # MB, allows short site videos
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false   # no usage telemetry
+
+[client]
+toolbarMode = "minimal"   # no developer menu / Deploy button: this app is local only, never deployed

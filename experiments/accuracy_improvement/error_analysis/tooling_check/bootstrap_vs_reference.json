@@ -1,0 +1,35 @@
+{
+  "reference": "dev_yolo26n_active_baseline",
+  "B": 200,
+  "seed": 0,
+  "split": "dev",
+  "unit": "image (paired)",
+  "results": {
+    "dev_yolo26m_e30_b4_baseline": {
+      "mAP50_audit": {
+        "mean": 0.0832,
+        "ci95": [
+          0.0644,
+          0.1002
+        ],
+        "share_positive": 1.0
+      },
+      "recall@0.25": {
+        "mean": 0.083,
+        "ci95": [
+          0.0692,
+          0.0959
+        ],
+        "share_positive": 1.0
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.1232,
+        "ci95": [
+          0.0939,
+          0.154
+        ],
+        "share_positive": 1.0
+      }
+    }
+  }
+}

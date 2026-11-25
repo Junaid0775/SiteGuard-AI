@@ -1,0 +1,256 @@
+{
+  "yolo26n": {
+    "model": "yolo26n",
+    "frames": 149,
+    "capture_fps_measured_at_capture": 29.8,
+    "labelled_frames": 10,
+    "raw": {
+      "performance": {
+        "frames_received": 149,
+        "frames_dropped_queue": 0,
+        "frames_analysed": 149,
+        "frames_rendered": 149,
+        "errors": 0,
+        "inference_ms": {
+          "mean": 23.78,
+          "median": 23.49,
+          "p95": 30.31,
+          "max": 58.98,
+          "n": 149
+        },
+        "receive_to_render_ms": {
+          "mean": 24.12,
+          "median": 23.82,
+          "p95": 30.8,
+          "max": 59.26,
+          "n": 149
+        },
+        "displayed_result_age_ms": {
+          "mean": 24.12,
+          "median": 23.82,
+          "p95": 30.8,
+          "max": 59.26,
+          "n": 149
+        },
+        "received_fps": 29.81,
+        "analysed_fps": 29.77,
+        "rendered_fps": 29.77,
+        "memory_free_pct_before_after": [
+          69.0,
+          69.0
+        ]
+      },
+      "stability": {
+        "analysed_frames": 149,
+        "matched_box_pairs": 332,
+        "class_flips_per_frame": 0.0,
+        "appear_per_frame": 0.115,
+        "disappear_per_frame": 0.108,
+        "mean_abs_conf_change": 0.0188,
+        "mean_box_jitter_1_minus_iou": 0.0121
+      },
+      "displayed_accuracy_labelled": {
+        "images": 10,
+        "gt_objects": 30,
+        "tp": 10,
+        "fp": 15,
+        "fn": 20,
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "fp_types": {
+          "localization": 15
+        }
+      },
+      "stale_box_frames": 0,
+      "stale_box_note": "every displayed frame carries detections of its own source frame (R1 invariant; tested)"
+    },
+    "vp8_1mbps": {
+      "performance": {
+        "frames_received": 149,
+        "frames_dropped_queue": 0,
+        "frames_analysed": 149,
+        "frames_rendered": 149,
+        "errors": 0,
+        "inference_ms": {
+          "mean": 24.76,
+          "median": 24.7,
+          "p95": 30.22,
+          "max": 33.6,
+          "n": 149
+        },
+        "receive_to_render_ms": {
+          "mean": 25.13,
+          "median": 25.07,
+          "p95": 30.79,
+          "max": 34.0,
+          "n": 149
+        },
+        "displayed_result_age_ms": {
+          "mean": 25.13,
+          "median": 25.07,
+          "p95": 30.79,
+          "max": 34.0,
+          "n": 149
+        },
+        "received_fps": 29.8,
+        "analysed_fps": 29.8,
+        "rendered_fps": 29.8,
+        "memory_free_pct_before_after": [
+          69.0,
+          69.0
+        ]
+      },
+      "stability": {
+        "analysed_frames": 149,
+        "matched_box_pairs": 363,
+        "class_flips_per_frame": 0.0,
+        "appear_per_frame": 0.101,
+        "disappear_per_frame": 0.095,
+        "mean_abs_conf_change": 0.0175,
+        "mean_box_jitter_1_minus_iou": 0.0125
+      },
+      "displayed_accuracy_labelled": {
+        "images": 10,
+        "gt_objects": 30,
+        "tp": 11,
+        "fp": 15,
+        "fn": 19,
+        "precision": 0.4230769230769231,
+        "recall": 0.36666666666666664,
+        "fp_types": {
+          "localization": 15
+        }
+      },
+      "stale_box_frames": 0,
+      "stale_box_note": "every displayed frame carries detections of its own source frame (R1 invariant; tested)"
+    }
+  },
+  "yolo26m": {
+    "model": "yolo26m",
+    "frames": 149,
+    "capture_fps_measured_at_capture": 29.8,
+    "labelled_frames": 10,
+    "raw": {
+      "performance": {
+        "frames_received": 149,
+        "frames_dropped_queue": 0,
+        "frames_analysed": 149,
+        "frames_rendered": 149,
+        "errors": 0,
+        "inference_ms": {
+          "mean": 27.79,
+          "median": 26.5,
+          "p95": 35.87,
+          "max": 40.93,
+          "n": 149
+        },
+        "receive_to_render_ms": {
+          "mean": 27.96,
+          "median": 26.63,
+          "p95": 36.14,
+          "max": 41.29,
+          "n": 149
+        },
+        "displayed_result_age_ms": {
+          "mean": 27.96,
+          "median": 26.63,
+          "p95": 36.14,
+          "max": 41.29,
+          "n": 149
+        },
+        "received_fps": 29.71,
+        "analysed_fps": 29.77,
+        "rendered_fps": 29.77,
+        "memory_free_pct_before_after": [
+          72.0,
+          72.0
+        ]
+      },
+      "stability": {
+        "analysed_frames": 149,
+        "matched_box_pairs": 352,
+        "class_flips_per_frame": 0.007,
+        "appear_per_frame": 0.182,
+        "disappear_per_frame": 0.182,
+        "mean_abs_conf_change": 0.0176,
+        "mean_box_jitter_1_minus_iou": 0.029
+      },
+      "displayed_accuracy_labelled": {
+        "images": 10,
+        "gt_objects": 30,
+        "tp": 10,
+        "fp": 16,
+        "fn": 20,
+        "precision": 0.38461538461538464,
+        "recall": 0.3333333333333333,
+        "fp_types": {
+          "background": 9,
+          "localization": 7
+        }
+      },
+      "stale_box_frames": 0,
+      "stale_box_note": "every displayed frame carries detections of its own source frame (R1 invariant; tested)"
+    },
+    "vp8_1mbps": {
+      "performance": {
+        "frames_received": 149,
+        "frames_dropped_queue": 0,
+        "frames_analysed": 149,
+        "frames_rendered": 149,
+        "errors": 0,
+        "inference_ms": {
+          "mean": 27.88,
+          "median": 27.17,
+          "p95": 35.32,
+          "max": 40.27,
+          "n": 149
+        },
+        "receive_to_render_ms": {
+          "mean": 28.05,
+          "median": 27.29,
+          "p95": 35.65,
+          "max": 40.73,
+          "n": 149
+        },
+        "displayed_result_age_ms": {
+          "mean": 28.05,
+          "median": 27.29,
+          "p95": 35.65,
+          "max": 40.73,
+          "n": 149
+        },
+        "received_fps": 29.77,
+        "analysed_fps": 29.76,
+        "rendered_fps": 29.76,
+        "memory_free_pct_before_after": [
+          73.0,
+          73.0
+        ]
+      },
+      "stability": {
+        "analysed_frames": 149,
+        "matched_box_pairs": 380,
+        "class_flips_per_frame": 0.0,
+        "appear_per_frame": 0.209,
+        "disappear_per_frame": 0.209,
+        "mean_abs_conf_change": 0.0193,
+        "mean_box_jitter_1_minus_iou": 0.0384
+      },
+      "displayed_accuracy_labelled": {
+        "images": 10,
+        "gt_objects": 30,
+        "tp": 10,
+        "fp": 16,
+        "fn": 20,
+        "precision": 0.38461538461538464,
+        "recall": 0.3333333333333333,
+        "fp_types": {
+          "background": 9,
+          "localization": 7
+        }
+      },
+      "stale_box_frames": 0,
+      "stale_box_note": "every displayed frame carries detections of its own source frame (R1 invariant; tested)"
+    }
+  }
+}

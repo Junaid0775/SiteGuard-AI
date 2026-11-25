@@ -1,0 +1,275 @@
+{
+ "definition": "dev split; predictions conf>=0.05 (NMS 0.5); a prediction counts as correct if greedily matched to a same-class GT at IoU>=0.5 (protocol v1); precision per confidence bin vs mean confidence; ECE = sum_b n_b/N |precision_b - meanconf_b|",
+ "dev_E1_m640_base": {
+  "all": {
+   "bins": [
+    {
+     "bin": "0.05-0.15",
+     "n": 573,
+     "mean_conf": 0.09,
+     "precision": 0.084
+    },
+    {
+     "bin": "0.15-0.25",
+     "n": 218,
+     "mean_conf": 0.195,
+     "precision": 0.234
+    },
+    {
+     "bin": "0.25-0.35",
+     "n": 154,
+     "mean_conf": 0.295,
+     "precision": 0.364
+    },
+    {
+     "bin": "0.35-0.45",
+     "n": 130,
+     "mean_conf": 0.398,
+     "precision": 0.431
+    },
+    {
+     "bin": "0.45-0.55",
+     "n": 109,
+     "mean_conf": 0.499,
+     "precision": 0.56
+    },
+    {
+     "bin": "0.55-0.65",
+     "n": 109,
+     "mean_conf": 0.602,
+     "precision": 0.697
+    },
+    {
+     "bin": "0.65-0.75",
+     "n": 163,
+     "mean_conf": 0.702,
+     "precision": 0.871
+    },
+    {
+     "bin": "0.75-0.85",
+     "n": 356,
+     "mean_conf": 0.807,
+     "precision": 0.952
+    },
+    {
+     "bin": "0.85-0.95",
+     "n": 1242,
+     "mean_conf": 0.914,
+     "precision": 0.979
+    },
+    {
+     "bin": "0.95-1.00",
+     "n": 500,
+     "mean_conf": 0.958,
+     "precision": 0.994
+    }
+   ],
+   "ECE_conf>=0.05": 0.0625,
+   "ECE_conf>=0.25": 0.076,
+   "n": 3554
+  },
+  "missing_ppe": {
+   "bins": [
+    {
+     "bin": "0.05-0.15",
+     "n": 237,
+     "mean_conf": 0.092,
+     "precision": 0.084
+    },
+    {
+     "bin": "0.15-0.25",
+     "n": 98,
+     "mean_conf": 0.197,
+     "precision": 0.245
+    },
+    {
+     "bin": "0.25-0.35",
+     "n": 65,
+     "mean_conf": 0.295,
+     "precision": 0.369
+    },
+    {
+     "bin": "0.35-0.45",
+     "n": 55,
+     "mean_conf": 0.403,
+     "precision": 0.418
+    },
+    {
+     "bin": "0.45-0.55",
+     "n": 49,
+     "mean_conf": 0.5,
+     "precision": 0.653
+    },
+    {
+     "bin": "0.55-0.65",
+     "n": 39,
+     "mean_conf": 0.606,
+     "precision": 0.795
+    },
+    {
+     "bin": "0.65-0.75",
+     "n": 59,
+     "mean_conf": 0.703,
+     "precision": 0.831
+    },
+    {
+     "bin": "0.75-0.85",
+     "n": 103,
+     "mean_conf": 0.801,
+     "precision": 0.951
+    },
+    {
+     "bin": "0.85-0.95",
+     "n": 253,
+     "mean_conf": 0.907,
+     "precision": 0.972
+    },
+    {
+     "bin": "0.95-1.00",
+     "n": 23,
+     "mean_conf": 0.958,
+     "precision": 0.957
+    }
+   ],
+   "ECE_conf>=0.05": 0.0679,
+   "ECE_conf>=0.25": 0.0931,
+   "n": 981
+  }
+ },
+ "dev_E3_m896": {
+  "all": {
+   "bins": [
+    {
+     "bin": "0.05-0.15",
+     "n": 432,
+     "mean_conf": 0.089,
+     "precision": 0.081
+    },
+    {
+     "bin": "0.15-0.25",
+     "n": 181,
+     "mean_conf": 0.196,
+     "precision": 0.193
+    },
+    {
+     "bin": "0.25-0.35",
+     "n": 138,
+     "mean_conf": 0.296,
+     "precision": 0.355
+    },
+    {
+     "bin": "0.35-0.45",
+     "n": 119,
+     "mean_conf": 0.397,
+     "precision": 0.462
+    },
+    {
+     "bin": "0.45-0.55",
+     "n": 104,
+     "mean_conf": 0.495,
+     "precision": 0.615
+    },
+    {
+     "bin": "0.55-0.65",
+     "n": 121,
+     "mean_conf": 0.602,
+     "precision": 0.769
+    },
+    {
+     "bin": "0.65-0.75",
+     "n": 164,
+     "mean_conf": 0.703,
+     "precision": 0.817
+    },
+    {
+     "bin": "0.75-0.85",
+     "n": 397,
+     "mean_conf": 0.808,
+     "precision": 0.937
+    },
+    {
+     "bin": "0.85-0.95",
+     "n": 1353,
+     "mean_conf": 0.915,
+     "precision": 0.981
+    },
+    {
+     "bin": "0.95-1.00",
+     "n": 450,
+     "mean_conf": 0.959,
+     "precision": 0.991
+    }
+   ],
+   "ECE_conf>=0.05": 0.0654,
+   "ECE_conf>=0.25": 0.078,
+   "n": 3459
+  },
+  "missing_ppe": {
+   "bins": [
+    {
+     "bin": "0.05-0.15",
+     "n": 161,
+     "mean_conf": 0.09,
+     "precision": 0.099
+    },
+    {
+     "bin": "0.15-0.25",
+     "n": 66,
+     "mean_conf": 0.194,
+     "precision": 0.197
+    },
+    {
+     "bin": "0.25-0.35",
+     "n": 56,
+     "mean_conf": 0.299,
+     "precision": 0.339
+    },
+    {
+     "bin": "0.35-0.45",
+     "n": 61,
+     "mean_conf": 0.399,
+     "precision": 0.41
+    },
+    {
+     "bin": "0.45-0.55",
+     "n": 44,
+     "mean_conf": 0.498,
+     "precision": 0.705
+    },
+    {
+     "bin": "0.55-0.65",
+     "n": 50,
+     "mean_conf": 0.596,
+     "precision": 0.86
+    },
+    {
+     "bin": "0.65-0.75",
+     "n": 61,
+     "mean_conf": 0.703,
+     "precision": 0.918
+    },
+    {
+     "bin": "0.75-0.85",
+     "n": 126,
+     "mean_conf": 0.803,
+     "precision": 0.944
+    },
+    {
+     "bin": "0.85-0.95",
+     "n": 253,
+     "mean_conf": 0.908,
+     "precision": 0.972
+    },
+    {
+     "bin": "0.95-1.00",
+     "n": 29,
+     "mean_conf": 0.957,
+     "precision": 0.966
+    }
+   ],
+   "ECE_conf>=0.05": 0.0819,
+   "ECE_conf>=0.25": 0.1067,
+   "n": 907
+  }
+ }
+}

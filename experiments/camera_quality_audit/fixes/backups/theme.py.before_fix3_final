@@ -1,0 +1,134 @@
+"""Design tokens, CSS and chart styling for the dark industrial SiteGuard AI theme.
+
+The base palette lives in .streamlit/config.toml (Streamlit theme). This module adds the few things the theme
+cannot express: page density, the sidebar navigation list, metric tiles, small badges and focus outlines.
+Status colours are never used on their own; every status is also written as text.
+"""
+
+from __future__ import annotations
+
+import streamlit as st
+
+# ------------------------------------------------------------------ tokens (keep in sync with config.toml)
+BG = "#121417"
+SURFACE = "#1A1E23"
+SURFACE_2 = "#222830"
+BORDER = "#2E353E"
+TEXT = "#E4E6E8"
+MUTED = "#9AA3AE"
+ACCENT = "#E07A3F"
+DANGER = "#E5484D"
+OK = "#3FA66B"
+WARN = "#D9A23B"
+INFO = "#5B8DEF"
+
+# Neutral categorical sequence for charts: accent first, then steel/blue-greys (no rainbow palettes).
+CATEGORICAL = [ACCENT, "#7C8B9C", "#4F6D8A", "#B9C2CC", "#8A6F52", "#5E7D6E", "#A3826A"]
+
+# Review statuses as stored in the database -> human-readable labels (display only; stored values unchanged).
+REVIEW_LABELS = {
+    "pending_review": "Pending review",
+    "confirmed": "Confirmed by reviewer",
+    "false_positive": "False positive",
+    "dismissed": "Dismissed",
+}
+REVIEW_COLORS = {
+    "Pending review": WARN,
+    "Confirmed by reviewer": DANGER,
+    "False positive": "#7C8B9C",
+    "Dismissed": "#4F6D8A",
+}
+# Badge colours (Streamlit names) per compliance status and review status.
+STATUS_BADGE = {"potential_violation": "red", "compliant_evidence": "green", "uncertain": "orange"}
+REVIEW_BADGE = {"pending_review": "orange", "confirmed": "red", "false_positive": "gray", "dismissed": "gray"}
+
+CSS = f"""
+<style>
+  /* page density and width */
+  [data-testid="stMainBlockContainer"], .block-container {{
+    padding-top: 3.4rem; padding-bottom: 3rem; max-width: 1440px;
+  }}
+  h1 {{ font-size: 1.85rem !important; font-weight: 600 !important; letter-spacing: -0.01em; }}
+  h2 {{ font-size: 1.35rem !important; font-weight: 600 !important; }}
+  h3 {{ font-size: 1.08rem !important; font-weight: 600 !important; letter-spacing: 0.01em; }}
+  /* kicker above page titles */
+  .sg-kicker {{
+    font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: {ACCENT}; margin-bottom: -.55rem;
+  }}
+  /* brand block in the sidebar (text only: no images, so the page image count stays exact) */
+  .sg-brand {{ display: flex; align-items: center; gap: .6rem; margin: .2rem 0 .1rem 0; }}
+  .sg-brand-mark {{
+    width: 30px; height: 30px; border-radius: 4px; background: {ACCENT}; color: {BG};
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .9rem;
+  }}
+  .sg-brand-name {{ font-weight: 700; font-size: 1.05rem; color: {TEXT}; letter-spacing: .01em; }}
+  .sg-brand-sub {{ font-size: .74rem; color: {MUTED}; margin-top: -.15rem; }}
+  .sg-side-label {{
+    font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: {MUTED};
+    margin: .9rem 0 .3rem 0;
+  }}
+  /* sidebar navigation: radio rendered as a list with an accent bar on the active page */
+  [data-testid="stSidebar"] [role="radiogroup"] {{ gap: 2px; }}
+  [data-testid="stSidebar"] [role="radiogroup"] label {{
+    width: 100%; padding: .38rem .6rem; border-radius: 4px; border-left: 3px solid transparent; margin: 0;
+  }}
+  [data-testid="stSidebar"] [role="radiogroup"] label:hover {{ background: {SURFACE_2}; }}
+  [data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {{
+    background: {SURFACE_2}; border-left-color: {ACCENT};
+  }}
+  [data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) p {{ font-weight: 600; color: {TEXT}; }}
+  [data-testid="stSidebar"] [role="radiogroup"] label > div:first-child {{ display: none; }}
+  /* metric tiles */
+  [data-testid="stMetric"] {{ background: {SURFACE}; }}
+  [data-testid="stMetricLabel"] p {{
+    font-size: .8rem !important; letter-spacing: .01em; color: {MUTED} !important;
+  }}
+  [data-testid="stMetricValue"] {{ font-variant-numeric: tabular-nums; font-weight: 600; }}
+  /* small notes */
+  .sg-scope {{ font-size: .8rem; color: {MUTED}; margin: -.2rem 0 .6rem 0; }}
+  .sg-scope b {{ color: {TEXT}; font-weight: 600; }}
+  .sg-kv {{ width: 100%; border-collapse: collapse; font-size: .88rem; }}
+  .sg-kv td {{ padding: .32rem .5rem; border-bottom: 1px solid {BORDER}; vertical-align: top; }}
+  .sg-kv td:first-child {{ color: {MUTED}; width: 42%; }}
+  .sg-kv code {{ font-size: .8rem; word-break: break-all; }}
+  /* narrow laptop windows: never cut metric values or button labels; shrink and wrap instead */
+  [data-testid="stMetricValue"] div, [data-testid="stMetricLabel"] div, [data-testid="stMetricLabel"] p {{
+    overflow: visible !important; text-overflow: clip !important; white-space: normal !important;
+    word-break: normal !important; overflow-wrap: normal !important;
+  }}
+  [data-testid^="stBaseButton"] p {{ white-space: normal !important; overflow: visible !important; text-overflow: clip !important; }}
+  @media (max-width: 1280px) {{
+    [data-testid="stMetricValue"] {{ font-size: 1.55rem !important; }}
+    [data-testid="stMetricLabel"] p {{ font-size: .74rem !important; }}
+    [data-testid="stMetric"] {{ padding: .6rem .7rem !important; }}
+  }}
+  /* keyboard focus must stay visible on the dark background */
+  :focus-visible {{ outline: 2px solid {ACCENT} !important; outline-offset: 2px; }}
+</style>
+"""
+
+
+def inject_css() -> None:
+    st.markdown(CSS, unsafe_allow_html=True)
+
+
+def style_fig(fig, height: int = 320, *, x_title: str | None = None, y_title: str | None = None):
+    """Uniform Plotly styling on the dark theme: transparent background, muted grid, labelled axes."""
+    fig.update_layout(
+        height=height,
+        margin=dict(l=8, r=8, t=56, b=8 if not fig.layout.showlegend and len(fig.data) < 2 else 90),
+        title=dict(font=dict(size=14)),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color=TEXT, size=12),
+        legend=dict(title_text="", orientation="h", yanchor="top", y=-0.28, xanchor="left", x=0),
+        colorway=CATEGORICAL,
+    )
+    fig.update_xaxes(gridcolor=BORDER, zerolinecolor=BORDER, linecolor=BORDER)
+    fig.update_yaxes(gridcolor=BORDER, zerolinecolor=BORDER, linecolor=BORDER)
+    if x_title is not None:
+        fig.update_xaxes(title_text=x_title)
+    if y_title is not None:
+        fig.update_yaxes(title_text=y_title)
+    return fig

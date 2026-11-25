@@ -1,0 +1,182 @@
+{
+  "Person|1-2 persons": {
+    "matched": 180,
+    "gt": 184,
+    "recall": 0.978
+  },
+  "Person|3-5 persons": {
+    "matched": 156,
+    "gt": 176,
+    "recall": 0.886
+  },
+  "Person|6+ persons": {
+    "matched": 98,
+    "gt": 121,
+    "recall": 0.81
+  },
+  "boots|1-2 persons": {
+    "matched": 232,
+    "gt": 240,
+    "recall": 0.967
+  },
+  "boots|3-5 persons": {
+    "matched": 101,
+    "gt": 189,
+    "recall": 0.534
+  },
+  "boots|6+ persons": {
+    "matched": 11,
+    "gt": 52,
+    "recall": 0.212
+  },
+  "forklift|1-2 persons": {
+    "matched": 32,
+    "gt": 39,
+    "recall": 0.821
+  },
+  "forklift|3-5 persons": {
+    "matched": 18,
+    "gt": 22,
+    "recall": 0.818
+  },
+  "forklift|6+ persons": {
+    "matched": 9,
+    "gt": 12,
+    "recall": 0.75
+  },
+  "gloves|1-2 persons": {
+    "matched": 216,
+    "gt": 236,
+    "recall": 0.915
+  },
+  "gloves|3-5 persons": {
+    "matched": 57,
+    "gt": 116,
+    "recall": 0.491
+  },
+  "gloves|6+ persons": {
+    "matched": 9,
+    "gt": 29,
+    "recall": 0.31
+  },
+  "goggles|1-2 persons": {
+    "matched": 117,
+    "gt": 119,
+    "recall": 0.983
+  },
+  "goggles|3-5 persons": {
+    "matched": 8,
+    "gt": 13,
+    "recall": 0.615
+  },
+  "goggles|6+ persons": {
+    "matched": 5,
+    "gt": 7,
+    "recall": 0.714
+  },
+  "helmet|1-2 persons": {
+    "matched": 116,
+    "gt": 118,
+    "recall": 0.983
+  },
+  "helmet|3-5 persons": {
+    "matched": 90,
+    "gt": 118,
+    "recall": 0.763
+  },
+  "helmet|6+ persons": {
+    "matched": 26,
+    "gt": 58,
+    "recall": 0.448
+  },
+  "no_boots|1-2 persons": {
+    "matched": 101,
+    "gt": 119,
+    "recall": 0.849
+  },
+  "no_boots|3-5 persons": {
+    "matched": 10,
+    "gt": 37,
+    "recall": 0.27
+  },
+  "no_boots|6+ persons": {
+    "matched": 9,
+    "gt": 22,
+    "recall": 0.409
+  },
+  "no_gloves|1-2 persons": {
+    "matched": 98,
+    "gt": 112,
+    "recall": 0.875
+  },
+  "no_gloves|3-5 persons": {
+    "matched": 12,
+    "gt": 65,
+    "recall": 0.185
+  },
+  "no_gloves|6+ persons": {
+    "matched": 5,
+    "gt": 26,
+    "recall": 0.192
+  },
+  "no_goggle|1-2 persons": {
+    "matched": 13,
+    "gt": 57,
+    "recall": 0.228
+  },
+  "no_goggle|3-5 persons": {
+    "matched": 1,
+    "gt": 18,
+    "recall": 0.056
+  },
+  "no_goggle|6+ persons": {
+    "matched": 0,
+    "gt": 7,
+    "recall": 0.0
+  },
+  "no_helmet|1-2 persons": {
+    "matched": 59,
+    "gt": 64,
+    "recall": 0.922
+  },
+  "no_helmet|3-5 persons": {
+    "matched": 22,
+    "gt": 54,
+    "recall": 0.407
+  },
+  "no_helmet|6+ persons": {
+    "matched": 29,
+    "gt": 61,
+    "recall": 0.475
+  },
+  "no_vest|1-2 persons": {
+    "matched": 52,
+    "gt": 55,
+    "recall": 0.945
+  },
+  "no_vest|3-5 persons": {
+    "matched": 12,
+    "gt": 31,
+    "recall": 0.387
+  },
+  "no_vest|6+ persons": {
+    "matched": 17,
+    "gt": 44,
+    "recall": 0.386
+  },
+  "vest|1-2 persons": {
+    "matched": 124,
+    "gt": 127,
+    "recall": 0.976
+  },
+  "vest|3-5 persons": {
+    "matched": 118,
+    "gt": 139,
+    "recall": 0.849
+  },
+  "vest|6+ persons": {
+    "matched": 43,
+    "gt": 74,
+    "recall": 0.581
+  }
+}

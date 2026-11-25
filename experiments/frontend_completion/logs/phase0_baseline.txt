@@ -1,0 +1,12 @@
+11:07:40 manifest start
+experiments/accuracy_improvement/manifests/20261123-110740_frontend_phase0
+{"dataset": 2004, "protected": 851, "user_data": 317} {"dataset": 647834864, "protected": 799949003, "user_data": 63120810}
+11:07:41 pytest start
+........................................................................ [ 92%]
+............                                                             [100%]
+156 passed in 15.26s
+11:07:57 startup start
+health after 2s: ok
+GET / -> HTTP 200, 7863 bytes
+stopped pid 59849
+11:08:00 done

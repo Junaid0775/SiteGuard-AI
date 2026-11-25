@@ -1,0 +1,30 @@
+sheet,tile,split,file,selection_reason,gt_boxes
+0,0,val,ultralytics-ppe-nov2026-397.jpg,class sample: helmet,16
+0,1,val,ultralytics-ppe-nov2026-523.jpg,class sample: gloves,8
+0,2,val,source-49167518cb619cd5c12a8f33872f9b7e.jpg,class sample: vest,27
+0,3,val,ultralytics-ppe-nov2026-123.jpg,class sample: boots,8
+0,4,val,ultralytics-ppe-nov2026-448.jpg,class sample: goggles,8
+0,5,val,ultralytics-ppe-nov2026-346.jpg,class sample: Person,9
+1,0,val,ultralytics-ppe-nov2026-175.jpg,class sample: no_helmet,9
+1,1,val,ultralytics-ppe-nov2026-625.jpg,class sample: no_goggle,8
+1,2,val,source-f90f8c78e44eb2d40158a732d46901c8.jpg,class sample: no_gloves,19
+1,3,val,ultralytics-ppe-nov2026-597.jpg,class sample: no_boots,16
+1,4,val,ultralytics-ppe-nov2026-571.jpg,class sample: no_vest,8
+1,5,train,source-d5d4d730d8fbb824c881beaa18b34d80.jpg,rare class (train): no_goggle,32
+2,0,train,ultralytics-ppe-nov2026-279.jpg,rare class (train): no_goggle,17
+2,1,train,source-93168c9434209cfd03d41783e32cd24a.jpg,rare class (train): forklift,43
+2,2,train,ultralytics-ppe-nov2026-045.jpg,rare class (train): no_vest,15
+2,3,train,source-32b77e88696e2ba988310ec62da94f16.jpg,most small boxes,76
+2,4,train,source-d37e10fd0ec65eaf7ef7b91c8d830f8f.jpg,most small boxes,49
+2,5,train,ultralytics-ppe-nov2026-611.jpg,largest PPE boxes,9
+3,0,train,ultralytics-ppe-nov2026-103.jpg,largest PPE boxes,8
+3,1,train,source-cc3e6e8b453515c1824fa91042214b71.jpg,most persons (crowding/occlusion proxy),45
+3,2,train,source-3403f252ac25e929eef3aa6978ad32b4.jpg,viewpoint: overhead (AI-assisted label),25
+3,3,val,source-8473d8f6d74a556cf5c2ddda99432b04.jpg,viewpoint: overhead (AI-assisted label),18
+3,4,train,ultralytics-ppe-nov2026-126.jpg,viewpoint: side (AI-assisted label),8
+3,5,train,source-fc7635f8f5ccf2152ef0afcd824df643.jpg,darkest images,25
+4,0,train,source-c804b98bcd60ea646255dad2e4b4ebec.jpg,darkest images,13
+4,1,train,source-74c0b473923339bf2a5d512cfb73b63c.jpg,rule-flagged suspect (missing-PPE outside person),36
+4,2,val,source-aace0a9a1ad6cbfe9e492e99b2eb14e4.jpg,rule-flagged suspect (missing-PPE outside person),24
+4,3,val,ultralytics-ppe-nov2026-024.jpg,rule-flagged suspect (missing-PPE outside person),61
+4,4,train,source-41527d1166c4fb9c683f1a66502cbc3e.jpg,rule-flagged suspect (missing-PPE outside person),32

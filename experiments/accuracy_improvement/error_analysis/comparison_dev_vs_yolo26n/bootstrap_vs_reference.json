@@ -1,0 +1,61 @@
+{
+  "reference": "dev_yolo26n_active_baseline",
+  "B": 1000,
+  "seed": 0,
+  "split": "dev",
+  "unit": "image (paired)",
+  "results": {
+    "dev_E3_m896": {
+      "mAP50_audit": {
+        "mean": 0.1111,
+        "ci95": [
+          0.0898,
+          0.1305
+        ],
+        "share_positive": 1.0
+      },
+      "recall@0.25": {
+        "mean": 0.1124,
+        "ci95": [
+          0.0963,
+          0.1305
+        ],
+        "share_positive": 1.0
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.1914,
+        "ci95": [
+          0.1559,
+          0.2271
+        ],
+        "share_positive": 1.0
+      }
+    },
+    "dev_yolo26m_e30_b4_baseline": {
+      "mAP50_audit": {
+        "mean": 0.0835,
+        "ci95": [
+          0.0646,
+          0.1017
+        ],
+        "share_positive": 1.0
+      },
+      "recall@0.25": {
+        "mean": 0.0826,
+        "ci95": [
+          0.0673,
+          0.0964
+        ],
+        "share_positive": 1.0
+      },
+      "mean_missing_recall@0.25": {
+        "mean": 0.1245,
+        "ci95": [
+          0.0956,
+          0.1564
+        ],
+        "share_positive": 1.0
+      }
+    }
+  }
+}

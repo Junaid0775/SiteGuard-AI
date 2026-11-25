@@ -1,0 +1,110 @@
+{
+  "settings": {
+    "conf": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "imgsz": 640,
+    "batch": 8,
+    "device": "mps",
+    "data": "experiments/accuracy_improvement/datasets/v1_original_labels/dev.yaml"
+  },
+  "seconds": 5.1,
+  "overall": {
+    "precision": 0.8322,
+    "recall": 0.6809,
+    "mAP50": 0.7339,
+    "mAP50-95": 0.5227
+  },
+  "per_class": {
+    "helmet": {
+      "precision": 0.9012,
+      "recall": 0.7755,
+      "AP50": 0.8246,
+      "AP50-95": 0.6266,
+      "instances": 294
+    },
+    "gloves": {
+      "precision": 0.8418,
+      "recall": 0.7349,
+      "AP50": 0.793,
+      "AP50-95": 0.6006,
+      "instances": 381
+    },
+    "vest": {
+      "precision": 0.9359,
+      "recall": 0.8294,
+      "AP50": 0.8873,
+      "AP50-95": 0.6853,
+      "instances": 340
+    },
+    "boots": {
+      "precision": 0.8121,
+      "recall": 0.6819,
+      "AP50": 0.7711,
+      "AP50-95": 0.5724,
+      "instances": 481
+    },
+    "goggles": {
+      "precision": 0.8292,
+      "recall": 0.9209,
+      "AP50": 0.9242,
+      "AP50-95": 0.5608,
+      "instances": 139
+    },
+    "Person": {
+      "precision": 0.9329,
+      "recall": 0.8965,
+      "AP50": 0.9399,
+      "AP50-95": 0.7809,
+      "instances": 481
+    },
+    "no_helmet": {
+      "precision": 0.894,
+      "recall": 0.5531,
+      "AP50": 0.652,
+      "AP50-95": 0.3829,
+      "instances": 179
+    },
+    "no_goggle": {
+      "precision": 0.3818,
+      "recall": 0.1281,
+      "AP50": 0.1483,
+      "AP50-95": 0.0451,
+      "instances": 82
+    },
+    "no_gloves": {
+      "precision": 0.8981,
+      "recall": 0.5644,
+      "AP50": 0.6199,
+      "AP50-95": 0.3841,
+      "instances": 203
+    },
+    "no_boots": {
+      "precision": 0.8388,
+      "recall": 0.6726,
+      "AP50": 0.7475,
+      "AP50-95": 0.5741,
+      "instances": 178
+    },
+    "forklift": {
+      "precision": 0.8006,
+      "recall": 0.7945,
+      "AP50": 0.8071,
+      "AP50-95": 0.5847,
+      "instances": 73
+    },
+    "no_vest": {
+      "precision": 0.92,
+      "recall": 0.6194,
+      "AP50": 0.6918,
+      "AP50-95": 0.4746,
+      "instances": 130
+    }
+  },
+  "speed_ms_per_image": {
+    "preprocess": 0.17,
+    "inference": 4.27,
+    "loss": 0.0,
+    "postprocess": 3.23
+  }
+}

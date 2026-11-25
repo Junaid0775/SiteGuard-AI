@@ -1,0 +1,97 @@
+"""Phase 4 stage 2: pre-registered choice of the combined configuration (E7) and its seed runs.
+
+    nohup .venv/bin/python scripts/accuracy/stage2_combined.py > experiments/accuracy_improvement/training/logs/stage2.log 2>&1 &
+
+Written and started on 2026-11-22 19:05 IST, BEFORE any result of E3, E4 or E5 existed, so that the overnight
+schedule needs no manual step (user deadline: before Tuesday 2026-11-24). The rule uses dev data only.
+
+  A = Ultralytics mAP50 on dev; B = mean of the five missing-PPE recalls at conf 0.25 on dev (protocol v1)
+  * resolution: 896 if E3 > E1 on both A and B, else 640
+  * add the E4 augmentation (scale 0.25, hsv_h 0.01, hsv_s 0.4, hsv_v 0.3) if E4 >= E1 on A and B and the gain is
+    >= 0.005 on at least one of them; the same rule adds cls_pw 0.5 from E5
+  * E7 = resolution + chosen additions, 30 epochs, batch 4, otherwise identical to E1; seeds 42, 0 and 1.
+    If E7 equals an ablation already trained with seed 42 (E1 or E3), that run is reused as the seed-42 run
+    instead of being trained twice.
+The decision and the metrics behind it are written to training/stage2_decision.json; the seed runs go through
+scripts/accuracy/run_matrix.py (same guards: thermal, battery, memory, locked-test check, dev evaluation).
+"""
+
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parents[2]
+AI = ROOT / "experiments" / "accuracy_improvement"
+TRAIN = AI / "training"
+NEEDED = ["E1_m640_base", "E3_m896", "E5_m640_clspw", "E4_m640_aug"]
+FAILED = {"training_failed", "evaluation_failed", "stopped_memory_pressure", "paused_low_battery",
+          "stopped_thermal_critical", "LOCKED_TEST_VIOLATION"}
+MISSING = ["no_helmet", "no_gloves", "no_goggle", "no_boots", "no_vest"]
+
+
+def metrics(name: str) -> tuple[float, float]:
+    s = json.loads((AI / "evaluation" / f"dev_{name}" / "summary.json").read_text())
+    return float(s["ultralytics"]["mAP50"]), sum(float(s["missing_ppe_recall_op"][c]) for c in MISSING) / len(MISSING)
+
+
+def main() -> None:
+    print(f"[{datetime.now():%Y-%m-%dT%H:%M:%S}] stage 2 waiting for {NEEDED}", flush=True)
+    while True:
+        st = json.loads((TRAIN / "matrix_status.json").read_text()) if (TRAIN / "matrix_status.json").exists() else {}
+        if any(st.get(n, {}).get("state") in FAILED for n in NEEDED):
+            print("an ablation failed - stage 2 not started", {n: st.get(n, {}).get("state") for n in NEEDED}, flush=True)
+            return
+        if all((AI / "evaluation" / f"dev_{n}" / "summary.json").exists() for n in NEEDED):
+            if subprocess.run(["pgrep", "-f", "run_matrix.py"], capture_output=True).returncode != 0:
+                break
+        time.sleep(300)
+    m = {n: metrics(n) for n in NEEDED}
+    base = m["E1_m640_base"]
+    e3_better = m["E3_m896"][0] > base[0] and m["E3_m896"][1] > base[1]
+
+    def helps(name: str) -> bool:
+        a, b = m[name]
+        return a >= base[0] and b >= base[1] and max(a - base[0], b - base[1]) >= 0.005
+
+    hyp = {}
+    if helps("E4_m640_aug"):
+        hyp.update({"scale": 0.25, "hsv_h": 0.01, "hsv_s": 0.4, "hsv_v": 0.3})
+    if helps("E5_m640_clspw"):
+        hyp.update({"cls_pw": 0.5})
+    imgsz = 896 if e3_better else 640
+    reuse = "E3_m896" if (imgsz == 896 and not hyp) else ("E1_m640_base" if (imgsz == 640 and not hyp) else None)
+    decision = {"decided": datetime.now().isoformat(timespec="seconds"), "rule": __doc__.split("  A =")[1].split("The decision")[0].strip(),
+                "dev_metrics_mAP50_and_mean_missing_recall": m, "E3_better_than_E1": e3_better,
+                "E4_helps": helps("E4_m640_aug"), "E5_helps": helps("E5_m640_clspw"),
+                "E7": {"imgsz": imgsz, "hyp": hyp, "epochs": 30, "batch": 4}, "seed42_reused_from": reuse}
+    (TRAIN / "stage2_decision.json").write_text(json.dumps(decision, indent=2))
+    print(json.dumps(decision, indent=1), flush=True)
+    seeds = [0, 1] if reuse else [42, 0, 1]
+    tag = f"m{imgsz}" + ("_aug" if "scale" in hyp else "") + ("_clspw" if "cls_pw" in hyp else "")
+    exps = []
+    for sd in seeds:
+        e = {"name": f"E7_{tag}_s{sd}", "imgsz": imgsz, "seed": sd,
+             "hypothesis": "Seed variation of the pre-registered combined configuration (stage 2 rule)",
+             "changed": [f"seed {sd}"] + ([f"hyp {hyp}"] if hyp else []) + ([f"imgsz {imgsz}"] if imgsz != 640 else []),
+             "expected": "Dev metrics within the seed-to-seed spread; establishes uncertainty of the leading candidate",
+             "success": "Completes; reported with all seeds, not only the best"}
+        if hyp:
+            e["hyp"] = hyp
+        exps.append(e)
+    phase4 = yaml.safe_load((TRAIN / "matrix_phase4.yaml").read_text())
+    stage2 = {"defaults": phase4["defaults"], "experiments": exps}
+    (TRAIN / "matrix_phase4_stage2.yaml").write_text("# Stage 2 (generated by scripts/accuracy/stage2_combined.py)\n" + yaml.safe_dump(stage2, sort_keys=False, width=150))
+    subprocess.run(["caffeinate", "-s", str(ROOT / ".venv/bin/python"), "scripts/accuracy/run_matrix.py",
+                    str((TRAIN / "matrix_phase4_stage2.yaml").relative_to(ROOT))], cwd=ROOT)
+    print(f"[{datetime.now():%Y-%m-%dT%H:%M:%S}] stage 2 runner finished", flush=True)
+
+
+if __name__ == "__main__":
+    main()

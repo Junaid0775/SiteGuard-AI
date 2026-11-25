@@ -1,0 +1,41 @@
+{
+  "val_persons": 481,
+  "per_item_label_coverage": {
+    "helmet": {
+      "positive": 280,
+      "negative": 174,
+      "both": 3,
+      "neither": 24,
+      "neither_pct": 5.0
+    },
+    "vest": {
+      "positive": 338,
+      "negative": 127,
+      "both": 3,
+      "neither": 13,
+      "neither_pct": 2.7
+    },
+    "gloves": {
+      "positive": 203,
+      "negative": 112,
+      "both": 14,
+      "neither": 152,
+      "neither_pct": 31.6
+    },
+    "boots": {
+      "positive": 248,
+      "negative": 90,
+      "both": 1,
+      "neither": 142,
+      "neither_pct": 29.5
+    },
+    "goggles": {
+      "positive": 138,
+      "negative": 83,
+      "both": 2,
+      "neither": 258,
+      "neither_pct": 53.6
+    }
+  },
+  "note": "A Person box 'has' an item label when >=60% of the item/missing-item box lies inside it."
+}
